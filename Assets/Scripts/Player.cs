@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
     private bool _interactable;
+    [SerializeField]
+    private float _jumpForce = 20f;
+    [SerializeField]
+    private float _fallingGravity = 2f;
 
     void Start()
     {
@@ -34,14 +38,28 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Interact();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+
+        if (_rb.velocity.y < 0)
+        {
+            _rb.gravityScale = _fallingGravity;
+        }
+        else
+        {
+            _rb.gravityScale = 1f;
+        }
     }
 
     void CalculateMovement()
     {
-        float hInput = Input.GetAxis("Horizontal");
-        _anim.SetFloat("Speed", Mathf.Abs(hInput));
-        _direction = new Vector3(hInput, 0, 0) * _speed;
-        _rb.velocity = (_direction * Time.deltaTime);
+        float hInput = Input.GetAxis("Horizontal") * Time.deltaTime;
+        _anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+        _direction = new Vector3(hInput * _speed, _rb.velocity.y, 0);
+        _rb.velocity = _direction;
 
         if (hInput < 0)
         {
@@ -52,6 +70,11 @@ public class Player : MonoBehaviour
             _spriteR.flipX = false;
         }
 
+    }
+
+    void Jump()
+    {
+        _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
     }
 
     private void OnTriggerStay2D(Collider2D other)

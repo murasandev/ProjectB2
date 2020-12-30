@@ -60,6 +60,8 @@ public class Player : MonoBehaviour
         _anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
         _direction = new Vector3(hInput * _speed, _rb.velocity.y, 0);
         _rb.velocity = _direction;
+       
+       
 
         if (hInput < 0)
         {
@@ -70,10 +72,17 @@ public class Player : MonoBehaviour
             _spriteR.flipX = false;
         }
 
+        /*
+        if (_rb.OverlapCir)
+        {
+
+        } */
+
     }
 
     void Jump()
     {
+        // Need a boolean to disable further jumping deactivates when touching the ground, probably reacts when colliding with ground tagged colliders.
         _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
     }
 

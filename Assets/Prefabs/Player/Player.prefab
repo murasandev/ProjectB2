@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 250
+  _jumpForce: 5
+  _fallingGravity: 2
 --- !u!50 &1324167276
 Rigidbody2D:
   serializedVersion: 4

@@ -1,31 +1,40 @@
 fileFormatVersion: 2
-guid: 27f71b5c54f9c6342aaa712c9afc0da1
+guid: dfeaf562c861e8d43b25480393618509
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5065147357895369444
-    second: brom_walkcycle_0
+      213: -5700432248739874823
+    second: brom_rowing_0
   - first:
-      213: -5731835577445835131
-    second: brom_walkcycle_1
+      213: -7271572987027344309
+    second: brom_rowing_1
   - first:
-      213: 1519919658668848451
-    second: brom_walkcycle_2
+      213: -3272116061269549577
+    second: brom_rowing_2
   - first:
-      213: -4310110071015155089
-    second: brom_walkcycle_3
+      213: -955750844961188546
+    second: brom_rowing_3
   - first:
-      213: -953639672892928796
-    second: brom_walkcycle_4
+      213: -1963415450580426694
+    second: brom_rowing_4
   - first:
-      213: 3837026283417328067
-    second: brom_walkcycle_5
+      213: 3304384023495558619
+    second: brom_rowing_5
   - first:
-      213: 168639828225018645
-    second: brom_walkcycle_6
+      213: -1794684248762487899
+    second: brom_rowing_6
   - first:
-      213: 967561786585653968
-    second: brom_walkcycle_7
+      213: -1024856711877247816
+    second: brom_rowing_7
+  - first:
+      213: 4694374193252991382
+    second: brom_rowing_8
+  - first:
+      213: -7524890135367763606
+    second: brom_rowing_9
+  - first:
+      213: 6815579850460428028
+    second: brom_rowing_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,6 +117,30 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -135,13 +168,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brom_walkcycle_0
+      name: brom_rowing_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1d53a5705bf4b9b0800000000000000
-      internalID: -5065147357895369444
+      spriteID: 9f7bdab621ff3e0b0800000000000000
+      internalID: -5700432248739874823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_1
+      name: brom_rowing_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58e156f29ed6470b0800000000000000
-      internalID: -5731835577445835131
+      spriteID: b44b8ed05ee261b90800000000000000
+      internalID: -7271572987027344309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_2
+      name: brom_rowing_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345f61e60e6d71510800000000000000
-      internalID: 1519919658668848451
+      spriteID: 7fd9d2857cb1792d0800000000000000
+      internalID: -3272116061269549577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_3
+      name: brom_rowing_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6ade42f9b96f24c0800000000000000
-      internalID: -4310110071015155089
+      spriteID: e351f489bad7cb2f0800000000000000
+      internalID: -955750844961188546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_4
+      name: brom_rowing_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec4f7525cdf3c2f0800000000000000
-      internalID: -953639672892928796
+      spriteID: a30e3a1ec0c80c4e0800000000000000
+      internalID: -1963415450580426694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_5
+      name: brom_rowing_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c95de8431bdf3530800000000000000
-      internalID: 3837026283417328067
+      spriteID: bd5cde113c78bdd20800000000000000
+      internalID: 3304384023495558619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_6
+      name: brom_rowing_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51bc550c701275200800000000000000
-      internalID: 168639828225018645
+      spriteID: 5abe5843f200817e0800000000000000
+      internalID: -1794684248762487899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_7
+      name: brom_rowing_7
       rect:
         serializedVersion: 2
         x: 448
         y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,8 +329,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d22eab81587d6d00800000000000000
-      internalID: 967561786585653968
+      spriteID: 8bcb1ee104af6c1f0800000000000000
+      internalID: -1024856711877247816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brom_rowing_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6910b97f474c52140800000000000000
+      internalID: 4694374193252991382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brom_rowing_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69309b5a48329790800000000000000
+      internalID: -7524890135367763606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brom_rowing_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6f00573cdc59e50800000000000000
+      internalID: 6815579850460428028
       vertices: []
       indices: 
       edges: []

@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D _rb;
-    [SerializeField]
-    private float _speed = 10f;
+    #region PlayerVariables
+    [SerializeField] private float _speed = 10f;
+    [SerializeField] private float _jumpForce = 20f;
+    [SerializeField] private float _fallingGravity = 2f;
+    #endregion
+
     private Animator _anim;
-    private Vector3 _direction;
+    private Rigidbody2D _rb;
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
-    private bool _interactable;
-    [SerializeField]
-    private float _jumpForce = 20f;
-    [SerializeField]
-    private float _fallingGravity = 2f;
+
+    private Vector3 _direction;
+
 
     void Start()
     {
@@ -37,8 +38,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Interact();
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
@@ -84,34 +83,5 @@ public class Player : MonoBehaviour
     {
         // Need a boolean to disable further jumping deactivates when touching the ground, probably reacts when colliding with ground tagged colliders.
         _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Bookshelf"))
-        {
-            _canvas.ShowHelpText();
-            _interactable = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Bookshelf"))
-        {
-            _canvas.HideHelpText();
-            _interactable = false;
-        }
-    }
-
-    private void Interact()
-    {
-        if (_interactable)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                _canvas.NovelPanelActive();
-            }
-        }
     }
 }

@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: 27f71b5c54f9c6342aaa712c9afc0da1
+guid: 81d3c188f576b5c44b1e72e7556d8583
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5065147357895369444
-    second: brom_walkcycle_0
+      213: -2430940113042081706
+    second: hawkdrakeflap_0
   - first:
-      213: -5731835577445835131
-    second: brom_walkcycle_1
+      213: -642922242492650904
+    second: hawkdrakeflap_1
   - first:
-      213: 1519919658668848451
-    second: brom_walkcycle_2
+      213: -2100433605485403373
+    second: hawkdrakeflap_2
   - first:
-      213: -4310110071015155089
-    second: brom_walkcycle_3
+      213: 2009423579500747424
+    second: hawkdrakeflap_3
   - first:
-      213: -953639672892928796
-    second: brom_walkcycle_4
+      213: 7991090999064359364
+    second: hawkdrakeflap_4
   - first:
-      213: 3837026283417328067
-    second: brom_walkcycle_5
+      213: -4461859548614622001
+    second: hawkdrakeflap_5
   - first:
-      213: 168639828225018645
-    second: brom_walkcycle_6
+      213: -4251039568311766054
+    second: hawkdrakeflap_6
   - first:
-      213: 967561786585653968
-    second: brom_walkcycle_7
+      213: -6012323871748575396
+    second: hawkdrakeflap_7
+  - first:
+      213: 2951398530428623846
+    second: hawkdrakeflap_8
+  - first:
+      213: -4199964560318705995
+    second: hawkdrakeflap_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,6 +114,30 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -135,7 +165,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brom_walkcycle_0
+      name: hawkdrakeflap_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1d53a5705bf4b9b0800000000000000
-      internalID: -5065147357895369444
+      spriteID: 658f0ebc8d0934ed0800000000000000
+      internalID: -2430940113042081706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_1
+      name: hawkdrakeflap_1
       rect:
         serializedVersion: 2
         x: 64
@@ -170,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58e156f29ed6470b0800000000000000
-      internalID: -5731835577445835131
+      spriteID: 86a270670a1e317f0800000000000000
+      internalID: -642922242492650904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_2
+      name: hawkdrakeflap_2
       rect:
         serializedVersion: 2
         x: 128
@@ -191,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345f61e60e6d71510800000000000000
-      internalID: 1519919658668848451
+      spriteID: 313efbea3c2c9d2e0800000000000000
+      internalID: -2100433605485403373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_3
+      name: hawkdrakeflap_3
       rect:
         serializedVersion: 2
         x: 192
@@ -212,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6ade42f9b96f24c0800000000000000
-      internalID: -4310110071015155089
+      spriteID: 0aa9f636918e2eb10800000000000000
+      internalID: 2009423579500747424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_4
+      name: hawkdrakeflap_4
       rect:
         serializedVersion: 2
         x: 256
@@ -233,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec4f7525cdf3c2f0800000000000000
-      internalID: -953639672892928796
+      spriteID: 4c17d0fccee06ee60800000000000000
+      internalID: 7991090999064359364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_5
+      name: hawkdrakeflap_5
       rect:
         serializedVersion: 2
         x: 320
@@ -254,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c95de8431bdf3530800000000000000
-      internalID: 3837026283417328067
+      spriteID: fc40427616a4412c0800000000000000
+      internalID: -4461859548614622001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_6
+      name: hawkdrakeflap_6
       rect:
         serializedVersion: 2
         x: 384
@@ -275,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51bc550c701275200800000000000000
-      internalID: 168639828225018645
+      spriteID: ad3b5ac19064105c0800000000000000
+      internalID: -4251039568311766054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brom_walkcycle_7
+      name: hawkdrakeflap_7
       rect:
         serializedVersion: 2
         x: 448
@@ -296,8 +326,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d22eab81587d6d00800000000000000
-      internalID: 967561786585653968
+      spriteID: c5f23d51b4fef8ca0800000000000000
+      internalID: -6012323871748575396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hawkdrakeflap_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebdec4835975f820800000000000000
+      internalID: 2951398530428623846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hawkdrakeflap_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be49f81c7ab6b5c0800000000000000
+      internalID: -4199964560318705995
       vertices: []
       indices: 
       edges: []

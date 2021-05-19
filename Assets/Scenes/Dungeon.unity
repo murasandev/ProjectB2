@@ -704,7 +704,7 @@ PrefabInstance:
     - target: {fileID: 7702073214987795594, guid: e5556366a4f1d234a8c11f9c80587a3b,
         type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7702073214987795594, guid: e5556366a4f1d234a8c11f9c80587a3b,
         type: 3}
@@ -7133,6 +7133,18 @@ MonoBehaviour:
   gravityModifier: 1
   maxSpeed: 5
   jumpPower: 10
+--- !u!114 &965052538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965052533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5faa073eb793cf64e8d314d6094a791e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1036831508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4681847789575128, guid: 86dbd91ee722cb8438fd914fd28c3f0c,

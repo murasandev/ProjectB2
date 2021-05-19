@@ -12,6 +12,10 @@ public class PlayerAnimation : MonoBehaviour
         _anim = GetComponentInChildren<Animator>();
     }
 
+    public void Move(float move)
+    {
+        _anim.SetFloat("Speed", Mathf.Abs(move));
+    }
     public void Jump(bool jump)
     {
         _anim.SetBool("Jump", jump);

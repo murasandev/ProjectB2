@@ -15,13 +15,24 @@ public class NewPlayer : PhysicsObject
     // Start is called before the first frame update
     void Start()
     {
-
+        _anim = GetComponentInChildren<Animator>();
+        _spriteR = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
+        _anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            _spriteR.flipX = true;
+        }
+        else
+        {
+            _spriteR.flipX = false;
+        }
 
         if (Input.GetButtonDown("Jump") && grounded)
         {

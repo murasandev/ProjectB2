@@ -24,4 +24,8 @@ public class PlayerAnimation : MonoBehaviour
     {
         _anim.SetTrigger("Attack");
     }
+    public void Rage()
+    {
+        _anim.SetTrigger("Rage");
+    }
 }

@@ -7,6 +7,8 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private float maxSpeed = 1;
     [SerializeField] private float jumpPower = 10;
 
+    [SerializeField] private int rage = 0;
+
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
@@ -27,6 +29,8 @@ public class NewPlayer : PhysicsObject
     // Update is called once per frame
     void Update()
     {
+        ActivateRage();
+
         if (Input.GetButtonDown("Fire1"))
         {
             _anim.Attack();
@@ -56,5 +60,12 @@ public class NewPlayer : PhysicsObject
     {
         yield return new WaitForSeconds(0.1f);
         _anim.Jump(false);
+    }
+    void ActivateRage()
+    {
+        if (rage >= 100)
+        {
+            _anim.Rage();
+        }
     }
 }

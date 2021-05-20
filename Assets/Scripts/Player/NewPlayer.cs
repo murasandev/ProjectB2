@@ -27,6 +27,10 @@ public class NewPlayer : PhysicsObject
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            _anim.Attack();
+        }
         targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
         _anim.Move(Mathf.Abs(Input.GetAxis("Horizontal")));
 

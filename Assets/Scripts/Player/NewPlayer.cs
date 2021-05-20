@@ -8,6 +8,9 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private float jumpPower = 10;
 
     [SerializeField] private int rage = 0;
+    [SerializeField] private bool enrage = false;
+    [SerializeField] private int subtractRage = 5;
+    [SerializeField] private bool boolRage;
 
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
@@ -63,9 +66,28 @@ public class NewPlayer : PhysicsObject
     }
     void ActivateRage()
     {
-        if (rage >= 100)
+        if (rage >= 100 && enrage == false)
         {
             _anim.Rage();
+            enrage = true;
+            boolRage = true;
+            _spriteR.color = new Color(.9686f,.5725f,.4823f,1f);
         }
+        else if (rage <= 0)
+        {
+            enrage = false;
+            _spriteR.color = new Color(1f, 1f, 1f, 1f);
+        }
+        if (enrage == true && boolRage == true)
+        {
+            StartCoroutine(LoseRageRoutine());
+            boolRage = false;
+        }
+    }
+    IEnumerator LoseRageRoutine()
+    {
+        yield return new WaitForSeconds(1.0f);
+        rage -= subtractRage;
+        boolRage = true;
     }
 }

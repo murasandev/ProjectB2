@@ -6092,6 +6092,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2643925493054059858, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
         type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643925493054059858, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643925493054059858, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643925493054059858, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
+        type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -7139,6 +7154,9 @@ MonoBehaviour:
   maxSpeed: 5
   jumpPower: 10
   rage: 0
+  enrage: 0
+  subtractRage: 5
+  boolRage: 0
 --- !u!114 &965052538
 MonoBehaviour:
   m_ObjectHideFlags: 0

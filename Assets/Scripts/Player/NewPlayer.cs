@@ -39,7 +39,7 @@ public class NewPlayer : PhysicsObject
             //_spriteR.flipX = true;
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        else
+        else if (Input.GetAxis("Horizontal") > 0)
         {
             //_spriteR.flipX = false;
             transform.localScale = new Vector3(1, 1, 1);

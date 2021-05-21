@@ -71,18 +71,24 @@ public class NewPlayer : PhysicsObject
             _anim.Rage();
             enrage = true;
             boolRage = true;
-            _spriteR.color = new Color(.9686f,.5725f,.4823f,1f);
+            StartCoroutine(StartRageRoutine());
         }
         else if (rage <= 0)
         {
             enrage = false;
             _spriteR.color = new Color(1f, 1f, 1f, 1f);
         }
+        //Coroutine to start rage counter
         if (enrage == true && boolRage == true)
         {
             StartCoroutine(LoseRageRoutine());
             boolRage = false;
         }
+    }
+    IEnumerator StartRageRoutine()
+    {
+        yield return new WaitForSeconds(3.0f);
+        _spriteR.color = new Color(.9686f, .5725f, .4823f, 1f);
     }
     IEnumerator LoseRageRoutine()
     {

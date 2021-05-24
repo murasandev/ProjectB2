@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solo_Plate (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4725418786820602, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -133,6 +137,10 @@ PrefabInstance:
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_Name
       value: Solo_Plate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4725418786820602, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_RootOrder
@@ -521,6 +529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solo_Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4725418786820602, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -646,6 +658,10 @@ PrefabInstance:
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_Name
       value: Solo_Plate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4725418786820602, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_RootOrder

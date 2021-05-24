@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4887088904323069193}
   - component: {fileID: 4887088904323069192}
+  - component: {fileID: 4941627265417167576}
   m_Layer: 0
   m_Name: Table_With_Plates
   m_TagString: Untagged
@@ -61,6 +62,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!210 &4941627265417167576
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887088904323069194}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
 --- !u!1001 &2676321195990185106
 PrefabInstance:
   m_ObjectHideFlags: 0

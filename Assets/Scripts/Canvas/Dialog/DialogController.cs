@@ -6,78 +6,110 @@ using UnityEngine.UI;
 
 public class DialogController : MonoBehaviour
 {
-    private Queue<string> sentences;
+    private Queue<string> _sentences;
 
-    /*
-     -Need to pass in actual Dialog.
-     -Need to have more control over dialog pace.
-     -Need to look for cooler font.
-     */
+    [SerializeField] private Text _nameTxt;
+    [SerializeField] private Text _dialogTxt;
+    [SerializeField] private Text _xKeyHelp;
 
+    [SerializeField] private float _textSpeed;
 
-    [SerializeField] private float delay = 0.1f;
-    [SerializeField] private string fullText;
-    [SerializeField] private string currentText = "";
+    private string _fullTxt;
+    private string _currentTxt;
 
-    public Text nameText;
-    public Text sentencesText;
+    private UIManager _uiManager;
 
-    // Start is called before the first frame update
-    void Start()
+    private bool _dialogOn;
+    private bool _initialDialogHelp;
+    
+   
+    private void Start()
     {
-        sentences = new Queue<string>();
+        _sentences = new Queue<string>();
+        _uiManager = FindObjectOfType<UIManager>();
+
+     
+        if(_uiManager == null)
+        {
+            Debug.Log("UI Manager is NULL");
+        }
+        _initialDialogHelp = true;
+        _currentTxt = "";
+
         
     }
 
- 
+    private void Update()
+    {
+        ContinueDialog();
+    }
+
+
+
     public void StartDialog(Dialog dialog)
     {
-        Debug.Log("Starting conversation with " + dialog.name);
-        nameText.text = dialog.name;
-        
 
-        sentences.Clear();
+        _nameTxt.text = dialog.name;
+        _dialogOn = true;
+        _uiManager.ShowDialogBox(true);
+       
+
+        if (_initialDialogHelp)
+        {
+            _initialDialogHelp = false;
+            _xKeyHelp.gameObject.SetActive(true);
+        }
+        
 
         foreach (string sentence in dialog.sentences)
         {
-            sentences.Enqueue(sentence);
-            //sentencesText.text = sentence;
-            DisplayNextSentence();
-            //fullText = sentence;
-            Debug.Log("sentence: " + sentence );
+            _sentences.Enqueue(sentence);
+           
         }
 
-       // StartCoroutine(ShowText());
-       
+        
+        DisplayNextSentence();
     }
+
+    private void ContinueDialog()
+    {
+        if (Input.GetKeyDown(KeyCode.X) && _dialogOn)
+        {
+            DisplayNextSentence();
+            _xKeyHelp.gameObject.SetActive(false);
+        }
+    }
+
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (_sentences.Count == 0)
         {
             EndDialog();
             return;
         }
+  
+        string sentence = _sentences.Dequeue();
+        _fullTxt = sentence;
+        StartCoroutine(ShowTextTypeWrite());
 
-        string sentence = sentences.Dequeue();
-        sentencesText.text = sentence;
-        Debug.Log(sentence);
-        
     }
-
-    IEnumerator ShowText()
-    {
-        for (int i = 0; i < fullText.Length; i++)
-        {
-            currentText = fullText.Substring(0, i);
-            this.GetComponent<DialogController>().currentText = currentText;
-            yield return new WaitForSeconds(delay);
-        }
-    }
-
 
     private void EndDialog()
     {
-        Debug.Log("End of Conversation");
+        Debug.Log("Conversation over.");
+        _uiManager.ShowDialogBox(false);
+        _dialogOn = false;
+    }
+
+    IEnumerator ShowTextTypeWrite()
+    {
+        for(int i = 0; i < _fullTxt.Length; i++)
+        {
+            _currentTxt = _fullTxt.Substring(0, i);
+            _dialogTxt.text = _currentTxt;
+            yield return new WaitForSeconds(_textSpeed);
+        }
+      
     }
 }

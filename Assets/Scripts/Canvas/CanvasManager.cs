@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class CanvasManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _novelPanel;
+    private GameObject[] _objects;
+
     [SerializeField]
     private Text _helpText;
 
@@ -20,12 +21,12 @@ public class CanvasManager : MonoBehaviour
 
     public void NovelPanelActive()
     {
-        _novelPanel.SetActive(true);
+        _objects[0].SetActive(true);
     }
 
     public void ExitNovelPanel()
     {
-        _novelPanel.SetActive(false);
+        _objects[0].SetActive(false);
     }
 
     public void ShowHelpText()

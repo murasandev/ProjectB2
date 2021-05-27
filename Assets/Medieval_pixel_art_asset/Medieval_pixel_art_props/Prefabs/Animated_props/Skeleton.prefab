@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2856970755920589930}
   - component: {fileID: 2856970755920589933}
   - component: {fileID: 8074609342212668865}
+  - component: {fileID: 4895455975975292731}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -82,6 +83,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39057553, y: 0.8745301}
   m_EdgeRadius: 0
+--- !u!114 &4895455975975292731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856970755920589931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b26ba56824fcc546be33149c6725a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2856970756838245516
 PrefabInstance:
   m_ObjectHideFlags: 0

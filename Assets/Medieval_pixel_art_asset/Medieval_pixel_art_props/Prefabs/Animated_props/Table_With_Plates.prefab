@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4887088904323069192}
   - component: {fileID: 4941627265417167576}
   - component: {fileID: 3138826286245589662}
+  - component: {fileID: -8839530047445869882}
   m_Layer: 0
   m_Name: Table_With_Plates
   m_TagString: Untagged
@@ -100,6 +101,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3321669, y: 0.54195595}
   m_EdgeRadius: 0
+--- !u!114 &-8839530047445869882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887088904323069194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b26ba56824fcc546be33149c6725a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2676321195990185106
 PrefabInstance:
   m_ObjectHideFlags: 0

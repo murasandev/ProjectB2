@@ -12,6 +12,10 @@ public class PlayerAnimation : MonoBehaviour
         _anim = GetComponentInChildren<Animator>();
     }
 
+    public void Move(float move)
+    {
+        _anim.SetFloat("Speed", Mathf.Abs(move));
+    }
     public void Jump(bool jump)
     {
         _anim.SetBool("Jump", jump);
@@ -19,5 +23,9 @@ public class PlayerAnimation : MonoBehaviour
     public void Attack()
     {
         _anim.SetTrigger("Attack");
+    }
+    public void Rage()
+    {
+        _anim.SetTrigger("Rage");
     }
 }

@@ -11,13 +11,15 @@ public class DialogController : MonoBehaviour
     [SerializeField] private Text _nameTxt;
     [SerializeField] private Text _dialogTxt;
     [SerializeField] private Text _xKeyHelp;
+    [SerializeField] private Image _dialogImage;
+    [SerializeField] private Text _btnTxt;
 
     [SerializeField] private float _textSpeed;
 
-    private string _fullTxt;
-    private string _currentTxt;
+    private string _fullSentence;
+    private string _currentChar;
 
-    private UIManager _uiManager;
+    private CanvasManager _canvasManager;
 
     private bool _dialogOn;
     private bool _initialDialogHelp;
@@ -26,15 +28,15 @@ public class DialogController : MonoBehaviour
     private void Start()
     {
         _sentences = new Queue<string>();
-        _uiManager = FindObjectOfType<UIManager>();
+        _canvasManager = FindObjectOfType<CanvasManager>();
 
      
-        if(_uiManager == null)
+        if(_canvasManager == null)
         {
             Debug.Log("UI Manager is NULL");
         }
         _initialDialogHelp = true;
-        _currentTxt = "";
+        _currentChar = "";
 
         
     }
@@ -50,8 +52,9 @@ public class DialogController : MonoBehaviour
     {
 
         _nameTxt.text = dialog.name;
+        _dialogImage.sprite = dialog.charImageSprite;
         _dialogOn = true;
-        _uiManager.ShowDialogBox(true);
+        _canvasManager.ShowDialogBox(true);
        
 
         if (_initialDialogHelp)
@@ -66,7 +69,6 @@ public class DialogController : MonoBehaviour
             _sentences.Enqueue(sentence);
            
         }
-
         
         DisplayNextSentence();
     }
@@ -88,28 +90,33 @@ public class DialogController : MonoBehaviour
             EndDialog();
             return;
         }
+
+        if (_sentences.Count == 1)
+        {
+            _btnTxt.text = "<CLOSE>";
+        }
   
         string sentence = _sentences.Dequeue();
-        _fullTxt = sentence;
+        _fullSentence = sentence;
         StartCoroutine(ShowTextTypeWrite());
-
     }
+
 
     private void EndDialog()
     {
         Debug.Log("Conversation over.");
-        _uiManager.ShowDialogBox(false);
+        _canvasManager.ShowDialogBox(false);
         _dialogOn = false;
     }
 
+
     IEnumerator ShowTextTypeWrite()
     {
-        for(int i = 0; i < _fullTxt.Length; i++)
+        for(int i = 0; i < _fullSentence.Length; i++)
         {
-            _currentTxt = _fullTxt.Substring(0, i);
-            _dialogTxt.text = _currentTxt;
+            _currentChar = _fullSentence.Substring(0, i);
+            _dialogTxt.text = _currentChar;
             yield return new WaitForSeconds(_textSpeed);
-        }
-      
+        }  
     }
 }

@@ -9,7 +9,16 @@ public class CanvasManager : MonoBehaviour
     private GameObject[] _objects;
 
     [SerializeField]
+    private GameObject _dialogbox;
+
+    [SerializeField]
     private Text _helpText;
+
+    void Start()
+    {
+        _dialogbox.SetActive(false);
+    }
+
 
     void Update()
     {
@@ -37,5 +46,10 @@ public class CanvasManager : MonoBehaviour
     public void HideHelpText()
     {
         _helpText.enabled = false;
+    }
+
+    public void ShowDialogBox(bool isDbActive)
+    {
+        _dialogbox.SetActive(isDbActive);
     }
 }

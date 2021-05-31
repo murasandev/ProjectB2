@@ -6,9 +6,19 @@ using UnityEngine.UI;
 public class CanvasManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _novelPanel;
+    private GameObject[] _objects;
+
+    [SerializeField]
+    private GameObject _dialogbox;
+
     [SerializeField]
     private Text _helpText;
+
+    void Start()
+    {
+        _dialogbox.SetActive(false);
+    }
+
 
     void Update()
     {
@@ -20,12 +30,12 @@ public class CanvasManager : MonoBehaviour
 
     public void NovelPanelActive()
     {
-        _novelPanel.SetActive(true);
+        _objects[0].SetActive(true);
     }
 
     public void ExitNovelPanel()
     {
-        _novelPanel.SetActive(false);
+        _objects[0].SetActive(false);
     }
 
     public void ShowHelpText()
@@ -36,5 +46,10 @@ public class CanvasManager : MonoBehaviour
     public void HideHelpText()
     {
         _helpText.enabled = false;
+    }
+
+    public void ShowDialogBox(bool isDbActive)
+    {
+        _dialogbox.SetActive(isDbActive);
     }
 }

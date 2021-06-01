@@ -41,6 +41,7 @@ public class DialogController : MonoBehaviour
         
     }
 
+
     private void Update()
     {
         ContinueDialog();
@@ -99,6 +100,12 @@ public class DialogController : MonoBehaviour
         string sentence = _sentences.Dequeue();
         _fullSentence = sentence;
         StartCoroutine(ShowTextTypeWrite());
+    }
+
+
+    public void StartGammieDialog(Dialog dialog)
+    {
+
     }
 
 

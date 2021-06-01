@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
     private bool _initialDialog;
+  
 
     private void Start()
     {
@@ -20,10 +22,19 @@ public class DialogTrigger : MonoBehaviour
             {
                 TriggerDialog();
                 _initialDialog = false;
-            }  
+            }
+            if (dialog.gammieSceneDialog)
+            {
+                TriggerGammieDialog();
+                _initialDialog = false;
+            }
         }
     }
 
+    private void TriggerGammieDialog()
+    {
+        FindObjectOfType<DialogController>().StartGammieDialog(dialog);
+    }
 
     public void TriggerDialog()
     {

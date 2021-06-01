@@ -11,8 +11,8 @@ public class DialogController : MonoBehaviour
     [SerializeField] private Text _nameTxt;
     [SerializeField] private Text _dialogTxt;
     [SerializeField] private Text _xKeyHelp;
-    [SerializeField] private Image _dialogImage;
-    [SerializeField] private Text _btnTxt;
+    [SerializeField] private Image _charImage;
+    [SerializeField] private Text _contBtnTxt;
 
     [SerializeField] private float _textSpeed;
 
@@ -53,7 +53,7 @@ public class DialogController : MonoBehaviour
     {
 
         _nameTxt.text = dialog.name;
-        _dialogImage.sprite = dialog.charImageSprite;
+        _charImage.sprite = dialog.charImageSprite;
         _dialogOn = true;
         _canvasManager.ShowDialogBox(true);
        
@@ -94,7 +94,7 @@ public class DialogController : MonoBehaviour
 
         if (_sentences.Count == 1)
         {
-            _btnTxt.text = "<CLOSE>";
+            _contBtnTxt.text = "<CLOSE>";
         }
   
         string sentence = _sentences.Dequeue();

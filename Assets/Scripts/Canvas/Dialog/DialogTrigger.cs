@@ -20,20 +20,24 @@ public class DialogTrigger : MonoBehaviour
         {
             if (dialog.startDialogOnContact)
             {
-                TriggerDialog();
-                _initialDialog = false;
-            }
-            if (dialog.gammieSceneDialog)
-            {
-                TriggerGammieDialog();
-                _initialDialog = false;
+   
+                if (!dialog.gammySceneDialog)
+                {
+                    TriggerDialog();
+                    _initialDialog = false;
+                }
+                else if (dialog.gammySceneDialog)
+                {
+                    TriggerGammySceneDialog();
+                    _initialDialog = false;
+                }
             }
         }
     }
 
-    private void TriggerGammieDialog()
+    public void TriggerGammySceneDialog()
     {
-        FindObjectOfType<DialogController>().StartGammieDialog(dialog);
+        FindObjectOfType<DialogController>().StartGammyDialog(dialog);
     }
 
     public void TriggerDialog()

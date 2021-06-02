@@ -20,6 +20,7 @@ public class DialogController : MonoBehaviour
     private string _currentChar;
 
     private CanvasManager _canvasManager;
+    private Player _player;
 
     private bool _dialogOn;
     private bool _initialDialogHelp;
@@ -29,16 +30,14 @@ public class DialogController : MonoBehaviour
     {
         _sentences = new Queue<string>();
         _canvasManager = FindObjectOfType<CanvasManager>();
-
+        _player = FindObjectOfType<Player>();
      
         if(_canvasManager == null)
         {
             Debug.Log("UI Manager is NULL");
         }
         _initialDialogHelp = true;
-        _currentChar = "";
-
-        
+        _currentChar = "";    
     }
 
 
@@ -46,8 +45,6 @@ public class DialogController : MonoBehaviour
     {
         ContinueDialog();
     }
-
-
 
     public void StartDialog(Dialog dialog)
     {
@@ -73,6 +70,44 @@ public class DialogController : MonoBehaviour
         
         DisplayNextSentence();
     }
+
+    public void StartGammyDialog(Dialog dialog)
+    {
+        int dialogNum = 0;
+
+        _nameTxt.text = dialog.name;
+        _charImage.sprite = dialog.charImageSprite;
+        _dialogOn = true;
+        _canvasManager.ShowDialogBox(true);
+
+
+        if (_initialDialogHelp)
+        {
+            _initialDialogHelp = false;
+            _xKeyHelp.gameObject.SetActive(true);
+        }
+
+        if (dialogNum < dialog._dialogList.Count)
+        {
+            foreach (string sentence in dialog._dialogList[dialogNum]._sentences)
+            {
+                _sentences.Enqueue(sentence);
+            }
+        } 
+
+        DisplayNextSentence();
+
+
+        dialogNum++;
+        //TriggerBromDialog();
+    }
+
+    private void TriggerBromDialog()
+    {
+        if (gameObject != _player)
+            _player.GetComponent<DialogTrigger>().TriggerGammySceneDialog();
+    }
+
 
     private void ContinueDialog()
     {
@@ -103,11 +138,7 @@ public class DialogController : MonoBehaviour
     }
 
 
-    public void StartGammieDialog(Dialog dialog)
-    {
-
-    }
-
+  
 
     private void EndDialog()
     {

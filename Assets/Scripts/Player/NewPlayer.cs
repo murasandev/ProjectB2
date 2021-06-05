@@ -11,6 +11,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private bool enrage = false;
     [SerializeField] private int subtractRage = 5;
     [SerializeField] private bool boolRage;
+    [SerializeField] private bool stopActions = false;
 
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
@@ -33,31 +34,33 @@ public class NewPlayer : PhysicsObject
     void Update()
     {
         ActivateRage();
+        if (stopActions == false)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                _anim.Attack();
+            }
+            targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
+            _anim.Move(Mathf.Abs(Input.GetAxis("Horizontal")));
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            _anim.Attack();
-        }
-        targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
-        _anim.Move(Mathf.Abs(Input.GetAxis("Horizontal")));
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                //_spriteR.flipX = true;
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (Input.GetAxis("Horizontal") > 0)
+            {
+                //_spriteR.flipX = false;
+                transform.localScale = new Vector3(1, 1, 1);
+            }
 
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            //_spriteR.flipX = true;
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (Input.GetAxis("Horizontal") > 0)
-        {
-            //_spriteR.flipX = false;
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-
-        if (Input.GetButtonDown("Jump") && grounded)
-        {
-            velocity.y = jumpPower;
-            _anim.Jump(true);
-            StartCoroutine(ResetJumpCoroutine());
-        }
+            if (Input.GetButtonDown("Jump") && grounded)
+            {
+                velocity.y = jumpPower;
+                _anim.Jump(true);
+                StartCoroutine(ResetJumpCoroutine());
+            }
+        } 
     }
     IEnumerator ResetJumpCoroutine()
     {
@@ -71,6 +74,7 @@ public class NewPlayer : PhysicsObject
             _anim.Rage();
             enrage = true;
             boolRage = true;
+            stopActions = true;
             StartCoroutine(StartRageRoutine());
         }
         else if (rage <= 0)
@@ -88,6 +92,7 @@ public class NewPlayer : PhysicsObject
     IEnumerator StartRageRoutine()
     {
         yield return new WaitForSeconds(3.0f);
+        stopActions = false;
         _spriteR.color = new Color(.9686f, .5725f, .4823f, 1f);
     }
     IEnumerator LoseRageRoutine()

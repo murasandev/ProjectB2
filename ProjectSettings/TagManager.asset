@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bookshelf
   - Weapon
+  - Object
   layers:
   - Default
   - TransparentFX

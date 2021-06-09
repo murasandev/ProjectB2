@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1874310364}
   - component: {fileID: 1874310366}
   - component: {fileID: 1874310365}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon_Hit_Box
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2643925493054059861}
   - component: {fileID: 2643925493054059858}
   - component: {fileID: 2643925493054059859}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,8 @@ GameObject:
   - component: {fileID: 1324167278}
   - component: {fileID: 965052534}
   - component: {fileID: 965052538}
-  m_Layer: 0
+  - component: {fileID: 2010995071}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -244,7 +245,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2643925493403041642}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -296,11 +297,12 @@ MonoBehaviour:
   minGroundNormalY: 0.65
   gravityModifier: 1
   maxSpeed: 5
-  jumpPower: 10
+  jumpPower: 8
   rage: 0
   enrage: 0
   subtractRage: 5
   boolRage: 0
+  stopActions: 0
 --- !u!114 &965052538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +315,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5faa073eb793cf64e8d314d6094a791e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!210 &2010995071
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643925493403041642}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
 --- !u!1001 &695524923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389,6 +402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hawkdrakeflap_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702073214987795596, guid: e5556366a4f1d234a8c11f9c80587a3b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5556366a4f1d234a8c11f9c80587a3b, type: 3}

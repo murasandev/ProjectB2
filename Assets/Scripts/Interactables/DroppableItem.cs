@@ -5,10 +5,12 @@ using UnityEngine;
 public class DroppableItem : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
+    private Animator _anim;
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,7 @@ public class DroppableItem : MonoBehaviour
         if (other.CompareTag("Weapon"))
         {
             _rb.gravityScale = 1.0f;
+            _anim.enabled = false;
         }
     }
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2856970755920589933}
   - component: {fileID: 8074609342212668865}
   - component: {fileID: 4895455975975292731}
-  - component: {fileID: -1682234343547376716}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -96,17 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b26ba56824fcc546be33149c6725a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!210 &-1682234343547376716
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856970755920589931}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
 --- !u!1001 &2856970756838245516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,6 +283,11 @@ PrefabInstance:
     - target: {fileID: 4878380114081338, guid: 29326c3f342487a40bc88a21a7282e79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212498784939807320, guid: 29326c3f342487a40bc88a21a7282e79,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29326c3f342487a40bc88a21a7282e79, type: 3}

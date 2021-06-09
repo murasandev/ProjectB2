@@ -219,6 +219,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: jumpPower
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: gravityModifier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324167276, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1874310363, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
       propertyPath: m_Layer
       value: 0

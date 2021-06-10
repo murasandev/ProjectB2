@@ -13,6 +13,8 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private bool boolRage;
     [SerializeField] private bool stopActions = false;
 
+    [SerializeField] private bool hasClub = false;
+
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
@@ -36,7 +38,7 @@ public class NewPlayer : PhysicsObject
         ActivateRage();
         if (stopActions == false)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && hasClub == true)
             {
                 _anim.Attack();
             }
@@ -100,5 +102,18 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(1.0f);
         rage -= subtractRage;
         boolRage = true;
+    }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("FindClub"))
+        {
+            Debug.Log("Press 'Enter' to obtain club!");
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                hasClub = true;
+                Debug.Log("Club obtained!");
+            }
+        }
     }
 }

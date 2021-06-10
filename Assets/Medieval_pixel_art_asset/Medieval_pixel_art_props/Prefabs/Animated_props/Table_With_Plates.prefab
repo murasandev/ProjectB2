@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3138826286245589662}
   - component: {fileID: -8839530047445869882}
   - component: {fileID: 3522791195460194571}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Table_With_Plates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +133,10 @@ PrefabInstance:
       value: Oooze_Ground
       objectReference: {fileID: 0}
     - target: {fileID: 1137897866673206, guid: 7998961bfce85bc42a3ee902ca2bbdb5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137897866673206, guid: 7998961bfce85bc42a3ee902ca2bbdb5, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -205,6 +209,10 @@ PrefabInstance:
       value: Solo_Plate (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -271,6 +279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table_Left
       objectReference: {fileID: 0}
+    - target: {fileID: 1226494215679104, guid: b796f675f2d851f4391217c31c96d5d8, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4363754595180846, guid: b796f675f2d851f4391217c31c96d5d8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -334,6 +346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stack_Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 1607646094381562, guid: 52317e5025a9c9848887e3aae41f463f, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4485882616540220, guid: 52317e5025a9c9848887e3aae41f463f, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -396,6 +412,10 @@ PrefabInstance:
     - target: {fileID: 1776555268456926, guid: 802ffd2019b22be438b757cf601984bf, type: 3}
       propertyPath: m_Name
       value: Table_Ooze
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776555268456926, guid: 802ffd2019b22be438b757cf601984bf, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1776555268456926, guid: 802ffd2019b22be438b757cf601984bf, type: 3}
       propertyPath: m_IsActive
@@ -469,6 +489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table_Mid
       objectReference: {fileID: 0}
+    - target: {fileID: 1630316888894980, guid: 6c7f54e9e2b8dae45a61245961bda11c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4960752269130198, guid: 6c7f54e9e2b8dae45a61245961bda11c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -532,6 +556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table_Right
       objectReference: {fileID: 0}
+    - target: {fileID: 1667200747411536, guid: 74f19ac169f8fe54590d1a2514697434, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4248590440589300, guid: 74f19ac169f8fe54590d1a2514697434, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -594,6 +622,10 @@ PrefabInstance:
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_Name
       value: Solo_Plate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_IsActive
@@ -662,6 +694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 1171698800569806, guid: 033bd3dad99476e47a7a4e619637e883, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4720333800832822, guid: 033bd3dad99476e47a7a4e619637e883, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -724,6 +760,10 @@ PrefabInstance:
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_Name
       value: Solo_Plate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_IsActive
@@ -791,6 +831,10 @@ PrefabInstance:
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_Name
       value: Solo_Plate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1011986757716366, guid: b34a650fefff33e44992b7062308aa53, type: 3}
       propertyPath: m_IsActive

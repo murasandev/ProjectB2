@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4109418768209114}
   - component: {fileID: 212491806563612914}
   - component: {fileID: 189756822}
-  - component: {fileID: 189756823}
+  - component: {fileID: 486171866}
+  - component: {fileID: 486171865}
   m_Layer: 0
   m_Name: Medieval_props_1
   m_TagString: Untagged
@@ -109,7 +110,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0416666, y: 0.24142694}
   m_EdgeRadius: 0
---- !u!251 &189756823
+--- !u!61 &486171866
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890323746861510}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.40011978}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0416666, y: 1.0416666}
+    newSize: {x: 1.0416666, y: 1.0416666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0416666, y: 0.24142694}
+  m_EdgeRadius: 0
+--- !u!251 &486171865
 PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

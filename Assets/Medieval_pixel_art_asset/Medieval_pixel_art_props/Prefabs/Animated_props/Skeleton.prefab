@@ -154,6 +154,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212029875095908694, guid: 32bbf0b74d8c76544bef25c8f7220a52,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32bbf0b74d8c76544bef25c8f7220a52, type: 3}
 --- !u!4 &2858480761316589106 stripped
@@ -221,6 +226,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212033862827844500, guid: f95ce332b14a44d40be36f6a8bc63d2d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95ce332b14a44d40be36f6a8bc63d2d, type: 3}
 --- !u!4 &2858252367516153299 stripped
@@ -287,7 +297,7 @@ PrefabInstance:
     - target: {fileID: 212498784939807320, guid: 29326c3f342487a40bc88a21a7282e79,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29326c3f342487a40bc88a21a7282e79, type: 3}
@@ -352,6 +362,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212958959784559100, guid: 0f711491a0e2bb54d915eba36f948765,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f711491a0e2bb54d915eba36f948765, type: 3}
 --- !u!4 &2858397803190902308 stripped
@@ -414,6 +429,11 @@ PrefabInstance:
     - target: {fileID: 4202797366778074, guid: 0f711491a0e2bb54d915eba36f948765, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212958959784559100, guid: 0f711491a0e2bb54d915eba36f948765,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f711491a0e2bb54d915eba36f948765, type: 3}

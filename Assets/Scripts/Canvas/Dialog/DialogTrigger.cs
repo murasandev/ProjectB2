@@ -18,31 +18,17 @@ public class DialogTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && _initialDialog)
         {
-            if (dialog.startDialogOnContact)
-            {
-   
-                if (!dialog.gammySceneDialog)
-                {
-                    TriggerDialog();
-                    _initialDialog = false;
-                }
-                else if (dialog.gammySceneDialog)
-                {
-                    TriggerGammySceneDialog();
-                    _initialDialog = false;
-                }
-            }
+      
+
+           TriggerDialog();
         }
     }
 
-    public void TriggerGammySceneDialog()
-    {
-        FindObjectOfType<DialogController>().StartGammyDialog(dialog);
-    }
+
 
     public void TriggerDialog()
     {
-        //convert to singleton?
-        FindObjectOfType<DialogController>().StartDialog(dialog);
+        DialogController.Instance.StartDialog(dialog);
+        
     }
 }

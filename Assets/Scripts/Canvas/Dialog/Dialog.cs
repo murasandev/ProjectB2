@@ -7,23 +7,22 @@ using UnityEngine.UI;
 [System.Serializable]
 public class DialogList
 {
-    [SerializeField] private string _dialogName;
-    [TextArea(3, 10)] public string[] _sentences;
-    
-}
+
+
+    public Characters character;
+    [TextArea(3, 10)] public string dialogText;
+
+
+    }
+
 
 
 [System.Serializable]
-public class Dialog
-{
-    public string name;
-    public Sprite charImageSprite;
-    public bool startDialogOnContact;
-    public bool gammySceneDialog;
-
-    public List<DialogList> _dialogList;
-    [TextArea(3, 10)] public string[] sentences;
- 
+[CreateAssetMenu (fileName = "New Conversation", menuName = "Conversations")]
+public class Dialog : ScriptableObject
+ {
+   
+     public List<DialogList> _dialogList;
 }
 
 

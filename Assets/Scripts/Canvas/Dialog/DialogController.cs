@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogController : MonoBehaviour
-{
+public class DialogController : MonoBehaviour {
+
+
     private Queue<string> _sentences;
+    private Queue<Sprite> _sprites;
 
     [SerializeField] private Text _nameTxt;
     [SerializeField] private Text _dialogTxt;
-    [SerializeField] private Text _xKeyHelp;
+    [SerializeField] private Text _eKeyHelp;
     [SerializeField] private Image _charImage;
     [SerializeField] private Text _contBtnTxt;
 
@@ -20,106 +22,89 @@ public class DialogController : MonoBehaviour
     private string _currentChar;
 
     private CanvasManager _canvasManager;
-    private Player _player;
+    private NewPlayer _player;
 
     private bool _dialogOn;
     private bool _initialDialogHelp;
-    
-   
+    private int _dialogNum = 0;
+
+    private Dialog _dialog;
+
+    private static DialogController _instance;
+    public static DialogController Instance { get { return _instance;  } }
+
+  
+    private void Awake()
+    {
+            _instance = this;
+            DontDestroyOnLoad(this);
+    }
+ 
+
     private void Start()
     {
         _sentences = new Queue<string>();
         _canvasManager = FindObjectOfType<CanvasManager>();
-        _player = FindObjectOfType<Player>();
-     
-        if(_canvasManager == null)
+        _player = FindObjectOfType<NewPlayer>();
+
+        if (_player == null)
+        {
+            Debug.Log("Player is NULL");
+        }
+
+        if (_canvasManager == null)
         {
             Debug.Log("UI Manager is NULL");
         }
         _initialDialogHelp = true;
-        _currentChar = "";    
+        _currentChar = "";
     }
 
 
     private void Update()
     {
-        ContinueDialog();
+        ContinueDialog(_dialog);
     }
 
     public void StartDialog(Dialog dialog)
     {
 
-        _nameTxt.text = dialog.name;
-        _charImage.sprite = dialog.charImageSprite;
         _dialogOn = true;
         _canvasManager.ShowDialogBox(true);
-       
+        var dList = dialog._dialogList;
+        _dialog = dialog;
 
         if (_initialDialogHelp)
         {
             _initialDialogHelp = false;
-            _xKeyHelp.gameObject.SetActive(true);
+            _eKeyHelp.gameObject.SetActive(true);
         }
-        
 
-        foreach (string sentence in dialog.sentences)
+
+        for (int i = 0; i < dList.Count; i++)
         {
-            _sentences.Enqueue(sentence);
-           
+
+            _nameTxt.text = dList[i].character.name;
+            _sentences.Enqueue(dialog._dialogList[i].dialogText);
+            _dialogNum = 0;
+
         }
-        
-        DisplayNextSentence();
+
+        DisplayNextSentence(dialog);
     }
 
-    public void StartGammyDialog(Dialog dialog)
+
+    private void ContinueDialog(Dialog dialog)
     {
-        int dialogNum = 0;
-
-        _nameTxt.text = dialog.name;
-        _charImage.sprite = dialog.charImageSprite;
-        _dialogOn = true;
-        _canvasManager.ShowDialogBox(true);
-
-
-        if (_initialDialogHelp)
+        if (Input.GetKeyDown(KeyCode.E) && _dialogOn)
         {
-            _initialDialogHelp = false;
-            _xKeyHelp.gameObject.SetActive(true);
-        }
-
-        if (dialogNum < dialog._dialogList.Count)
-        {
-            foreach (string sentence in dialog._dialogList[dialogNum]._sentences)
-            {
-                _sentences.Enqueue(sentence);
-            }
-        } 
-
-        DisplayNextSentence();
-
-
-        dialogNum++;
-        //TriggerBromDialog();
-    }
-
-    private void TriggerBromDialog()
-    {
-        if (gameObject != _player)
-            _player.GetComponent<DialogTrigger>().TriggerGammySceneDialog();
-    }
-
-
-    private void ContinueDialog()
-    {
-        if (Input.GetKeyDown(KeyCode.X) && _dialogOn)
-        {
-            DisplayNextSentence();
-            _xKeyHelp.gameObject.SetActive(false);
+            DisplayNextSentence(dialog);
+            _eKeyHelp.gameObject.SetActive(false);
         }
     }
 
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentence(Dialog dialog)
     {
         if (_sentences.Count == 0)
         {
@@ -131,14 +116,19 @@ public class DialogController : MonoBehaviour
         {
             _contBtnTxt.text = "<CLOSE>";
         }
-  
+
         string sentence = _sentences.Dequeue();
+        Sprite sprite = _dialog._dialogList[_dialogNum].character.charSprite;
+        if (_dialogNum < _dialog._dialogList.Count - 1)
+        {
+            _dialogNum++;
+        }
+
+        _charImage.sprite = sprite;
         _fullSentence = sentence;
         StartCoroutine(ShowTextTypeWrite());
     }
 
-
-  
 
     private void EndDialog()
     {
@@ -150,11 +140,11 @@ public class DialogController : MonoBehaviour
 
     IEnumerator ShowTextTypeWrite()
     {
-        for(int i = 0; i < _fullSentence.Length; i++)
+        for (int i = 0; i <= _fullSentence.Length; i++)
         {
             _currentChar = _fullSentence.Substring(0, i);
             _dialogTxt.text = _currentChar;
             yield return new WaitForSeconds(_textSpeed);
-        }  
+        }
     }
 }

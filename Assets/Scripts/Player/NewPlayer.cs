@@ -15,9 +15,13 @@ public class NewPlayer : PhysicsObject
 
     [SerializeField] private bool hasClub = false;
 
+    [SerializeField] private bool teachRage = true;
+
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
+
+    [SerializeField] private Transform gammieTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,7 @@ public class NewPlayer : PhysicsObject
     void Update()
     {
         ActivateRage();
+        TeachBromRage();
         if (stopActions == false)
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true)
@@ -62,7 +67,8 @@ public class NewPlayer : PhysicsObject
                 _anim.Jump(true);
                 StartCoroutine(ResetJumpCoroutine());
             }
-        } 
+        }
+        
     }
     IEnumerator ResetJumpCoroutine()
     {
@@ -115,5 +121,19 @@ public class NewPlayer : PhysicsObject
                 Debug.Log("Club obtained!");
             }
         }
+    }
+    private void TeachBromRage()
+    {
+        float dist = Vector3.Distance(transform.position, gammieTransform.position);
+        if (dist < 2.0f && teachRage == true)
+        {
+            StartCoroutine(TeachRageRoutine());
+            teachRage = false;
+        }
+    }
+    IEnumerator TeachRageRoutine()
+    {
+        yield return new WaitForSeconds(3.0f);
+        rage = 100;
     }
 }

@@ -281,7 +281,24 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7702073215368110770, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702073215368110770, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702073215368110775, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
+        type: 3}
+      propertyPath: m_Name
+      value: drake_follow
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7702073215368110768, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+    - {fileID: 7702073215368110769, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
 --- !u!1 &164000255
 GameObject:
@@ -9225,6 +9242,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1837216858755995490, guid: 0380ab2cc2ba48b4fa1610f3a8be62ad,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 30986625}
+    - target: {fileID: 1837216858755995490, guid: 0380ab2cc2ba48b4fa1610f3a8be62ad,
+        type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 317285035}
@@ -9236,12 +9258,12 @@ PrefabInstance:
     - target: {fileID: 8330630406826874834, guid: 0380ab2cc2ba48b4fa1610f3a8be62ad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.97
+      value: -9.07
       objectReference: {fileID: 0}
     - target: {fileID: 8330630406826874834, guid: 0380ab2cc2ba48b4fa1610f3a8be62ad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.32
+      value: 5.28
       objectReference: {fileID: 0}
     - target: {fileID: 8330630406826874834, guid: 0380ab2cc2ba48b4fa1610f3a8be62ad,
         type: 3}

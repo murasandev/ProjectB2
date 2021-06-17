@@ -130,7 +130,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 10ceb5390ba1e2e47ad338cd173aaea3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -191,3 +191,4 @@ MonoBehaviour:
   speed: 2
   target: {fileID: 0}
   position: {fileID: 1837216858375201478}
+  player: {fileID: 0}

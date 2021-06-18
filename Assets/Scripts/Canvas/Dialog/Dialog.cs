@@ -4,17 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+[System.Serializable]
+public class DialogInfo
+{
+
+
+    public Characters character;
+    [TextArea(3, 10)] public string dialogText;
+
+
+    }
+
+
 
 [System.Serializable]
-public class Dialog
-{
-    public string name;
-    public Sprite charImageSprite;
-    public bool startDialogOnContact;
-    public bool gammieSceneDialog;
-
-
-    public Dictionary<string, string[]> _dialogKeys = new Dictionary<string, string[]>();
-    [TextArea(3, 10)] public string[] sentences;
- 
+[CreateAssetMenu (fileName = "New Scene Dialog", menuName = "Scene Dialogs")]
+public class Dialog : ScriptableObject
+ {
+   
+     public List<DialogInfo> _dialogInfo;
 }
+
+

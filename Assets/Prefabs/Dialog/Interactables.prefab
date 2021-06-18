@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2806564666046885595
+--- !u!1 &310267171522986799
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2806564666046885594}
+  - component: {fileID: 310267171522986798}
   m_Layer: 0
   m_Name: Interactables
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2806564666046885594
+--- !u!4 &310267171522986798
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2806564666046885595}
+  m_GameObject: {fileID: 310267171522986799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2806564666398121942}
+  - {fileID: 310267172010488354}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2806564666398121940
+--- !u!1 &310267172010488352
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,40 +39,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2806564666398121942}
-  - component: {fileID: 2806564666398121943}
-  - component: {fileID: 2806564666398121936}
-  - component: {fileID: 2806564666398121937}
-  - component: {fileID: 2806564666398121939}
-  - component: {fileID: 2806564666398121938}
+  - component: {fileID: 310267172010488354}
+  - component: {fileID: 310267172010488355}
+  - component: {fileID: 310267172010488356}
+  - component: {fileID: 310267172010488357}
+  - component: {fileID: 310267172010488359}
+  - component: {fileID: 310267172010488358}
   m_Layer: 0
-  m_Name: Skeleton
+  m_Name: Skeleton_Dialog_Tester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2806564666398121942
+--- !u!4 &310267172010488354
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2806564666398121940}
+  m_GameObject: {fileID: 310267172010488352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.48, y: -2, z: 0}
+  m_LocalPosition: {x: -4.47, y: -1.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2806564666046885594}
+  m_Father: {fileID: 310267171522986798}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2806564666398121943
+--- !u!212 &310267172010488355
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2806564666398121940}
+  m_GameObject: {fileID: 310267172010488352}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -116,45 +116,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2806564666398121936
+--- !u!114 &310267172010488356
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2806564666398121940}
+  m_GameObject: {fileID: 310267172010488352}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 248b942a4af60460d9dda60b1d30e07d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: 'Skeleton:'
-    charImageSprite: {fileID: 21300000, guid: 1115d7a7e7823405cb79e574d26a60b3, type: 3}
-    startDialogOnContact: 1
-    sentences:
-    - Booooo!!!!
-    - Hehee, sorry. I've been hanging out here for a while...
---- !u!114 &2806564666398121937
+  dialog: {fileID: 11400000, guid: ea3328c37e75e4eb1941d5dd74bbd5b9, type: 2}
+  _initialDialog: 0
+--- !u!114 &310267172010488357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2806564666398121940}
+  m_GameObject: {fileID: 310267172010488352}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c31e74d4ef20a4655a7c24436df98564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &2806564666398121939
+--- !u!50 &310267172010488359
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2806564666398121940}
+  m_GameObject: {fileID: 310267172010488352}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -168,13 +163,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &2806564666398121938
+--- !u!61 &310267172010488358
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2806564666398121940}
+  m_GameObject: {fileID: 310267172010488352}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}

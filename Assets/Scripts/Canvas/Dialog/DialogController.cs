@@ -8,7 +8,6 @@ public class DialogController : MonoBehaviour {
 
 
     private Queue<string> _sentences;
-    private Queue<Sprite> _sprites;
 
     [SerializeField] private Text _nameTxt;
     [SerializeField] private Text _dialogTxt;
@@ -71,7 +70,7 @@ public class DialogController : MonoBehaviour {
 
         _dialogOn = true;
         _canvasManager.ShowDialogBox(true);
-        var dList = dialog._dialogList;
+        var dList = dialog._dialogInfo;
         _dialog = dialog;
 
         if (_initialDialogHelp)
@@ -83,9 +82,7 @@ public class DialogController : MonoBehaviour {
 
         for (int i = 0; i < dList.Count; i++)
         {
-
-            _nameTxt.text = dList[i].character.name;
-            _sentences.Enqueue(dialog._dialogList[i].dialogText);
+            _sentences.Enqueue(dialog._dialogInfo[i].dialogText);
             _dialogNum = 0;
 
         }
@@ -118,13 +115,15 @@ public class DialogController : MonoBehaviour {
         }
 
         string sentence = _sentences.Dequeue();
-        Sprite sprite = _dialog._dialogList[_dialogNum].character.charSprite;
-        if (_dialogNum < _dialog._dialogList.Count - 1)
+        Sprite sprite = _dialog._dialogInfo[_dialogNum].character.charSprite;
+        string name = _dialog._dialogInfo[_dialogNum].character.name;
+        if (_dialogNum < _dialog._dialogInfo.Count - 1)
         {
             _dialogNum++;
         }
 
         _charImage.sprite = sprite;
+        _nameTxt.text = name + ":";
         _fullSentence = sentence;
         StartCoroutine(ShowTextTypeWrite());
     }
@@ -132,7 +131,6 @@ public class DialogController : MonoBehaviour {
 
     private void EndDialog()
     {
-        Debug.Log("Conversation over.");
         _canvasManager.ShowDialogBox(false);
         _dialogOn = false;
     }

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88de665b37364515b5eca52df43d0dd, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
-  _dialogList:
+  _dialogInfo:
   - character: {fileID: 11400000, guid: 827bfea3908344406918fb72dbe9a970, type: 2}
-    dialogText: 'Booo!! '
+    dialogText: Boooo!!!!
   - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
-    dialogText: Hey, you scared me!
+    dialogText: Hey! You scared me!
   - character: {fileID: 11400000, guid: 827bfea3908344406918fb72dbe9a970, type: 2}
-    dialogText: Hehe, sorry.  I've been hanigng out here a while.
+    dialogText: Hehe, sorry. I've been hanging out here a while.

@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
-    private bool _initialDialog;
+    [SerializeField]private bool _initialDialog;
   
 
     private void Start()
@@ -18,9 +18,9 @@ public class DialogTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && _initialDialog)
         {
-      
-
+     
            TriggerDialog();
+            _initialDialog = false;
         }
     }
 

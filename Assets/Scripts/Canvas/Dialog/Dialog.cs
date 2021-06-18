@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 [System.Serializable]
-public class DialogList
+public class DialogInfo
 {
 
 
@@ -18,11 +18,11 @@ public class DialogList
 
 
 [System.Serializable]
-[CreateAssetMenu (fileName = "New Conversation", menuName = "Conversations")]
+[CreateAssetMenu (fileName = "New Scene Dialog", menuName = "Scene Dialogs")]
 public class Dialog : ScriptableObject
  {
    
-     public List<DialogList> _dialogList;
+     public List<DialogInfo> _dialogInfo;
 }
 
 

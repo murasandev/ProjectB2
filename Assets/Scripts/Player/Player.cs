@@ -40,12 +40,12 @@ public class Player : PhysicsObject
 
     private void Update()
     {
-        targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
+        //targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
 
-        if (Input.GetButtonDown("Jump") && grounded)
-        {
-            velocity.y = jumpPower;
-        }
+        //if (Input.GetButtonDown("Jump") && grounded)
+        //{
+        //    velocity.y = jumpPower;
+        //}
 
 
         /*if (_rb.velocity.y < 0)

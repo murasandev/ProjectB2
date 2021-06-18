@@ -14,7 +14,7 @@ public class BreakableObject : MonoBehaviour
     {
         Debug.Log("Hit " + other.name);
 
-        if (other.tag == "Weapon")
+        if (other.tag == "Weapon" || other.tag == "Object" || other.CompareTag("Bird Cage"))
         {
             _anim.SetTrigger("Hit");
         }

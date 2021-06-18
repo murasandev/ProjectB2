@@ -5,31 +5,38 @@ using UnityEngine;
 public  abstract class Interactables_Abstract_Class : MonoBehaviour
 {
 
-    private CanvasManager _canvas;
+    protected CanvasManager _canvas;
     private bool _interactable;
 
-    public virtual void Start()
+    protected virtual void Start()
     {
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         if (_canvas == null)
             Debug.Log("Canvas is NULL");
     }
 
-    public virtual void Update()
+    protected virtual void Update()
     {
-        Interact();
+        if (_interactable)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+            }
+        }
     }
 
-    public virtual void OnTriggerStay2D(Collider2D other)
+    protected virtual void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             _canvas.ShowHelpText();
             _interactable = true;
+            Debug.Log("Interactable is active....and _interactable bool is :" + _interactable);
         }
     }
 
-    public virtual void OnTriggerExit2D(Collider2D other)
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -38,14 +45,10 @@ public  abstract class Interactables_Abstract_Class : MonoBehaviour
         }
     }
 
-    public virtual void Interact()
+    protected virtual void Interact()
     {
-        if (_interactable)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                _canvas.NovelPanelActive();
-            }
-        }
+        
+        
+          
     }
 }

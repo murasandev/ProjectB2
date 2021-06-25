@@ -23,6 +23,10 @@ public class NewPlayer : PhysicsObject
 
     [SerializeField] private Transform gammieTransform;
 
+    [SerializeField] AudioClip _sfxSource;
+    [SerializeField] private float _sfxVolume = 1.0f;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +50,12 @@ public class NewPlayer : PhysicsObject
             if (Input.GetButtonDown("Fire1") && hasClub == true)
             {
                 _anim.Attack();
+                //
+                if (_sfxSource != null)
+                {
+                    AudioManager.Instance.PlayEffect(_sfxSource, _sfxVolume);
+                }
+                //
             }
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
             _anim.Move(Mathf.Abs(Input.GetAxis("Horizontal")));

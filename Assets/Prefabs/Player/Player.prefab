@@ -304,6 +304,16 @@ MonoBehaviour:
   boolRage: 0
   stopActions: 0
   hasClub: 0
+  teachRage: 1
+  gammieTransform: {fileID: 0}
+  _sfxSource: {fileID: 0}
+  _sfxVolume: 1
+  rageBar: {fileID: 0}
+  rageBarOrigSize: {x: 0, y: 0}
+  percentRage: 0
+  heart1: {fileID: 0}
+  heart2: {fileID: 0}
+  heart3: {fileID: 0}
 --- !u!114 &965052538
 MonoBehaviour:
   m_ObjectHideFlags: 0

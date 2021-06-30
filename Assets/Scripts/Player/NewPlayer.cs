@@ -69,7 +69,7 @@ public class NewPlayer : PhysicsObject
             if (Input.GetButtonDown("Fire1") && hasClub == true)
             {
                 _anim.Attack();
-             /*
+                /*
                 if (_sfxSource != null)
                 {
                     AudioManager.Instance.PlayEffect(_sfxSource, _sfxVolume);

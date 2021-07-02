@@ -94,7 +94,7 @@ ScriptedImporter:
     border: {x: 15, y: 0, z: 14, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 2697
       y: 2172
       width: 810
       height: 33
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -219, y: 163}
+    uvTransform: {x: 2474, y: 163}
   - name: Background (Reference)
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -131,6 +131,28 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
+  - name: Water
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 2685
+      height: 999
+    spriteID: 390b70a5b5c62974989b3a4010e08d92
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -407, y: 1779}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -150,13 +172,20 @@ ScriptedImporter:
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Water
+    spriteName: Water
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 390b70a5b5c62974989b3a4010e08d92
+    layerID: 8
+    mosaicPosition: {x: 4, y: 2172}
   - name: Rage Bar
     spriteName: Rage Bar
     isGroup: 0
     parentIndex: -1
     spriteID: 5a752717b6228c7429a97a994a4d27c3
     layerID: 3
-    mosaicPosition: {x: 4, y: 2172}
+    mosaicPosition: {x: 2697, y: 2172}
   - name: Background (Reference)
     spriteName: Background (Reference)
     isGroup: 0

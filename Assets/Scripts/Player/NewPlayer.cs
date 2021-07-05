@@ -37,6 +37,9 @@ public class NewPlayer : PhysicsObject
     public Animator heart2;
     public Animator heart3;
 
+    private bool _initialSwim = true;
+    private bool _isSwimming = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +67,7 @@ public class NewPlayer : PhysicsObject
         ActivateRage();
         TeachBromRage();
         UpdateUI();
+        row();
         if (stopActions == false)
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true)
@@ -147,6 +151,36 @@ public class NewPlayer : PhysicsObject
             {
                 hasClub = true;
                 Debug.Log("Club obtained!");
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Water") && _initialSwim == true)
+        {
+            stopActions = true;
+            _anim.Swim();
+            StartCoroutine(StartSwimRoutine());
+        }
+    }
+    IEnumerator StartSwimRoutine()
+    {
+        yield return new WaitForSeconds(3.0f);
+        _initialSwim = false;
+        stopActions = false;
+        _isSwimming = true;
+    }
+    private void row()
+    {
+        if (_isSwimming == true)
+        {
+            if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
+            {
+                _anim.Row(true);
+            }
+            else
+            {
+                _anim.Row(false);
             }
         }
     }

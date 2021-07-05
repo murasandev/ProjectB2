@@ -150,6 +150,13 @@ public class NewPlayer : PhysicsObject
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            _anim.Swim();
+        }
+    }
     private void TeachBromRage()
     {
         float dist = Vector3.Distance(transform.position, gammieTransform.position);

@@ -28,4 +28,16 @@ public class PlayerAnimation : MonoBehaviour
     {
         _anim.SetTrigger("Rage");
     }
+    public void Swim()
+    {
+        _anim.SetTrigger("Swim");
+    }
+    public void Row(bool row)
+    {
+        _anim.SetBool("Row", row);
+    }
+    public void Reach()
+    {
+        _anim.SetTrigger("Reach");
+    }
 }

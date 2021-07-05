@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3107996406431087721}
   - component: {fileID: 8279289855812195999}
+  - component: {fileID: 1151478310703709181}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -72,6 +73,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1151478310703709181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290424386500997922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2355dc6fdcf8d8548963f4f79659625e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lighting: {fileID: 0}
 --- !u!1 &1321030048120879977
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +179,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 4620356337393703593, guid: f83724fa00126c34ea6169d62935ed3f,
+        type: 3}
+      propertyPath: lighting
+      value: 
+      objectReference: {fileID: 290424386500997922}
     - target: {fileID: 6566746470352397235, guid: f83724fa00126c34ea6169d62935ed3f,
         type: 3}
       propertyPath: m_MaxParticleSize

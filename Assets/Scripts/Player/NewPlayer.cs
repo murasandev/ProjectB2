@@ -41,6 +41,7 @@ public class NewPlayer : PhysicsObject
     {
         ActivateRage();
         TeachBromRage();
+
         if (stopActions == false)
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true)

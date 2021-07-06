@@ -9,7 +9,7 @@ public class CanvasManager : MonoBehaviour
     private GameObject[] _objects;
 
     [SerializeField]
-    private GameObject _dialogbox;
+    public GameObject _dialogbox;
 
     [SerializeField]
     private Text _helpText;

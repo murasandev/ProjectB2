@@ -14,9 +14,13 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private Text _helpText;
 
+    private DialogController _dialogController;
+    public Image helpBox;
+
     void Start()
     {
         _dialogbox.SetActive(false);
+        _dialogController = FindObjectOfType<DialogController>();
     }
 
 
@@ -24,8 +28,12 @@ public class CanvasManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ExitNovelPanel();
+            //ExitNovelPanel();
+            CloseHelpBox();
         }
+
+        OpenHelpBox();
+        
     }
 
     public void NovelPanelActive()
@@ -51,5 +59,18 @@ public class CanvasManager : MonoBehaviour
     public void ShowDialogBox(bool isDbActive)
     {
         _dialogbox.SetActive(isDbActive);
+    }
+
+    private void OpenHelpBox()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+            helpBox.gameObject.SetActive(true);
+
+    }
+
+    private void CloseHelpBox()
+    {
+
+        helpBox.gameObject.SetActive(false);
     }
 }

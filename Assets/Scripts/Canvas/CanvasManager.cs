@@ -26,12 +26,12 @@ public class CanvasManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            //ExitNovelPanel();
-            CloseHelpBox();
-        }
-
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    //ExitNovelPanel();
+        //    CloseHelpBox();
+        //}
+        CloseHelpBox();
         OpenHelpBox();
         
     }
@@ -64,13 +64,21 @@ public class CanvasManager : MonoBehaviour
     private void OpenHelpBox()
     {
         if (Input.GetKeyDown(KeyCode.X))
+        {
             helpBox.gameObject.SetActive(true);
+            HideHelpText();
+        }
+           
 
     }
 
     private void CloseHelpBox()
     {
-
-        helpBox.gameObject.SetActive(false);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            helpBox.gameObject.SetActive(false);
+            ShowHelpText();
+        }
+            
     }
 }

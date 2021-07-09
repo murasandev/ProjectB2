@@ -12,7 +12,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private bool enrage = false;
     [SerializeField] private float subtractRage = 1f;
     [SerializeField] private bool boolRage;
-    [SerializeField] private bool stopActions = false;
+    [SerializeField] public bool stopActions = false;
 
     [SerializeField] private bool hasClub = false;
 
@@ -21,6 +21,7 @@ public class NewPlayer : PhysicsObject
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
+    private DialogTrigger _dt;
 
     [SerializeField] private Transform gammieTransform;
 
@@ -39,12 +40,14 @@ public class NewPlayer : PhysicsObject
 
     private bool _initialSwim = true;
     private bool _isSwimming = false;
+    public bool _dbOn = false;
 
     // Start is called before the first frame update
     void Start()
     {
         _anim = GetComponentInChildren<PlayerAnimation>();
         _spriteR = GetComponentInChildren<SpriteRenderer>();
+        _dt = GetComponent<DialogTrigger>();
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         rageBar = GameObject.Find("RageBarFill").GetComponent<Image>();
 
@@ -59,6 +62,8 @@ public class NewPlayer : PhysicsObject
         {
             Debug.LogError("The Canvas is NULL");
         }
+
+        _dt.TriggerDialog();
     }
 
     // Update is called once per frame
@@ -66,9 +71,10 @@ public class NewPlayer : PhysicsObject
     {
         ActivateRage();
         TeachBromRage();
+
         UpdateUI();
         row();
-        if (stopActions == false)
+        if (stopActions == false && _dbOn == false)
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true)
             {
@@ -80,6 +86,7 @@ public class NewPlayer : PhysicsObject
                 }
                 */
             }
+            maxSpeed = 5;
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
             _anim.Move(Mathf.Abs(Input.GetAxis("Horizontal")));
 
@@ -100,7 +107,14 @@ public class NewPlayer : PhysicsObject
                 _anim.Jump(true);
                 StartCoroutine(ResetJumpCoroutine());
             }
-        }      
+        }
+
+        if(_dbOn)
+        {
+            targetVelocity = new Vector2(Input.GetAxis("Horizontal") * 0, 0);
+            _anim.Idle(0);
+        }
+           
     }
     IEnumerator ResetJumpCoroutine()
     {

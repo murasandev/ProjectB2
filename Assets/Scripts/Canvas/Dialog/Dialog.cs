@@ -21,7 +21,7 @@ public class DialogInfo
 [CreateAssetMenu (fileName = "New Scene Dialog", menuName = "Scene Dialogs")]
 public class Dialog : ScriptableObject
  {
-   
+     public bool gammieConversation;
      public List<DialogInfo> _dialogInfo;
 }
 

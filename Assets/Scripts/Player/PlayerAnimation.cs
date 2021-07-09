@@ -40,4 +40,8 @@ public class PlayerAnimation : MonoBehaviour
     {
         _anim.SetTrigger("Reach");
     }
+    public void Idle(float move)
+    {
+        _anim.SetFloat("Speed", Mathf.Abs(move));
+    }
 }

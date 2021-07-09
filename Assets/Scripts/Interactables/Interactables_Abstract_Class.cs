@@ -6,13 +6,16 @@ public  abstract class Interactables_Abstract_Class : MonoBehaviour
 {
 
     protected CanvasManager _canvas;
-    private bool _interactable;
+    public bool _interactable;
+    public Dialog dialog;
 
     protected virtual void Start()
     {
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         if (_canvas == null)
             Debug.Log("Canvas is NULL");
+
+        Debug.Log("Interactables is working.....");
     }
 
     protected virtual void Update()
@@ -30,9 +33,10 @@ public  abstract class Interactables_Abstract_Class : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("I see the player");
             _canvas.ShowHelpText();
             _interactable = true;
-            Debug.Log("Interactable is active....and _interactable bool is :" + _interactable);
+       
         }
     }
 
@@ -47,8 +51,8 @@ public  abstract class Interactables_Abstract_Class : MonoBehaviour
 
     protected virtual void Interact()
     {
-        
-        
-          
+
+        DialogController.Instance.StartDialog(dialog);
+
     }
 }

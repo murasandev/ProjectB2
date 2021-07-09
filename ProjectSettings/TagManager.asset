@@ -9,6 +9,8 @@ TagManager:
   - Object
   - FindClub
   - Bird Cage
+  - Dialogue
+  - Water
   layers:
   - Default
   - TransparentFX

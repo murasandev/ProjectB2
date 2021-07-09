@@ -14299,6 +14299,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactables
       objectReference: {fileID: 0}
+    - target: {fileID: 310267172010488352, guid: dbc66298c90754ed4872457c8377091b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialogue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbc66298c90754ed4872457c8377091b, type: 3}
 --- !u!1001 &4434391152823167900
@@ -14367,6 +14372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gammy_Dialog_Tester
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648246322126479, guid: 9f14d724010964ebdb7023d5621b2f62,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialogue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f14d724010964ebdb7023d5621b2f62, type: 3}

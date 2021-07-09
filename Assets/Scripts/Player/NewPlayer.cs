@@ -74,9 +74,9 @@ public class NewPlayer : PhysicsObject
 
         UpdateUI();
         row();
-        if (stopActions == false && _dbOn == false)
+        if (stopActions == false || _dbOn == false)
         {
-            if (Input.GetButtonDown("Fire1") && hasClub == true)
+            if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
             {
                 _anim.Attack();
                 /*

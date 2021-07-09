@@ -8,7 +8,6 @@ public class DialogTrigger : MonoBehaviour
     public Dialog dialog;
     [SerializeField]private bool _initialDialog;
   
-
     private void Start()
     {
         _initialDialog = true;
@@ -23,6 +22,7 @@ public class DialogTrigger : MonoBehaviour
             _initialDialog = false;
         }
     }
+
 
 
 

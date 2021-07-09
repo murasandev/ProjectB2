@@ -7,7 +7,7 @@ public class Gammie : MonoBehaviour
     [SerializeField] private bool cageFree = false;
     [SerializeField] private bool movetoPlayer = false;
     [SerializeField] private bool transformGammie = true;
-    [SerializeField] private bool transformDrake = false;
+    [SerializeField] public bool transformDrake = false;
 
     private Animator _anim;
     private SpriteRenderer _spriteR;
@@ -66,16 +66,16 @@ public class Gammie : MonoBehaviour
             _anim.SetTrigger("toGammie");
             transformGammie = false;
             transformDrake = true;
-            StartCoroutine(toDrake());
+            //StartCoroutine(toDrake());
         }
     }
-    IEnumerator toDrake()
-    {
-        //coroutine to test transform back to drake
-        yield return new WaitForSeconds(5.0f);
-        TransformtoDrake();
-    }
-    private void TransformtoDrake()
+    //IEnumerator toDrake()
+    //{
+    //    //coroutine to test transform back to drake
+    //    yield return new WaitForSeconds(25.0f);
+    //    TransformtoDrake();
+    //}
+    public void TransformtoDrake()
     {
         if (transformDrake == true)
         {

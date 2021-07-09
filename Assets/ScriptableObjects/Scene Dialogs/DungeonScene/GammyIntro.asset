@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88de665b37364515b5eca52df43d0dd, type: 3}
   m_Name: GammyIntro
   m_EditorClassIdentifier: 
+  gammieConversation: 1
   _dialogInfo:
   - character: {fileID: 11400000, guid: cd607f9ebd48c4d07ae54e52dc04c23f, type: 2}
     dialogText: Brom! My boy! It's me your gammy.

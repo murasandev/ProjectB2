@@ -15,25 +15,28 @@ public class CanvasManager : MonoBehaviour
     private Text _helpText;
 
     private DialogController _dialogController;
+    private bool _dbActive;
+    private bool _helpBoxActive;
     public Image helpBox;
 
     void Start()
     {
         _dialogbox.SetActive(false);
+        _dbActive = true;
         _dialogController = FindObjectOfType<DialogController>();
     }
 
 
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    //ExitNovelPanel();
-        //    CloseHelpBox();
-        //}
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ExitNovelPanel();
+        }
+
         CloseHelpBox();
         OpenHelpBox();
-        
+        ShowHelpText();
     }
 
     public void NovelPanelActive()
@@ -48,28 +51,35 @@ public class CanvasManager : MonoBehaviour
 
     public void ShowHelpText()
     {
-        _helpText.enabled = true;
+        if (!_dbActive && !_helpBoxActive)
+        {
+            _helpText.gameObject.SetActive(true);
+        }
+        else
+        {
+            HideHelpText();
+        }       
     }
 
     public void HideHelpText()
     {
-        _helpText.enabled = false;
+        _helpText.gameObject.SetActive(false);
     }
 
     public void ShowDialogBox(bool isDbActive)
     {
         _dialogbox.SetActive(isDbActive);
+        _dbActive = isDbActive;
+        
     }
 
     private void OpenHelpBox()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) && !_dbActive)
         {
             helpBox.gameObject.SetActive(true);
-            HideHelpText();
+            _helpBoxActive = true;
         }
-           
-
     }
 
     private void CloseHelpBox()
@@ -77,8 +87,7 @@ public class CanvasManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             helpBox.gameObject.SetActive(false);
-            ShowHelpText();
-        }
-            
+            _helpBoxActive = false;
+        }     
     }
 }

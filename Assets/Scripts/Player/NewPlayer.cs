@@ -25,7 +25,8 @@ public class NewPlayer : PhysicsObject
 
     [SerializeField] private Transform gammieTransform;
 
-    [SerializeField] AudioClip _sfxSource;
+
+    PlayerAudioStorage audioStorage;
     [SerializeField] private float _sfxVolume = 1.0f;
 
     public Image rageBar;
@@ -50,6 +51,8 @@ public class NewPlayer : PhysicsObject
         _dt = GetComponent<DialogTrigger>();
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         rageBar = GameObject.Find("RageBarFill").GetComponent<Image>();
+
+        audioStorage = GetComponent<PlayerAudioStorage>();
 
         heart1 = GameObject.Find("Heart_1").GetComponent<Animator>();
         heart2 = GameObject.Find("Heart_2").GetComponent<Animator>();
@@ -79,12 +82,25 @@ public class NewPlayer : PhysicsObject
             if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
             {
                 _anim.Attack();
-                /*
-                if (_sfxSource != null)
+
+                int randSound = Random.Range(1, 3);
+                switch (randSound)
                 {
-                    AudioManager.Instance.PlayEffect(_sfxSource, _sfxVolume);
+                    case 1:
+                        PlayAudio(audioStorage._woosh_1, 1.0f);
+                        break;
+                    case 2:
+                        PlayAudio(audioStorage._woosh_2, 1.0f);
+                        break;
+                    default:
+                        print("Randomizer selected a non-existant sound option.");
+                        break;
+                      
                 }
-                */
+
+                
+                
+                
             }
             maxSpeed = 5;
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
@@ -121,6 +137,8 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(0.1f);
         _anim.Jump(false);
     }
+
+
     void ActivateRage()
     {
         if (rage >= 100 && enrage == false)
@@ -198,6 +216,16 @@ public class NewPlayer : PhysicsObject
             }
         }
     }
+
+    private void PlayAudio(AudioClip _soundFX, float _sfxVolume)
+    {
+        if (_soundFX != null)
+        {
+            AudioManager.Instance.PlayEffect(_soundFX, _sfxVolume);
+        }
+    }
+
+
     private void TeachBromRage()
     {
         float dist = Vector3.Distance(transform.position, gammieTransform.position);

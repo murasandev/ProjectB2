@@ -29,7 +29,6 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private Transform gammieTransform;
 
     PlayerAudioStorage audioStorage;
-    [SerializeField] AudioClip _sfxSource;
     [SerializeField] private float _sfxVolume = 1.0f;
 
     public Image rageBar;
@@ -55,6 +54,8 @@ public class NewPlayer : PhysicsObject
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         rageBar = GameObject.Find("RageBarFill").GetComponent<Image>();
         _scene = GetComponentInChildren<SceneSelector>();
+
+        audioStorage = GetComponent<PlayerAudioStorage>();
 
         audioStorage = GetComponent<PlayerAudioStorage>();
 
@@ -86,12 +87,7 @@ public class NewPlayer : PhysicsObject
             if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
             {
                 _anim.Attack();
-                /*
-                if (_sfxSource != null)
-                {
-                    AudioManager.Instance.PlayEffect(_sfxSource, _sfxVolume);
-                }
-                */
+
                 int randSound = Random.Range(1, 3);
                 switch (randSound)
                 {
@@ -102,8 +98,9 @@ public class NewPlayer : PhysicsObject
                         PlayAudio(audioStorage._woosh_2, 1.0f);
                         break;
                     default:
-                        print("Randomizer selected a non-existent sound option.");
+                        print("Randomizer selected a non-existant sound option.");
                         break;
+                      
                 }
             }
             maxSpeed = 5;
@@ -146,6 +143,8 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(0.1f);
         _anim.Jump(false);
     }
+
+
     void ActivateRage()
     {
         if (rage >= 100 && enrage == false)
@@ -223,6 +222,7 @@ public class NewPlayer : PhysicsObject
             }
         }
     }
+
     private void FreeGammyCutScene()
     {
         float dist = Vector3.Distance(transform.position, gammieTransform.position);

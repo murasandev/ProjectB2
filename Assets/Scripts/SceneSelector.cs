@@ -7,11 +7,13 @@ public class SceneSelector : MonoBehaviour
 {
     private Canvas _canvas;
     private NewPlayer _player;
+    private Gammie _gammie;
 
     private void Start()
     {
         _canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         _player = FindObjectOfType<NewPlayer>();
+        _gammie = FindObjectOfType<Gammie>();
     }
     public void IntroComplete()
     {
@@ -37,5 +39,6 @@ public class SceneSelector : MonoBehaviour
         SceneManager.UnloadSceneAsync(4);
         _canvas.enabled = true;
         _player.TeachBromRage();
+        _gammie.TransformtoDrake();
     }
 }

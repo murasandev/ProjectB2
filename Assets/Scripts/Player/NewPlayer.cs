@@ -57,6 +57,8 @@ public class NewPlayer : PhysicsObject
 
         audioStorage = GetComponent<PlayerAudioStorage>();
 
+        audioStorage = GetComponent<PlayerAudioStorage>();
+
         heart1 = GameObject.Find("Heart_1").GetComponent<Animator>();
         heart2 = GameObject.Find("Heart_2").GetComponent<Animator>();
         heart3 = GameObject.Find("Heart_3").GetComponent<Animator>();
@@ -85,12 +87,7 @@ public class NewPlayer : PhysicsObject
             if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
             {
                 _anim.Attack();
-                /*
-                if (_sfxSource != null)
-                {
-                    AudioManager.Instance.PlayEffect(_sfxSource, _sfxVolume);
-                }
-                */
+
                 int randSound = Random.Range(1, 3);
                 switch (randSound)
                 {
@@ -101,8 +98,9 @@ public class NewPlayer : PhysicsObject
                         PlayAudio(audioStorage._woosh_2, 1.0f);
                         break;
                     default:
-                        print("Randomizer selected a non-existent sound option.");
+                        print("Randomizer selected a non-existant sound option.");
                         break;
+                      
                 }
             }
             maxSpeed = 5;
@@ -145,6 +143,8 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(0.1f);
         _anim.Jump(false);
     }
+
+
     void ActivateRage()
     {
         if (rage >= 100 && enrage == false)
@@ -222,6 +222,7 @@ public class NewPlayer : PhysicsObject
             }
         }
     }
+
     private void FreeGammyCutScene()
     {
         float dist = Vector3.Distance(transform.position, gammieTransform.position);

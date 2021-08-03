@@ -22,8 +22,9 @@ public class DialogController : MonoBehaviour {
 
     private CanvasManager _canvasManager;
     private NewPlayer _player;
+    private Gammie _gammie;
 
-    private bool _dialogOn;
+    public bool dialogOn;
     private bool _initialDialogHelp;
     private int _dialogNum = 0;
 
@@ -45,6 +46,7 @@ public class DialogController : MonoBehaviour {
         _sentences = new Queue<string>();
         _canvasManager = FindObjectOfType<CanvasManager>();
         _player = FindObjectOfType<NewPlayer>();
+        _gammie = FindObjectOfType<Gammie>();
 
         if (_player == null)
         {
@@ -68,8 +70,9 @@ public class DialogController : MonoBehaviour {
     public void StartDialog(Dialog dialog)
     {
 
-        _dialogOn = true;
+        dialogOn = true;
         _canvasManager.ShowDialogBox(true);
+        _player._dbOn = true;
         var dList = dialog._dialogInfo;
         _dialog = dialog;
 
@@ -93,7 +96,7 @@ public class DialogController : MonoBehaviour {
 
     private void ContinueDialog(Dialog dialog)
     {
-        if (Input.GetKeyDown(KeyCode.E) && _dialogOn)
+        if (Input.GetKeyDown(KeyCode.E) && dialogOn)
         {
             DisplayNextSentence(dialog);
             _eKeyHelp.gameObject.SetActive(false);
@@ -132,8 +135,12 @@ public class DialogController : MonoBehaviour {
     private void EndDialog()
     {
         _canvasManager.ShowDialogBox(false);
-        _dialogOn = false;
-    }
+        _player._dbOn = false;
+        dialogOn = false;
+
+        if (_dialog.gammieConversation)
+            _gammie.TransformtoDrake();
+     }
 
 
     IEnumerator ShowTextTypeWrite()

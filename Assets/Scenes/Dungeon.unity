@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7136,6 +7136,16 @@ MonoBehaviour:
   hasClub: 0
   teachRage: 1
   gammieTransform: {fileID: 255421032}
+  _sfxSource: {fileID: 0}
+  _sfxVolume: 1
+  rageBar: {fileID: 0}
+  rageBarOrigSize: {x: 0, y: 0}
+  percentRage: 0
+  _hp: 3
+  heart1: {fileID: 0}
+  heart2: {fileID: 0}
+  heart3: {fileID: 0}
+  _dbOn: 0
 --- !u!114 &965052535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13359,12 +13369,17 @@ PrefabInstance:
     - target: {fileID: 7536281631877678315, guid: 5da91d4bef484477ea1b792edf31bff5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7536281632217017096, guid: 5da91d4bef484477ea1b792edf31bff5,
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536281632217017096, guid: 5da91d4bef484477ea1b792edf31bff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536281632217017140, guid: 5da91d4bef484477ea1b792edf31bff5,
         type: 3}

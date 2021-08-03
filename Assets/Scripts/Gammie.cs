@@ -7,7 +7,7 @@ public class Gammie : MonoBehaviour
     [SerializeField] private bool cageFree = false;
     [SerializeField] private bool movetoPlayer = false;
     [SerializeField] private bool transformGammie = true;
-    [SerializeField] private bool transformDrake = false;
+    [SerializeField] public bool transformDrake = false;
 
     private Animator _anim;
     private SpriteRenderer _spriteR;
@@ -75,7 +75,7 @@ public class Gammie : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         TransformtoDrake();
     }
-    private void TransformtoDrake()
+    public void TransformtoDrake()
     {
         if (transformDrake == true)
         {

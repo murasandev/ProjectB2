@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -265,7 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 1315742816}
     - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
       propertyPath: jumpPower
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
       propertyPath: gammieTransform
@@ -804,6 +804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2e82e50aef14bb7896caea80c4d9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactable: 0
+  dialog: {fileID: 11400000, guid: c3262c70781034d288d0d975c3a592c9, type: 2}
 --- !u!1001 &394979232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5564,7 +5566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778947191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1458268, y: 1.1089339, z: -10}
+  m_LocalPosition: {x: -3.8938031, y: 1.0480447, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5931,7 +5933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248b942a4af60460d9dda60b1d30e07d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 0}
+  dialog: {fileID: 11400000, guid: 050eeb28fdaa24535b2cce3b776f8c74, type: 2}
   _initialDialog: 0
 --- !u!4 &1052471409 stripped
 Transform:
@@ -5957,7 +5959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248b942a4af60460d9dda60b1d30e07d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 0}
+  dialog: {fileID: 11400000, guid: 5b6591b9bdb654326bd54a4395127209, type: 2}
   _initialDialog: 1
 --- !u!4 &1100110236 stripped
 Transform:
@@ -9794,7 +9796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248b942a4af60460d9dda60b1d30e07d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 0}
+  dialog: {fileID: 11400000, guid: 050eeb28fdaa24535b2cce3b776f8c74, type: 2}
   _initialDialog: 0
 --- !u!61 &1969418761
 BoxCollider2D:

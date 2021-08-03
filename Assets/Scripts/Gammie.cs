@@ -66,17 +66,18 @@ public class Gammie : MonoBehaviour
             _anim.SetTrigger("toGammie");
             transformGammie = false;
             transformDrake = true;
-            StartCoroutine(toDrake());
+            //StartCoroutine(toDrake());
         }
+    }
+    
+    public void TransformtoDrake()
+    {
+        StartCoroutine(toDrake());
     }
     IEnumerator toDrake()
     {
         //coroutine to test transform back to drake
         yield return new WaitForSeconds(5.0f);
-        TransformtoDrake();
-    }
-    public void TransformtoDrake()
-    {
         if (transformDrake == true)
         {
             _anim.SetTrigger("toDrake");

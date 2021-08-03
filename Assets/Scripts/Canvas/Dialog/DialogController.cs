@@ -24,23 +24,25 @@ public class DialogController : MonoBehaviour {
     private NewPlayer _player;
     private Gammie _gammie;
 
+    [SerializeField] private bool _delayOn;
+    [SerializeField] private bool _typeWriterComplete;
+
     public bool dialogOn;
     private bool _initialDialogHelp;
     private int _dialogNum = 0;
+    private Coroutine _currentTWText = null;
 
     private Dialog _dialog;
 
     private static DialogController _instance;
     public static DialogController Instance { get { return _instance;  } }
 
-  
     private void Awake()
     {
             _instance = this;
             DontDestroyOnLoad(this);
     }
  
-
     private void Start()
     {
         _sentences = new Queue<string>();
@@ -59,6 +61,7 @@ public class DialogController : MonoBehaviour {
         }
         _initialDialogHelp = true;
         _currentChar = "";
+        _typeWriterComplete = true;
     }
 
 
@@ -87,7 +90,6 @@ public class DialogController : MonoBehaviour {
         {
             _sentences.Enqueue(dialog._dialogInfo[i].dialogText);
             _dialogNum = 0;
-
         }
 
         DisplayNextSentence(dialog);
@@ -96,9 +98,19 @@ public class DialogController : MonoBehaviour {
 
     private void ContinueDialog(Dialog dialog)
     {
-        if (Input.GetKeyDown(KeyCode.E) && dialogOn)
+        if (Input.GetKeyDown(KeyCode.E) && dialogOn )
         {
-            DisplayNextSentence(dialog);
+            if (_typeWriterComplete)
+            {
+                DisplayNextSentence(dialog);
+
+            }else if (!_typeWriterComplete)
+            {
+                StopCoroutine(_currentTWText);
+                _dialogTxt.text = _fullSentence;
+                _typeWriterComplete = true;
+            }
+
             _eKeyHelp.gameObject.SetActive(false);
         }
     }
@@ -106,6 +118,8 @@ public class DialogController : MonoBehaviour {
 
     public void DisplayNextSentence(Dialog dialog)
     {
+        
+
         if (_sentences.Count == 0)
         {
             EndDialog();
@@ -128,7 +142,8 @@ public class DialogController : MonoBehaviour {
         _charImage.sprite = sprite;
         _nameTxt.text = name + ":";
         _fullSentence = sentence;
-        StartCoroutine(ShowTextTypeWrite());
+
+        _currentTWText = StartCoroutine(ShowTextTypeWrite());
     }
 
 
@@ -145,11 +160,27 @@ public class DialogController : MonoBehaviour {
 
     IEnumerator ShowTextTypeWrite()
     {
-        for (int i = 0; i <= _fullSentence.Length; i++)
+        if (_typeWriterComplete)
         {
-            _currentChar = _fullSentence.Substring(0, i);
-            _dialogTxt.text = _currentChar;
-            yield return new WaitForSeconds(_textSpeed);
+            StartCoroutine(Delay());
+
+            for (int i = 0; i <= _fullSentence.Length; i++)
+            {
+                _currentChar = _fullSentence.Substring(0, i);
+                _dialogTxt.text = _currentChar;
+                _typeWriterComplete = false;
+                yield return new WaitForSeconds(_textSpeed);
+            }
+
+            _typeWriterComplete = true;
         }
+    }
+
+    IEnumerator Delay()
+    {
+        _delayOn = true;
+        yield return new WaitForSeconds(1f);
+        _delayOn = false;
+        
     }
 }

@@ -15,16 +15,18 @@ public class NewPlayer : PhysicsObject
     [SerializeField] public bool stopActions = false;
 
     [SerializeField] private bool hasClub = false;
+    [SerializeField] private bool clubCinematic = true;
 
-    [SerializeField] private bool teachRage = true;
+    [SerializeField] private bool freeGammyBool = true;
+    [SerializeField] private bool teachRageBool = true;
 
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
     private DialogTrigger _dt;
+    private SceneSelector _scene;
 
     [SerializeField] private Transform gammieTransform;
-
 
     PlayerAudioStorage audioStorage;
     [SerializeField] private float _sfxVolume = 1.0f;
@@ -51,6 +53,9 @@ public class NewPlayer : PhysicsObject
         _dt = GetComponent<DialogTrigger>();
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         rageBar = GameObject.Find("RageBarFill").GetComponent<Image>();
+        _scene = GetComponentInChildren<SceneSelector>();
+
+        audioStorage = GetComponent<PlayerAudioStorage>();
 
         audioStorage = GetComponent<PlayerAudioStorage>();
 
@@ -73,7 +78,7 @@ public class NewPlayer : PhysicsObject
     void Update()
     {
         ActivateRage();
-        TeachBromRage();
+        FreeGammyCutScene();
 
         UpdateUI();
         row();
@@ -97,10 +102,6 @@ public class NewPlayer : PhysicsObject
                         break;
                       
                 }
-
-                
-                
-                
             }
             maxSpeed = 5;
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
@@ -122,6 +123,11 @@ public class NewPlayer : PhysicsObject
                 velocity.y = jumpPower;
                 _anim.Jump(true);
                 StartCoroutine(ResetJumpCoroutine());
+            }
+            if (hasClub == true && clubCinematic == true)
+            {
+                _scene.FoundClub();
+                clubCinematic = false;
             }
         }
 
@@ -217,29 +223,34 @@ public class NewPlayer : PhysicsObject
         }
     }
 
-    private void PlayAudio(AudioClip _soundFX, float _sfxVolume)
-    {
-        if (_soundFX != null)
-        {
-            AudioManager.Instance.PlayEffect(_soundFX, _sfxVolume);
-        }
-    }
-
-
-    private void TeachBromRage()
+    private void FreeGammyCutScene()
     {
         float dist = Vector3.Distance(transform.position, gammieTransform.position);
-        if (dist < 2.0f && teachRage == true)
+        if (dist < 2.0f && freeGammyBool == true)
         {
-            StartCoroutine(TeachRageRoutine());
-            teachRage = false;
+            StartCoroutine(FreeGammyRoutine());
+            freeGammyBool = false;
         }
     }
-    IEnumerator TeachRageRoutine()
+    IEnumerator FreeGammyRoutine()
     {
         yield return new WaitForSeconds(3.0f);
-        rage = 100;
+        _scene.FreeGammyScene();
     }
+    public void TeachBromRage()
+    {
+        if (teachRageBool == true)
+        {
+            StartCoroutine(TeachBromRageRoutine());
+        }
+    }
+    IEnumerator TeachBromRageRoutine()
+    {
+        yield return new WaitForSeconds(2.0f);
+        rage = 100;
+        teachRageBool = false;
+    }
+
     public void UpdateUI()
     {
         percentRage = rage / _rageFull;
@@ -268,6 +279,13 @@ public class NewPlayer : PhysicsObject
             heart1.SetBool("Empty", true);
             heart2.SetBool("Empty", true);
             heart3.SetBool("Empty", true);
+        }
+    }
+    private void PlayAudio(AudioClip _soundFX, float _sfxVolume)
+    {
+        if (_soundFX != null)
+        {
+            AudioManager.Instance.PlayEffect(_soundFX, _sfxVolume);
         }
     }
 }

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon3.unity
     guid: b7f10bdce045c435d97c0e65086abad0
+  - enabled: 1
+    path: Assets/Scenes/Club Cinematic.unity
+    guid: ea1908d731f9c3547bb584d9d5ac31ad
+  - enabled: 1
+    path: Assets/Scenes/Free Gammy Cinematic.unity
+    guid: e151683d4af79564cb1e354e59c04dcb
   m_configObjects: {}

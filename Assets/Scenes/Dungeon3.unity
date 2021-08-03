@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1055,10 +1055,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60754f201c6ca468e984e9f26e24650e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _helpTxtString: 'Brom, our baby babarian hero is getting hangry! Look around the
-    room for clues. Use your spacebar to jump and your arrow keys to move around. '
+  _helpTxtString:
+  - 'Brom, our baby babarian hero is getting hangry! Look around the room for clues.
+    Use your spacebar to jump and your arrow keys to move around. '
+  - Looks like Brom might've seen something by the bookcase.
+  - What does that big button do?
+  - Investigate the birdcage.
+  - Help Brom get all of his rage out by breaking as many items as you can!
   _helpDisplayTxt: {fileID: 1830151697}
   _txtSpeedDelay: 0.08
+  _helpLevel: 0
 --- !u!114 &509309579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5479,6 +5485,80 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &720761164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 720761165}
+  - component: {fileID: 720761167}
+  - component: {fileID: 720761166}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &720761165
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720761164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 69732282}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 7.199951, y: 6.4000244}
+  m_SizeDelta: {x: 163.23022, y: 160.09064}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &720761166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720761164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 156fc1618de75de4899044f013b309a9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &720761167
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720761164}
+  m_CullTransparentMesh: 0
 --- !u!4 &752837927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1321030048120879976, guid: 63d29724a737ff141907bff8e9a28cef,
@@ -5565,7 +5645,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778947191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9071736, y: 1.0480447, z: -10}
+
+  m_LocalPosition: {x: -1.3971915, y: 1.1218863, z: -10}
+
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5946,6 +6028,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 79735346}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1091014208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091014207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ceea8ae0dd218b4c906204a548306cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1091014214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9457,8 +9551,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8596815625172720255, guid: 5da91d4bef484477ea1b792edf31bff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da91d4bef484477ea1b792edf31bff5, type: 3}
+--- !u!1 &1619635545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536281632217017096, guid: 5da91d4bef484477ea1b792edf31bff5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1619635544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1619635546
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619635545}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9e0438e0b694a84fbaff7187ed0b51e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1628094823
 GameObject:
   m_ObjectHideFlags: 0
@@ -10005,7 +10129,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 150
+  m_SortingOrder: 49
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

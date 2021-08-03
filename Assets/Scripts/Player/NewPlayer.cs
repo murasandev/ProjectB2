@@ -28,6 +28,7 @@ public class NewPlayer : PhysicsObject
 
     [SerializeField] private Transform gammieTransform;
 
+    PlayerAudioStorage audioStorage;
     [SerializeField] AudioClip _sfxSource;
     [SerializeField] private float _sfxVolume = 1.0f;
 
@@ -54,7 +55,9 @@ public class NewPlayer : PhysicsObject
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         rageBar = GameObject.Find("RageBarFill").GetComponent<Image>();
         _scene = GetComponentInChildren<SceneSelector>();
-       
+
+        audioStorage = GetComponent<PlayerAudioStorage>();
+
         heart1 = GameObject.Find("Heart_1").GetComponent<Animator>();
         heart2 = GameObject.Find("Heart_2").GetComponent<Animator>();
         heart3 = GameObject.Find("Heart_3").GetComponent<Animator>();
@@ -89,6 +92,19 @@ public class NewPlayer : PhysicsObject
                     AudioManager.Instance.PlayEffect(_sfxSource, _sfxVolume);
                 }
                 */
+                int randSound = Random.Range(1, 3);
+                switch (randSound)
+                {
+                    case 1:
+                        PlayAudio(audioStorage._woosh_1, 1.0f);
+                        break;
+                    case 2:
+                        PlayAudio(audioStorage._woosh_2, 1.0f);
+                        break;
+                    default:
+                        print("Randomizer selected a non-existent sound option.");
+                        break;
+                }
             }
             maxSpeed = 5;
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
@@ -263,6 +279,13 @@ public class NewPlayer : PhysicsObject
             heart1.SetBool("Empty", true);
             heart2.SetBool("Empty", true);
             heart3.SetBool("Empty", true);
+        }
+    }
+    private void PlayAudio(AudioClip _soundFX, float _sfxVolume)
+    {
+        if (_soundFX != null)
+        {
+            AudioManager.Instance.PlayEffect(_soundFX, _sfxVolume);
         }
     }
 }

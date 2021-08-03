@@ -29,7 +29,6 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private Transform gammieTransform;
 
     PlayerAudioStorage audioStorage;
-    [SerializeField] AudioClip _sfxSource;
     [SerializeField] private float _sfxVolume = 1.0f;
 
     public Image rageBar;

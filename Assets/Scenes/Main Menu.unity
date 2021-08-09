@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: d7d5b871994d95f44a2bfd758e4cfdda, type: 2}
-  _menuMusic: {fileID: 8300000, guid: 44d2cd1da0870b346a71d272545f6bfd, type: 3}
+  _menuMusic: {fileID: 8300000, guid: a41b90607aaa7b8428d686438edb7d59, type: 3}
 --- !u!1 &1461090945
 GameObject:
   m_ObjectHideFlags: 0

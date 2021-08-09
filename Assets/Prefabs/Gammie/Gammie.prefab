@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1837216858755995489}
   - component: {fileID: 1837216858755995488}
   - component: {fileID: 1837216858755995490}
+  - component: {fileID: 11717246}
   m_Layer: 0
   m_Name: Gammie
   m_TagString: Untagged
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -193,3 +194,17 @@ MonoBehaviour:
   target: {fileID: 0}
   position: {fileID: 1837216858375201478}
   player: {fileID: 0}
+--- !u!114 &11717246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330630406826874839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248b942a4af60460d9dda60b1d30e07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 11400000, guid: ab3b0aab9a9e74d1094041976e3d5c87, type: 2}
+  _initialDialog: 0

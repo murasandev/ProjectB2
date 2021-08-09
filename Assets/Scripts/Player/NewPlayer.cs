@@ -200,6 +200,10 @@ public class NewPlayer : PhysicsObject
             _anim.Swim();
             StartCoroutine(StartSwimRoutine());
         }
+        if (other.CompareTag("EndSceneTrigger"))
+        {
+            _scene.EndScene();
+        }
     }
     IEnumerator StartSwimRoutine()
     {

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Water Cinematic.unity
     guid: 564f512aa52a40f4580dee1f72fe8625
+  - enabled: 1
+    path: Assets/Scenes/End Cinematic.unity
+    guid: b3398c04104da2842a8868e62d1e9ff5
   m_configObjects: {}

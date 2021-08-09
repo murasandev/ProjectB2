@@ -11,6 +11,7 @@ TagManager:
   - Bird Cage
   - Dialogue
   - Water
+  - EndSceneTrigger
   layers:
   - Default
   - TransparentFX

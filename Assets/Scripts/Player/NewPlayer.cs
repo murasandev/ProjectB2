@@ -200,6 +200,10 @@ public class NewPlayer : PhysicsObject
             _anim.Swim();
             StartCoroutine(StartSwimRoutine());
         }
+        if (other.CompareTag("EndSceneTrigger"))
+        {
+            _scene.EndScene();
+        }
     }
     IEnumerator StartSwimRoutine()
     {
@@ -242,6 +246,7 @@ public class NewPlayer : PhysicsObject
         if (teachRageBool == true)
         {
             StartCoroutine(TeachBromRageRoutine());
+            StartCoroutine(WaterSceneRoutine());
         }
     }
     IEnumerator TeachBromRageRoutine()
@@ -249,6 +254,12 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(2.0f);
         rage = 100;
         teachRageBool = false;
+    }
+    IEnumerator WaterSceneRoutine()
+    {
+        //Just a temporary trigger for the cinematic
+        yield return new WaitForSeconds(5.0f);
+        _scene.WaterScene();
     }
 
     public void UpdateUI()

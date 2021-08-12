@@ -12,6 +12,7 @@ TagManager:
   - Dialogue
   - Water
   - EndSceneTrigger
+  - Music
   layers:
   - Default
   - TransparentFX

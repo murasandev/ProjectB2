@@ -7,6 +7,9 @@ public class SceneAudio : MonoBehaviour
    [SerializeField]
     private float _volume = 1.0f;
 
+    [SerializeField]
+    private int _trackId;
+
     SceneMusicStorage sceneMusic;
 
 
@@ -14,7 +17,7 @@ public class SceneAudio : MonoBehaviour
     void Start()
     {
         sceneMusic = GetComponent<SceneMusicStorage>();
-        AudioManager.Instance.PlayMusic(sceneMusic._track_1, _volume);
+        AudioManager.Instance.PlayMusic(MusicSelection(_trackId), _volume);
     }
 
     // Update is called once per frame
@@ -22,4 +25,35 @@ public class SceneAudio : MonoBehaviour
     {
         
     }
+
+    private AudioClip MusicSelection(int _trackId)
+    {
+        AudioClip _musicTrack;
+        
+        if(_trackId > 3)
+        {
+            _musicTrack = null;
+        }
+        else
+        {
+            switch (_trackId)
+            {
+                case 1:
+                    _musicTrack = sceneMusic._track_1;
+                    break;
+                case 2:
+                    _musicTrack = sceneMusic._track_2;
+                    break;
+                case 3:
+                    _musicTrack = sceneMusic._track_3;
+                    break;
+                default:
+                    _musicTrack = null;
+                    break;
+            }
+        }
+        return _musicTrack;
+            
+    }
+
 }

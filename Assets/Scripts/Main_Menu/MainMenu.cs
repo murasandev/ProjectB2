@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -11,19 +12,35 @@ public class MainMenu : MonoBehaviour
     private AudioMixer _audioMixer;
 
     [SerializeField]
-    private AudioClip _menuMusic;
+    private Animator animator;
+
+    [SerializeField]
+    private GameObject fader;
+
+    //private CanvasGroup canvasGroup;
 
     private void Start()
     {
-        AudioManager.Instance.PlayMusic(_menuMusic, 1f);
+        //canvasGroup = GetComponent<CanvasGroup>();
+        //canvasGroup.interactable = false;
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        fader.SetActive(true);
+
+        Animator fadeAnim = fader.GetComponent<Animator>();
+
+        fadeAnim.SetTrigger("LoadScene");
     }
     public void Quit()
     {
         Application.Quit();
     }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 }

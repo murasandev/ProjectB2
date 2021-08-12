@@ -10,5 +10,4 @@ public class PlayerAudioStorage : MonoBehaviour
         _woosh_3,
         _footstep_1,
         _footstep_2;
-
 }

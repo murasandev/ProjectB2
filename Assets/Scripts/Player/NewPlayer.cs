@@ -11,7 +11,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private float rage = 0f;
     [SerializeField] private bool enrage = false;
     [SerializeField] private float subtractRage = 1f;
-    [SerializeField] private bool boolRage;
+    [SerializeField] public bool boolRage;
     [SerializeField] public bool stopActions = false;
 
     [SerializeField] private bool hasClub = false;

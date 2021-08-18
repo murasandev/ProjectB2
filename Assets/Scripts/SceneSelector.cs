@@ -10,6 +10,8 @@ public class SceneSelector : MonoBehaviour
     private Gammie _gammie;
     private WaterTrigger _water;
     private EndTrigger _endTrigger;
+    private TutorialRage _tutorialRage;
+
     private void Start()
     {
         _canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
@@ -17,6 +19,7 @@ public class SceneSelector : MonoBehaviour
         _gammie = FindObjectOfType<Gammie>();
         _water = FindObjectOfType<WaterTrigger>();
         _endTrigger = FindObjectOfType<EndTrigger>();
+        _tutorialRage = FindObjectOfType<TutorialRage>();
     }
     public void IntroComplete()
     {
@@ -43,6 +46,7 @@ public class SceneSelector : MonoBehaviour
         _canvas.enabled = true;
         _player.TeachBromRage();
         _gammie.TransformtoDrake();
+        _tutorialRage.startTutorialRage();
     }
     public void WaterScene()
     {

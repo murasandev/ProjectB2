@@ -14,8 +14,8 @@ public class Collectible : MonoBehaviour
     private void Start()
     {
         //reference player rage
-        _bc = GameObject.Find("Chicken_Collectible").GetComponent<BoxCollider2D>();
-        _rb = GameObject.Find("Chicken_Collectible").GetComponent<Rigidbody2D>();
+        _bc = GetComponent<BoxCollider2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {

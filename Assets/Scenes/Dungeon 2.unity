@@ -10260,6 +10260,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 379099851886758777, guid: 66377ac521c5907498b25223a3daed3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: RageCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 379099852101932308, guid: 66377ac521c5907498b25223a3daed3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: RageCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 379099853324448751, guid: 66377ac521c5907498b25223a3daed3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: RageCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 379099853586915395, guid: 66377ac521c5907498b25223a3daed3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: RageCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 379099853809468993, guid: 66377ac521c5907498b25223a3daed3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: RageCollectible
+      objectReference: {fileID: 0}
     - target: {fileID: 380343601511577504, guid: 66377ac521c5907498b25223a3daed3c,
         type: 3}
       propertyPath: m_RootOrder

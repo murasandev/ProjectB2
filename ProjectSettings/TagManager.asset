@@ -13,6 +13,7 @@ TagManager:
   - Water
   - EndSceneTrigger
   - Music
+  - RageCollectible
   layers:
   - Default
   - TransparentFX

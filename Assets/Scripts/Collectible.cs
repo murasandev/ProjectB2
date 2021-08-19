@@ -7,6 +7,8 @@ public class Collectible : MonoBehaviour
     [SerializeField] private BoxCollider2D _bc;
     [SerializeField] private Rigidbody2D _rb;
 
+    [SerializeField] private NewPlayer _player;
+
     Vector3 lastPosition = Vector3.zero;
     private float _speed;
 
@@ -16,6 +18,7 @@ public class Collectible : MonoBehaviour
         //reference player rage
         _bc = GetComponent<BoxCollider2D>();
         _rb = GetComponent<Rigidbody2D>();
+        _player = FindObjectOfType<NewPlayer>();
     }
     private void Update()
     {
@@ -36,6 +39,7 @@ public class Collectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //add rage to player rage
+            _player.RageCollected();
             Destroy(this.gameObject);
         }
     }

@@ -19,6 +19,9 @@ public class NewPlayer : PhysicsObject
 
     [SerializeField] private bool freeGammyBool = true;
     [SerializeField] private bool teachRageBool = true;
+    [SerializeField] private bool rageTutorial;
+    [SerializeField] private bool chestOpened = false;
+    [SerializeField] private int rageTutorialCollect = 0;
 
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
@@ -79,6 +82,7 @@ public class NewPlayer : PhysicsObject
     {
         ActivateRage();
         FreeGammyCutScene();
+        triggerWaterScene();
 
         UpdateUI();
         row();
@@ -204,6 +208,10 @@ public class NewPlayer : PhysicsObject
         {
             _scene.EndScene();
         }
+        if (other.CompareTag("RageCollectible"))
+        {
+            rageTutorialCollect += 1;
+        }
     }
     IEnumerator StartSwimRoutine()
     {
@@ -246,13 +254,14 @@ public class NewPlayer : PhysicsObject
         if (teachRageBool == true)
         {
             StartCoroutine(TeachBromRageRoutine());
-            StartCoroutine(WaterSceneRoutine());
+            //StartCoroutine(WaterSceneRoutine());
         }
     }
     IEnumerator TeachBromRageRoutine()
     {
         yield return new WaitForSeconds(2.0f);
         rage = 100;
+        rageTutorial = true;
         teachRageBool = false;
     }
     IEnumerator WaterSceneRoutine()
@@ -297,6 +306,25 @@ public class NewPlayer : PhysicsObject
         if (_soundFX != null)
         {
             AudioManager.Instance.PlayEffect(_soundFX, _sfxVolume);
+        }
+    }
+    public void RageCollected()
+    {
+        rage += 20;
+    }
+    public void rageTutorialChest()
+    {
+        if (rageTutorial == true)
+        {
+            chestOpened = true;
+        }   
+    }
+    public void triggerWaterScene()
+    {
+        if (rageTutorialCollect == 5 && chestOpened == true && rageTutorial == true)
+        {
+            _scene.WaterScene();
+            rageTutorial = false;
         }
     }
 }

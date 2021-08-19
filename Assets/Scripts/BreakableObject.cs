@@ -22,6 +22,9 @@ public class BreakableObject : MonoBehaviour
             if (_player.boolRage == true)
             {
                 _anim.SetTrigger("Hit");
+                //if bool tut is true
+                //set bool here
+                _player.rageTutorialChest();
             }
         }
         if (other.CompareTag("Bird Cage"))

@@ -22,10 +22,9 @@ public class BreakableObject : MonoBehaviour
             if (_player.isRaging == true)
             {
                 _anim.SetTrigger("Hit");
-                if (this.tag == "Chest")
-                {
-                    _player.rageTutorialChest();
-                }  
+                //if bool tut is true
+                //set bool here
+                _player.rageTutorialChest();
             }
         }
         if (other.CompareTag("Bird Cage"))

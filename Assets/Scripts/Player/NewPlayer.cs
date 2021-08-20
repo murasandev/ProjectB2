@@ -142,7 +142,12 @@ public class NewPlayer : PhysicsObject
             _anim.Idle(0);
             stopActions = true;
         }
-           
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            Vector3 tarPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = tarPos;
+        }
     }
     IEnumerator ResetJumpCoroutine()
     {

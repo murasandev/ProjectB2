@@ -277,6 +277,10 @@ public class NewPlayer : PhysicsObject
 
     public void UpdateUI()
     {
+        if (rage >= 100)
+        {
+            rage = 100;
+        }
         percentRage = rage / _rageFull;
         rageBar.rectTransform.sizeDelta = new Vector2(percentRage * rageBarOrigSize.x, rageBar.rectTransform.sizeDelta.y);
 

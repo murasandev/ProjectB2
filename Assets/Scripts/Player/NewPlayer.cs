@@ -145,7 +145,7 @@ public class NewPlayer : PhysicsObject
 
         if (Input.GetKeyDown(KeyCode.N))
         {
-            Vector3 tarPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 tarPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = tarPos;
         }
     }

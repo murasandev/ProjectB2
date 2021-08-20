@@ -139,6 +139,7 @@ public class NewPlayer : PhysicsObject
         {
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * 0, 0);
             _anim.Idle(0);
+            stopActions = true;
         }
            
     }

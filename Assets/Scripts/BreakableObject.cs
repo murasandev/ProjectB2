@@ -19,7 +19,7 @@ public class BreakableObject : MonoBehaviour
         //items only breakable when raging
         if (other.tag == "Weapon" || other.tag == "Object")
         {
-            if (_player.boolRage == true)
+            if (_player.isRaging == true)
             {
                 _anim.SetTrigger("Hit");
                 //if bool tut is true

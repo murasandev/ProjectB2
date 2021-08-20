@@ -11,8 +11,9 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private float rage = 0f;
     [SerializeField] private bool enrage = false;
     [SerializeField] private float subtractRage = 1f;
-    [SerializeField] public bool boolRage;
+    [SerializeField] private bool boolRage;
     [SerializeField] private bool stopActions = false;
+    [SerializeField] public bool isRaging = false;
 
     [SerializeField] private bool hasClub = false;
     [SerializeField] private bool clubCinematic = true;
@@ -158,11 +159,13 @@ public class NewPlayer : PhysicsObject
             enrage = true;
             boolRage = true;
             stopActions = true;
+            isRaging = true;
             StartCoroutine(StartRageRoutine());
         }
         else if (rage <= 0)
         {
             enrage = false;
+            isRaging = false;
             _spriteR.color = new Color(1f, 1f, 1f, 1f);
         }
         //Coroutine to start rage counter

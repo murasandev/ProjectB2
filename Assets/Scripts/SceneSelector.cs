@@ -29,16 +29,19 @@ public class SceneSelector : MonoBehaviour
     {
         SceneManager.LoadScene(3, LoadSceneMode.Additive);
         _canvas.enabled = false;
+        _player.enabled = false;
     }
     public void UnloadClubScene()
     {
         SceneManager.UnloadSceneAsync(3);
         _canvas.enabled = true;
+        _player.enabled = true;
     }
     public void FreeGammyScene()
     {
         SceneManager.LoadScene(4, LoadSceneMode.Additive);
         _canvas.enabled = false;
+        _player.enabled = false;
     }
     public void UnloadFreeGammy()
     {
@@ -47,11 +50,13 @@ public class SceneSelector : MonoBehaviour
         _player.TeachBromRage();
         _gammie.TransformtoDrake();
         _tutorialRage.startTutorialRage();
+        _player.enabled = true;
     }
     public void WaterScene()
     {
         SceneManager.LoadScene(5, LoadSceneMode.Additive);
         _canvas.enabled = false;
+        _player.enabled = false;
     }
     public void UnloadWaterScene()
     {
@@ -59,10 +64,12 @@ public class SceneSelector : MonoBehaviour
         _canvas.enabled = true;
         _water.WaterTriggerStart();
         _endTrigger.EndTriggerEnable();
+        _player.enabled = true;
     }
     public void EndScene()
     {
         SceneManager.LoadScene(6, LoadSceneMode.Additive);
         _canvas.enabled = false;
+        _player.enabled = false;
     }
 }

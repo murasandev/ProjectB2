@@ -5750,7 +5750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778947191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9049268, y: 1.0480447, z: -10}
+  m_LocalPosition: {x: -3.891213, y: 1.0480447, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6400,6 +6400,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2028595653}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1198168322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5466391850058807646, guid: e8503c0e0bf9c4f4c88a358ac4d4aa5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7270108494902822809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1198168323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198168322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955320f23a2d02a469768be5032a955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxSource: {fileID: 1949436344}
+  _bgmSource: {fileID: 1284465208}
+  _fadeType: 2
+  _fadeTime: 3
+  _targetVol: 0.27
 --- !u!1 &1225280943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6587,6 +6610,12 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
+--- !u!82 &1284465208 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7795422016529053175, guid: c8ecb5fd030c60c40a81deb7de141a18,
+    type: 3}
+  m_PrefabInstance: {fileID: 5154063935338313950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1309135059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9995,6 +10024,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f94989336bee0449f3f72d2aa3ee77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1949436344 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4268311444256384444, guid: c8ecb5fd030c60c40a81deb7de141a18,
+    type: 3}
+  m_PrefabInstance: {fileID: 5154063935338313950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1969418758
 GameObject:
   m_ObjectHideFlags: 0

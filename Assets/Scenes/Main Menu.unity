@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e04e488fe3db0741a0b4c8f542300ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneId: 1
+  _sceneId: 7
 --- !u!114 &521907643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +433,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxSource: {fileID: 359434831}
   _bgmSource: {fileID: 706553636}
+  _fadeType: 0
+  _fadeTime: 0
+  _targetVol: 0
 --- !u!1 &562844835
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,7 +922,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1423312759}
-        m_MethodName: FadeMusic
+        m_MethodName: FadeOutAuto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1421,6 +1424,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxSource: {fileID: 359434831}
   _bgmSource: {fileID: 706553636}
+  _fadeType: 0
+  _fadeTime: 0
+  _targetVol: 0
 --- !u!1 &1461090945
 GameObject:
   m_ObjectHideFlags: 0

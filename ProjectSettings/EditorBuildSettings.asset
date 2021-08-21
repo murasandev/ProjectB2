@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End Cinematic.unity
     guid: b3398c04104da2842a8868e62d1e9ff5
+  - enabled: 1
+    path: Assets/Scenes/Intro Cinematic Interact.unity
+    guid: 6595b7b4dcbfc5648a579c7dd817e2ce
   m_configObjects: {}

@@ -38,10 +38,11 @@ public class ComicViewer : MonoBehaviour
             _anim.ResetTrigger("OnLeftClick");
         }
 
+        /*
         if (this._anim.GetCurrentAnimatorStateInfo(0).IsName("Page_1_Panel_2"))
         {
             Debug.Log("State 2 done");
-        }
+        } */
 
     }
 }

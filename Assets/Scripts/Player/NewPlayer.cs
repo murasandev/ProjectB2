@@ -8,6 +8,8 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private float maxSpeed = 1;
     [SerializeField] private float jumpPower = 10;
 
+    [SerializeField] private float maxDistance = 5.0f;
+
     [SerializeField] private float rage = 0f;
     [SerializeField] private bool enrage = false;
     [SerializeField] private float subtractRage = 1f;
@@ -145,8 +147,24 @@ public class NewPlayer : PhysicsObject
 
         if (Input.GetKeyDown(KeyCode.N))
         {
+            //max dist is 5.0f
+            //if greater than max dist, dist = max dist
+            
+            float distToPoint = Vector2.Distance(transform.position, Input.mousePosition);
+            float percentOfDist = maxDistance / distToPoint;
+            float distX = Mathf.Abs(transform.position.x - Input.mousePosition.x);
+            if (distToPoint >= 5.0f)
+            {
+                distX = distToPoint * distX;
+                //a2 + b2 = c2
+                //find b2
+                //sqrt5.0f - sqrtdistx = b
+            }
+            
             Vector2 tarPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = tarPos;
+            Vector2.MoveTowards(transform.position , tarPos, 10.0f * Time.deltaTime);
+            Debug.Log("N " + tarPos);
         }
     }
     IEnumerator ResetJumpCoroutine()

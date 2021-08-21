@@ -8,17 +8,23 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private float maxSpeed = 1;
     [SerializeField] private float jumpPower = 10;
 
+    [SerializeField] private float maxDistance = 5.0f;
+
     [SerializeField] private float rage = 0f;
     [SerializeField] private bool enrage = false;
     [SerializeField] private float subtractRage = 1f;
     [SerializeField] private bool boolRage;
-    [SerializeField] public bool stopActions = false;
+    [SerializeField] private bool stopActions = false;
+    [SerializeField] public bool isRaging = false;
 
     [SerializeField] private bool hasClub = false;
     [SerializeField] private bool clubCinematic = true;
 
     [SerializeField] private bool freeGammyBool = true;
     [SerializeField] private bool teachRageBool = true;
+    [SerializeField] private bool rageTutorial;
+    [SerializeField] private bool chestOpened = false;
+    [SerializeField] private int rageTutorialCollect = 0;
 
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
@@ -79,6 +85,7 @@ public class NewPlayer : PhysicsObject
     {
         ActivateRage();
         FreeGammyCutScene();
+        triggerWaterScene();
 
         UpdateUI();
         row();
@@ -135,8 +142,30 @@ public class NewPlayer : PhysicsObject
         {
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * 0, 0);
             _anim.Idle(0);
+            stopActions = true;
         }
-           
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            //max dist is 5.0f
+            //if greater than max dist, dist = max dist
+            
+            float distToPoint = Vector2.Distance(transform.position, Input.mousePosition);
+            float percentOfDist = maxDistance / distToPoint;
+            float distX = Mathf.Abs(transform.position.x - Input.mousePosition.x);
+            if (distToPoint >= 5.0f)
+            {
+                distX = distToPoint * distX;
+                //a2 + b2 = c2
+                //find b2
+                //sqrt5.0f - sqrtdistx = b
+            }
+            
+            Vector2 tarPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = tarPos;
+            Vector2.MoveTowards(transform.position , tarPos, 10.0f * Time.deltaTime);
+            Debug.Log("N " + tarPos);
+        }
     }
     IEnumerator ResetJumpCoroutine()
     {
@@ -153,11 +182,13 @@ public class NewPlayer : PhysicsObject
             enrage = true;
             boolRage = true;
             stopActions = true;
+            isRaging = true;
             StartCoroutine(StartRageRoutine());
         }
         else if (rage <= 0)
         {
             enrage = false;
+            isRaging = false;
             _spriteR.color = new Color(1f, 1f, 1f, 1f);
         }
         //Coroutine to start rage counter
@@ -204,6 +235,10 @@ public class NewPlayer : PhysicsObject
         {
             _scene.EndScene();
         }
+        if (other.CompareTag("RageCollectible"))
+        {
+            rageTutorialCollect += 1;
+        }
     }
     IEnumerator StartSwimRoutine()
     {
@@ -246,13 +281,14 @@ public class NewPlayer : PhysicsObject
         if (teachRageBool == true)
         {
             StartCoroutine(TeachBromRageRoutine());
-            StartCoroutine(WaterSceneRoutine());
+            //StartCoroutine(WaterSceneRoutine());
         }
     }
     IEnumerator TeachBromRageRoutine()
     {
         yield return new WaitForSeconds(2.0f);
         rage = 100;
+        rageTutorial = true;
         teachRageBool = false;
     }
     IEnumerator WaterSceneRoutine()
@@ -264,6 +300,10 @@ public class NewPlayer : PhysicsObject
 
     public void UpdateUI()
     {
+        if (rage >= 100)
+        {
+            rage = 100;
+        }
         percentRage = rage / _rageFull;
         rageBar.rectTransform.sizeDelta = new Vector2(percentRage * rageBarOrigSize.x, rageBar.rectTransform.sizeDelta.y);
 
@@ -297,6 +337,25 @@ public class NewPlayer : PhysicsObject
         if (_soundFX != null)
         {
             AudioManager.Instance.PlayEffect(_soundFX, _sfxVolume);
+        }
+    }
+    public void RageCollected()
+    {
+        rage += 20;
+    }
+    public void rageTutorialChest()
+    {
+        if (rageTutorial == true)
+        {
+            chestOpened = true;
+        }   
+    }
+    public void triggerWaterScene()
+    {
+        if (rageTutorialCollect == 5 && chestOpened == true && rageTutorial == true)
+        {
+            _scene.WaterScene();
+            rageTutorial = false;
         }
     }
 }

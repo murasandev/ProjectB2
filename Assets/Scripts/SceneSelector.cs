@@ -10,6 +10,8 @@ public class SceneSelector : MonoBehaviour
     private Gammie _gammie;
     private WaterTrigger _water;
     private EndTrigger _endTrigger;
+    private TutorialRage _tutorialRage;
+
     private void Start()
     {
         _canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
@@ -17,6 +19,7 @@ public class SceneSelector : MonoBehaviour
         _gammie = FindObjectOfType<Gammie>();
         _water = FindObjectOfType<WaterTrigger>();
         _endTrigger = FindObjectOfType<EndTrigger>();
+        _tutorialRage = FindObjectOfType<TutorialRage>();
     }
     public void IntroComplete()
     {
@@ -26,16 +29,19 @@ public class SceneSelector : MonoBehaviour
     {
         SceneManager.LoadScene(3, LoadSceneMode.Additive);
         _canvas.enabled = false;
+        _player.enabled = false;
     }
     public void UnloadClubScene()
     {
         SceneManager.UnloadSceneAsync(3);
         _canvas.enabled = true;
+        _player.enabled = true;
     }
     public void FreeGammyScene()
     {
         SceneManager.LoadScene(4, LoadSceneMode.Additive);
         _canvas.enabled = false;
+        _player.enabled = false;
     }
     public void UnloadFreeGammy()
     {
@@ -43,11 +49,14 @@ public class SceneSelector : MonoBehaviour
         _canvas.enabled = true;
         _player.TeachBromRage();
         _gammie.TransformtoDrake();
+        _tutorialRage.startTutorialRage();
+        _player.enabled = true;
     }
     public void WaterScene()
     {
         SceneManager.LoadScene(5, LoadSceneMode.Additive);
         _canvas.enabled = false;
+        _player.enabled = false;
     }
     public void UnloadWaterScene()
     {
@@ -55,10 +64,12 @@ public class SceneSelector : MonoBehaviour
         _canvas.enabled = true;
         _water.WaterTriggerStart();
         _endTrigger.EndTriggerEnable();
+        _player.enabled = true;
     }
     public void EndScene()
     {
         SceneManager.LoadScene(6, LoadSceneMode.Additive);
         _canvas.enabled = false;
+        _player.enabled = false;
     }
 }

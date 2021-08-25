@@ -363,6 +363,9 @@ public class NewPlayer : PhysicsObject
         {
             _scene.WaterScene();
             rageTutorial = false;
+            isRaging = false;
+            rage = 0;
+            transform.position = new Vector3(-4.56f, -2f, 0f);
         }
     }
 }

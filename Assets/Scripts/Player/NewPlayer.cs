@@ -91,9 +91,9 @@ public class NewPlayer : PhysicsObject
         ActivateRage();
         FreeGammyCutScene();
         triggerWaterScene();
-        EnragedJump();
         UpdateUI();
         row();
+        EnragedJump();
         if (stopActions == false || _dbOn == false)
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
@@ -276,6 +276,7 @@ public class NewPlayer : PhysicsObject
         {
             StartCoroutine(FreeGammyRoutine());
             freeGammyBool = false;
+            stopActions = true;
         }
     }
     IEnumerator FreeGammyRoutine()

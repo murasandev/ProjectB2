@@ -54,6 +54,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float acceleration;
     [SerializeField] private float rageJump;
+    private bool enragedJumpBool = true;
 
     // Start is called before the first frame update
     void Start()
@@ -134,6 +135,7 @@ public class NewPlayer : PhysicsObject
                 velocity.y = jumpPower;
                 _anim.Jump(true);
                 StartCoroutine(ResetJumpCoroutine());
+                enragedJumpBool = true;
             }
             if (hasClub == true && clubCinematic == true)
             {
@@ -157,7 +159,7 @@ public class NewPlayer : PhysicsObject
 
     void EnragedJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !grounded && isRaging == true)
+        if (Input.GetKeyDown(KeyCode.Space) && !grounded && isRaging == true && enragedJumpBool == true)
         {
             Vector2 tarPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -167,6 +169,8 @@ public class NewPlayer : PhysicsObject
             Vector2 targetVelocity = new Vector2(direction.x * rageJump, direction.y * rageJump);
 
             rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, acceleration);
+
+            enragedJumpBool = false;
         }
     }
 

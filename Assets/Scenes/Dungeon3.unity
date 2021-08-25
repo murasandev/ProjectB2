@@ -228,13 +228,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1091014218}
+    - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
       propertyPath: rageBar
       value: 
       objectReference: {fileID: 1315742816}
     - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: rageJump
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: jumpPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: forceAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: acceleration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 965052534, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
       propertyPath: gammieTransform
       value: 
       objectReference: {fileID: 7702073216527326678}
+    - target: {fileID: 1324167276, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: m_LinearDrag
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2643925493403041642, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
         type: 3}
       propertyPath: m_Name
@@ -6248,6 +6272,12 @@ MonoBehaviour:
   _woosh_3: {fileID: 0}
   _footstep_1: {fileID: 8300000, guid: 9c8b7cbe18d952348a6d22874efd67a2, type: 3}
   _footstep_2: {fileID: 8300000, guid: 2173acaba95687448939203563f72638, type: 3}
+--- !u!50 &1091014218 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1324167276, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 79735346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1100110236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1321030048120879976, guid: 63d29724a737ff141907bff8e9a28cef,
@@ -12049,10 +12079,15 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 4268311444256384444, guid: c8ecb5fd030c60c40a81deb7de141a18,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7795422016529053175, guid: c8ecb5fd030c60c40a81deb7de141a18,
         type: 3}
       propertyPath: m_Volume
-      value: 0.02
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ecb5fd030c60c40a81deb7de141a18, type: 3}

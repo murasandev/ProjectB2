@@ -172,7 +172,7 @@ public class NewPlayer : PhysicsObject
 
     void ActivateRage()
     {
-        if (rage >= 100 && enrage == false)
+        if (rage >= 100 && enrage == false )
         {
             _anim.Rage();
             enrage = true;
@@ -181,11 +181,18 @@ public class NewPlayer : PhysicsObject
             isRaging = true;
             StartCoroutine(StartRageRoutine());
         }
-        else if (rage <= 0)
+        else if (rage <= 0 && rageTutorial == false)
         {
             enrage = false;
             isRaging = false;
             _spriteR.color = new Color(1f, 1f, 1f, 1f);
+        }
+        else if (rageTutorial == true)
+        {
+            if (rage <= 10)
+            {
+                rage = 10;
+            }
         }
         //Coroutine to start rage counter
         if (enrage == true && boolRage == true)

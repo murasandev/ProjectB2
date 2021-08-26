@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081bcea222b29482883f9c2d43ef4353, type: 3}
   m_Name: BromSad
   m_EditorClassIdentifier: 
-  name: 
-  charSprite: {fileID: 0}
+  name: Brom
+  charSprite: {fileID: 21300000, guid: af463ffd92940f747894f42fcec8866d, type: 3}

@@ -18,7 +18,7 @@ MonoBehaviour:
     dialogText: Oof.
   - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
     dialogText: I'm getting hangry...
-  - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
+  - character: {fileID: 11400000, guid: 973951aea8670d14fada3ceada171538, type: 2}
     dialogText: Hey, where's my club...?
   - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
     dialogText: It must have fallen around here somewhere...

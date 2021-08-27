@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b88de665b37364515b5eca52df43d0dd, type: 3}
-  m_Name: BromIntro
+  m_Name: WaterRising
   m_EditorClassIdentifier: 
   gammieConversation: 0
   _dialogInfo:
-  - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
-    dialogText: Oof.
-  - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
-    dialogText: I'm getting hangry...
   - character: {fileID: 11400000, guid: 973951aea8670d14fada3ceada171538, type: 2}
-    dialogText: Hey, where's my club...?
-  - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
-    dialogText: It must have fallen around here somewhere...
+    dialogText: Dad!!
+  - character: {fileID: 11400000, guid: 3ac656c90db419d48870852c02f5e62f, type: 2}
+    dialogText: Over here, son! Grab my hand!

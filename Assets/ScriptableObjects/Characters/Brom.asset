@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Brom
   m_EditorClassIdentifier: 
   name: Brom
-  charSprite: {fileID: 21300000, guid: bb5365ccc2b264eadbb34b68aaac5c4b, type: 3}
+  charSprite: {fileID: 21300000, guid: 921aee6fa89592642b77fc7339ff4d8f, type: 3}

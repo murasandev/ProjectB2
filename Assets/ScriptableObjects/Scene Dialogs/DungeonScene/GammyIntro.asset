@@ -23,3 +23,6 @@ MonoBehaviour:
     dialogText: There's some up there!
   - character: {fileID: 11400000, guid: 9076ecc4ea64dcb4d9c8a6a7757bda43, type: 2}
     dialogText: HANGRY!
+  - character: {fileID: 11400000, guid: 29fed5bfec4805643b5c22ac8c8c0766, type: 2}
+    dialogText: When you go into a RAGE you become stronger and are able to jump
+      higher! Go get 'em grandson!

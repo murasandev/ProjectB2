@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: WaterRising
   m_EditorClassIdentifier: 
   gammieConversation: 0
-  _dialogInfo: []
+  _dialogInfo:
+  - character: {fileID: 11400000, guid: 973951aea8670d14fada3ceada171538, type: 2}
+    dialogText: Dad!!
+  - character: {fileID: 11400000, guid: 3ac656c90db419d48870852c02f5e62f, type: 2}
+    dialogText: Over here, son! Grab my hand!

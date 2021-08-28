@@ -414,7 +414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &472965120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1011,7 @@ GameObject:
   - component: {fileID: 1426108609}
   - component: {fileID: 1426108608}
   - component: {fileID: 1426108611}
+  - component: {fileID: 1426108612}
   m_Layer: 0
   m_Name: Intro Cinematic Short
   m_TagString: Untagged
@@ -1081,6 +1082,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f34a2aaaf278747aa21dd141943b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1426108612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426108607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955320f23a2d02a469768be5032a955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxSource: {fileID: 0}
+  _bgmSource: {fileID: 0}
+  _fadeType: 2
+  _fadeTime: 0.5
+  _targetVol: 0.3
 --- !u!1 &1739597772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300b1c7c2a3f000428bb9d8829057f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _volume: 0.25
+  _volume: 0
   _trackId: 2
 --- !u!114 &1973510350
 MonoBehaviour:

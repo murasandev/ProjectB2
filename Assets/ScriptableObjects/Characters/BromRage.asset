@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 081bcea222b29482883f9c2d43ef4353, type: 3}
-  m_Name: Gammy
+  m_Name: BromRage
   m_EditorClassIdentifier: 
-  name: Gammy
-  charSprite: {fileID: 21300000, guid: 97520c0de965df84ab75c3483b725fac, type: 3}
+  name: Brom
+  charSprite: {fileID: 21300000, guid: 87c5f6d4c4beff14e8593de28b616ba6, type: 3}

@@ -221,9 +221,9 @@ public class NewPlayer : PhysicsObject
     {
         if (other.CompareTag("FindClub"))
         {
-            Debug.Log("Press 'Enter' to obtain club!");
+            Debug.Log("Press 'E' to obtain club!");
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 hasClub = true;
                 Debug.Log("Club obtained!");

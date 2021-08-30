@@ -26,11 +26,15 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private bool chestOpened = false;
     [SerializeField] private int rageTutorialCollect = 0;
 
+    [SerializeField] private int _helpLevel;
+    public int helpLevel { get { return _helpLevel; } }
+
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
     private DialogTrigger _dt;
     private SceneSelector _scene;
+    private EventManager _eventManager;
 
     [SerializeField] private Transform gammieTransform;
 
@@ -51,6 +55,11 @@ public class NewPlayer : PhysicsObject
     private bool _isSwimming = false;
     public bool _dbOn = false;
 
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float acceleration;
+    [SerializeField] private float rageJump;
+    private bool enragedJumpBool = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +69,9 @@ public class NewPlayer : PhysicsObject
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         rageBar = GameObject.Find("RageBarFill").GetComponent<Image>();
         _scene = GetComponentInChildren<SceneSelector>();
+        _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
+        if (_eventManager == null)
+            Debug.Log("Event Manager is null");
 
         audioStorage = GetComponent<PlayerAudioStorage>();
 
@@ -78,6 +90,8 @@ public class NewPlayer : PhysicsObject
         }
 
         _dt.TriggerDialog();
+        _helpLevel = 0;
+        _eventManager.UpdateHelpText(_helpLevel);
     }
 
     // Update is called once per frame
@@ -86,9 +100,11 @@ public class NewPlayer : PhysicsObject
         ActivateRage();
         FreeGammyCutScene();
         triggerWaterScene();
-
         UpdateUI();
         row();
+        EnragedJump();
+        FinalHelpTxt();
+
         if (stopActions == false || _dbOn == false)
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
@@ -130,10 +146,15 @@ public class NewPlayer : PhysicsObject
                 velocity.y = jumpPower;
                 _anim.Jump(true);
                 StartCoroutine(ResetJumpCoroutine());
+                enragedJumpBool = true;
             }
             if (hasClub == true && clubCinematic == true)
             {
                 _scene.FoundClub();
+                _helpLevel = 1;
+                _eventManager.UpdateHelpText(_helpLevel);
+                _eventManager.FoundClub();
+                //add event for triggering dialog trigger;
                 clubCinematic = false;
             }
         }
@@ -144,28 +165,6 @@ public class NewPlayer : PhysicsObject
             _anim.Idle(0);
             stopActions = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            //max dist is 5.0f
-            //if greater than max dist, dist = max dist
-            
-            float distToPoint = Vector2.Distance(transform.position, Input.mousePosition);
-            float percentOfDist = maxDistance / distToPoint;
-            float distX = Mathf.Abs(transform.position.x - Input.mousePosition.x);
-            if (distToPoint >= 5.0f)
-            {
-                distX = distToPoint * distX;
-                //a2 + b2 = c2
-                //find b2
-                //sqrt5.0f - sqrtdistx = b
-            }
-            
-            Vector2 tarPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = tarPos;
-            Vector2.MoveTowards(transform.position , tarPos, 10.0f * Time.deltaTime);
-            Debug.Log("N " + tarPos);
-        }
     }
     IEnumerator ResetJumpCoroutine()
     {
@@ -173,10 +172,26 @@ public class NewPlayer : PhysicsObject
         _anim.Jump(false);
     }
 
+    void EnragedJump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !grounded && isRaging == true && enragedJumpBool == true)
+        {
+            Vector2 tarPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Vector2 heading = tarPos - rb2d.position;
+            Vector2 direction = heading / heading.magnitude;
+            direction = direction.normalized;
+            Vector2 targetVelocity = new Vector2(direction.x * rageJump, direction.y * rageJump);
+
+            rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, acceleration);
+
+            enragedJumpBool = false;
+        }
+    }
 
     void ActivateRage()
     {
-        if (rage >= 100 && enrage == false)
+        if (rage >= 100 && enrage == false )
         {
             _anim.Rage();
             enrage = true;
@@ -185,11 +200,18 @@ public class NewPlayer : PhysicsObject
             isRaging = true;
             StartCoroutine(StartRageRoutine());
         }
-        else if (rage <= 0)
+        else if (rage <= 0 && rageTutorial == false)
         {
             enrage = false;
             isRaging = false;
             _spriteR.color = new Color(1f, 1f, 1f, 1f);
+        }
+        else if (rageTutorial == true)
+        {
+            if (rage <= 10)
+            {
+                rage = 10;
+            }
         }
         //Coroutine to start rage counter
         if (enrage == true && boolRage == true)
@@ -216,7 +238,7 @@ public class NewPlayer : PhysicsObject
         {
             Debug.Log("Press 'Enter' to obtain club!");
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyUp(KeyCode.E) || Input.GetKey(KeyCode.E))
             {
                 hasClub = true;
                 Debug.Log("Club obtained!");
@@ -268,7 +290,10 @@ public class NewPlayer : PhysicsObject
         if (dist < 2.0f && freeGammyBool == true)
         {
             StartCoroutine(FreeGammyRoutine());
+            _helpLevel = 3;
+            _eventManager.UpdateHelpText(_helpLevel);
             freeGammyBool = false;
+            stopActions = true;
         }
     }
     IEnumerator FreeGammyRoutine()
@@ -289,6 +314,8 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(2.0f);
         rage = 100;
         rageTutorial = true;
+        _helpLevel = 4;
+        _eventManager.UpdateHelpText(_helpLevel);
         teachRageBool = false;
     }
     IEnumerator WaterSceneRoutine()
@@ -356,6 +383,21 @@ public class NewPlayer : PhysicsObject
         {
             _scene.WaterScene();
             rageTutorial = false;
+            isRaging = false;
+            rage = 0;
+            transform.position = new Vector3(-4.56f, -2f, 0f);
+        }
+    }
+
+    public void FinalHelpTxt()
+    {
+        bool updateLastLvl = false;
+
+        if(rageTutorialCollect == 5 && !updateLastLvl)
+        {
+            _helpLevel = 5;
+            _eventManager.UpdateHelpText(_helpLevel);
+            updateLastLvl = true;
         }
     }
 }

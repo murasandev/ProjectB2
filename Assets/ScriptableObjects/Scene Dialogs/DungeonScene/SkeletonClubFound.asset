@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88de665b37364515b5eca52df43d0dd, type: 3}
+  m_Name: SkeletonClubFound
+  m_EditorClassIdentifier: 
+  gammieConversation: 0
+  _dialogInfo:
+  - character: {fileID: 11400000, guid: 827bfea3908344406918fb72dbe9a970, type: 2}
+    dialogText: Boooo!!!!
+  - character: {fileID: 11400000, guid: 9076ecc4ea64dcb4d9c8a6a7757bda43, type: 2}
+    dialogText: Hey! You scared me!
+  - character: {fileID: 11400000, guid: 827bfea3908344406918fb72dbe9a970, type: 2}
+    dialogText: Hehe, sorry. I've been hanging out here for a while.

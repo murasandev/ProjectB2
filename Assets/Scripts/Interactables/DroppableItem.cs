@@ -7,6 +7,7 @@ public class DroppableItem : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
     private Animator _anim;
     private EventManager _eventManager;
+  
 
     // Start is called before the first frame update
     void Start()

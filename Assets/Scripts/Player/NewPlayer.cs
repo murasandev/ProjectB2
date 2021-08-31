@@ -154,7 +154,6 @@ public class NewPlayer : PhysicsObject
                 _helpLevel = 1;
                 _eventManager.UpdateHelpText(_helpLevel);
                 _eventManager.FoundClub();
-                //add event for triggering dialog trigger;
                 clubCinematic = false;
             }
         }

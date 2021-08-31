@@ -24,7 +24,7 @@ public class ItemDrop : MonoBehaviour
     private void FixedUpdate()
     {
         Speed();
-        Debug.Log(_speed + " Speed");
+//        Debug.Log(_speed + " Speed");
         if (_speed == 0.0f)
         {
             DisableMass();

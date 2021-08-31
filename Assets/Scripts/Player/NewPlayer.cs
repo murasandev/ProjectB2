@@ -26,11 +26,15 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private bool chestOpened = false;
     [SerializeField] private int rageTutorialCollect = 0;
 
+    [SerializeField] private int _helpLevel;
+    public int helpLevel { get { return _helpLevel; } }
+
     private PlayerAnimation _anim;
     private SpriteRenderer _spriteR;
     private CanvasManager _canvas;
     private DialogTrigger _dt;
     private SceneSelector _scene;
+    private EventManager _eventManager;
 
     [SerializeField] private Transform gammieTransform;
 
@@ -65,6 +69,9 @@ public class NewPlayer : PhysicsObject
         _canvas = GameObject.Find("Canvas").GetComponent<CanvasManager>();
         rageBar = GameObject.Find("RageBarFill").GetComponent<Image>();
         _scene = GetComponentInChildren<SceneSelector>();
+        _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
+        if (_eventManager == null)
+            Debug.Log("Event Manager is null");
 
         audioStorage = GetComponent<PlayerAudioStorage>();
 
@@ -83,6 +90,8 @@ public class NewPlayer : PhysicsObject
         }
 
         _dt.TriggerDialog();
+        _helpLevel = 0;
+        _eventManager.UpdateHelpText(_helpLevel);
     }
 
     // Update is called once per frame
@@ -94,6 +103,8 @@ public class NewPlayer : PhysicsObject
         UpdateUI();
         row();
         EnragedJump();
+        FinalHelpTxt();
+
         if (stopActions == false || _dbOn == false)
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
@@ -140,6 +151,9 @@ public class NewPlayer : PhysicsObject
             if (hasClub == true && clubCinematic == true)
             {
                 _scene.FoundClub();
+                _helpLevel = 1;
+                _eventManager.UpdateHelpText(_helpLevel);
+                _eventManager.FoundClub();
                 clubCinematic = false;
             }
         }
@@ -223,7 +237,11 @@ public class NewPlayer : PhysicsObject
         {
             Debug.Log("Press 'E' to obtain club!");
 
+<<<<<<< HEAD
             if (Input.GetKeyDown(KeyCode.E))
+=======
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyUp(KeyCode.E) || Input.GetKey(KeyCode.E))
+>>>>>>> c8f4417b2c1192796f2c7081159213ce7c2498ff
             {
                 hasClub = true;
                 Debug.Log("Club obtained!");
@@ -275,6 +293,8 @@ public class NewPlayer : PhysicsObject
         if (dist < 2.0f && freeGammyBool == true)
         {
             StartCoroutine(FreeGammyRoutine());
+            _helpLevel = 3;
+            _eventManager.UpdateHelpText(_helpLevel);
             freeGammyBool = false;
             stopActions = true;
         }
@@ -297,6 +317,8 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(2.0f);
         rage = 100;
         rageTutorial = true;
+        _helpLevel = 4;
+        _eventManager.UpdateHelpText(_helpLevel);
         teachRageBool = false;
     }
     IEnumerator WaterSceneRoutine()
@@ -367,6 +389,18 @@ public class NewPlayer : PhysicsObject
             isRaging = false;
             rage = 0;
             transform.position = new Vector3(-4.56f, -2f, 0f);
+        }
+    }
+
+    public void FinalHelpTxt()
+    {
+        bool updateLastLvl = false;
+
+        if(rageTutorialCollect == 5 && !updateLastLvl)
+        {
+            _helpLevel = 5;
+            _eventManager.UpdateHelpText(_helpLevel);
+            updateLastLvl = true;
         }
     }
 }

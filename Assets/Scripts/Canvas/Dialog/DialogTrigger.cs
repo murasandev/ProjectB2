@@ -6,12 +6,15 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
+
     [SerializeField]private bool _initialDialog;
-  
+    public bool initialDialog { get { return _initialDialog; } }
+
     private void Start()
     {
         _initialDialog = true;
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,7 +26,7 @@ public class DialogTrigger : MonoBehaviour
         }
     }
 
-
+    public void SetIntitalDialogFalse() => _initialDialog = false;
 
 
     public void TriggerDialog()

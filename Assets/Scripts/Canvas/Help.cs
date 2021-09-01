@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Help : MonoBehaviour
 {
@@ -10,31 +11,49 @@ public class Help : MonoBehaviour
     [SerializeField] private Text _helpDisplayTxt;
     [SerializeField] private float _txtSpeedDelay;
 
-    //should move to player class
-    [SerializeField] private int _helpLevel;
+    [SerializeField] private GameObject _helpGeneral;
+    [SerializeField] private GameObject _helpClue;
 
-    private String _currentChar;
+
+    private int _helpLevel;
     private NewPlayer _player;
+    private EventManager _eventManager;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
+
+        if (_eventManager == null)
+            Debug.Log("Event Manager is null");
+
+        _eventManager.NewHelpText += UpdateHelpTxt;
+
         _player = FindObjectOfType<NewPlayer>();
-        //StartCoroutine(ShowTextTypeWrite());
-    }
-    void Update()
-    {
-        //need to change _helpLevel to _player._helpLevel
+        _helpLevel = _player.helpLevel;
         _helpDisplayTxt.text = _helpTxtString[_helpLevel];
+
     }
 
-    IEnumerator ShowTextTypeWrite()
+   public void UpdateHelpTxt(int helpLevel) => _helpDisplayTxt.text = _helpTxtString[helpLevel];
+
+
+    public void DisplayGeneralHelp()
     {
-        for (int i = 0; i <= _helpTxtString.Length; i++)
-        {
-            _currentChar = _helpTxtString[0].Substring(0, i);
-            _helpDisplayTxt.text = _currentChar;
-            yield return new WaitForSeconds(_txtSpeedDelay);
-        }
+        _helpGeneral.gameObject.SetActive(true);
+        _helpClue.gameObject.SetActive(false);
+    }
+
+    public void DisplayClueHelp()
+    {
+        _helpGeneral.gameObject.SetActive(false);
+        _helpClue.gameObject.SetActive(true);
+    }
+
+
+    private void OnDestroy()
+    {
+        _eventManager.NewHelpText -= UpdateHelpTxt;
     }
 }

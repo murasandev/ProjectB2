@@ -148,6 +148,7 @@ public class NewPlayer : PhysicsObject
                 StartCoroutine(ResetJumpCoroutine());
                 enragedJumpBool = true;
             }
+
             if (hasClub == true && clubCinematic == true)
             {
                 _scene.FoundClub();

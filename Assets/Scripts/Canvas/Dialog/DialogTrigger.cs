@@ -15,7 +15,6 @@ public class DialogTrigger : MonoBehaviour
         _initialDialog = true;
     }
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && _initialDialog)
@@ -27,7 +26,6 @@ public class DialogTrigger : MonoBehaviour
     }
 
     public void SetIntitalDialogFalse() => _initialDialog = false;
-
 
     public void TriggerDialog()
     {

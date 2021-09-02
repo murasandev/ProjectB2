@@ -57,7 +57,7 @@ public class MusicFader : MonoBehaviour
     }
 
 
-        public void FadeOutAuto()
+    public void FadeOutAuto()
     {
         _sfxSource = GameObject.Find("SFX").GetComponent<AudioSource>();
         _bgmSource = GameObject.Find("BGM").GetComponent<AudioSource>();

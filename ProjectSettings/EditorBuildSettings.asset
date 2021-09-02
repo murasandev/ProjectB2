@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End Cinematic.unity
     guid: b3398c04104da2842a8868e62d1e9ff5
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ab8755c9aa8e44d019fcb657bc2024d8
   m_configObjects: {}

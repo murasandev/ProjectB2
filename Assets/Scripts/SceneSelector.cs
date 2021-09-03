@@ -27,6 +27,12 @@ public class SceneSelector : MonoBehaviour
             Debug.Log("Event Manager is NULL");
 
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void IntroComplete()
     {
         SceneManager.LoadScene(2);
@@ -78,5 +84,10 @@ public class SceneSelector : MonoBehaviour
         SceneManager.LoadScene(6, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
+    }
+
+    public void CreditsScene()
+    {
+        SceneManager.LoadScene(7);
     }
 }

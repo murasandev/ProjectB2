@@ -1469,6 +1469,7 @@ MonoBehaviour:
   _track_1: {fileID: 8300000, guid: 44d2cd1da0870b346a71d272545f6bfd, type: 3}
   _track_2: {fileID: 8300000, guid: a41b90607aaa7b8428d686438edb7d59, type: 3}
   _track_3: {fileID: 8300000, guid: 7029145042f200d4ab11c4d03d291857, type: 3}
+  _track_4: {fileID: 0}
 --- !u!4 &687891892
 Transform:
   m_ObjectHideFlags: 0
@@ -5456,7 +5457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 76.886, y: -25.163}
+  m_AnchoredPosition: {x: 97.5, y: -24.788}
   m_SizeDelta: {x: 109.38808, y: 47.145493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &767155226
@@ -5961,13 +5962,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 767155225}
+  - {fileID: 1096201825}
   m_Father: {fileID: 1201873615}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 11.71, y: 155.25}
-  m_SizeDelta: {x: 146.60172, y: 48.7362}
+  m_AnchoredPosition: {x: 23.46, y: 154.83}
+  m_SizeDelta: {x: 170.11111, y: 49.57583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848821960
 MonoBehaviour:
@@ -6080,6 +6082,80 @@ Rigidbody2D:
     type: 3}
   m_PrefabInstance: {fileID: 79735346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1096201824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096201825}
+  - component: {fileID: 1096201827}
+  - component: {fileID: 1096201826}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1096201825
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096201824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 848821959}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -62.1, y: 1.9}
+  m_SizeDelta: {x: 35.76892, y: 31.570847}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1096201826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096201824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9622642, g: 0.94864726, b: 0.94864726, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e0eece4a3b35949ea987fed84572d2c4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1096201827
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096201824}
+  m_CullTransparentMesh: 0
 --- !u!4 &1100110236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1321030048120879976, guid: 63d29724a737ff141907bff8e9a28cef,
@@ -11385,6 +11461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647772224066750547, guid: 26c85801c66274834adc18b9bca5f6ed,
+        type: 3}
+      propertyPath: _helpTxtString.Array.data[4]
+      value: 'Hint:  Make sure he eats all of his food.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c85801c66274834adc18b9bca5f6ed, type: 3}

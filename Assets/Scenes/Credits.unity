@@ -455,7 +455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 77.1}
+  m_AnchoredPosition: {x: 79.2, y: 77.1}
   m_SizeDelta: {x: 45.72136, y: 10.943504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473005992
@@ -805,7 +805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51, y: 77}
+  m_AnchoredPosition: {x: -2, y: 77}
   m_SizeDelta: {x: 58.391167, y: 11.771339}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015382462
@@ -883,7 +883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.6, y: 76.8}
+  m_AnchoredPosition: {x: -88.2, y: 76.8}
   m_SizeDelta: {x: 45.78971, y: 10.3615265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1186251331
@@ -1321,7 +1321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47b41ecdc028a2540b966592a20a3453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 069533d29cbb641f7a0ed25863b75547, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1512,7 +1512,7 @@ PrefabInstance:
     - target: {fileID: 713285156337455200, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 78.6
       objectReference: {fileID: 0}
     - target: {fileID: 713285156337455200, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
@@ -1649,33 +1649,28 @@ PrefabInstance:
     - target: {fileID: 713285156532680276, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 57.451622
+      value: 97.9352
       objectReference: {fileID: 0}
     - target: {fileID: 713285156532680276, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 38.94754
+      value: 59.55934
       objectReference: {fileID: 0}
     - target: {fileID: 713285156532680276, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 54
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 713285156532680276, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 48
+      value: 40.794
       objectReference: {fileID: 0}
     - target: {fileID: 713285156532680279, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
       propertyPath: m_Text
-      value: 'Zapsplat.Com
-
-        Opengameart.com
-
-
-
-'
+      value: "Zapsplat.Com\nOpengameart.com\n\nBaby Barbarian Theme Song\nWritten
+        and Performed By: \nWilliam and Lewis Gosline\n\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 713285156532680279, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
@@ -1718,7 +1713,7 @@ PrefabInstance:
     - target: {fileID: 713285156664144854, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -60.1
+      value: -88.2
       objectReference: {fileID: 0}
     - target: {fileID: 713285156664144854, guid: 1229d48ee22604492a495d28dd31a9ae,
         type: 3}
@@ -1769,12 +1764,12 @@ PrefabInstance:
         Hoffmann\nGary Phillips\nDarren Close\nTimothy Paul Schneider\nEnnead Comic\nZanfore\nSven
         Gareth Peterson\nDavid Krause\nJorryn Taitch\nMaya Aurora Soderstrom\nEzra
         Sheppard\nJesse Keen\nBrandon Eaker\nKevin Joseph\nGreg Tjosvold\nTyler James\nJan
-        Wieremjewicz\nTAS\nMichael Butler\nMiriam Stone Wilson\nMuertosLopez\nDenise
+        Wieremjewicz\nTAS\nMichael Butler\nMiriam Stone Wilson\nMuertos Lopez\nDenise
         E Thompson\nSteven Blyth\nAutarch Morn\nJon Esparza\nSlavomir Lysak\nJaro
         Ejsymont\nBryan Timmins\nDaisy Amos\nCraig Hackl\nKevin KJ Chang\nWD Stancil\nImpling\nDusty
         Higgins\nM. Sorcier\nRain King Studios\nKeith Dury\nShane Campos\nSonse Cahuni\nDinu
         Christian Gabriel\nJeffrey I. Tokman\nGshegosh B.\nAlan Walters\nMark L Odom\nMahwar
-        Fam\nAnd of course, the fabulous model for Baby Barbarian himself, Lewis
+        Fam\n\n\nAnd of course, the fabulous model for Baby Barbarian himself, Lewis
         Gosline. "
       objectReference: {fileID: 0}
     - target: {fileID: 713285157498497967, guid: 1229d48ee22604492a495d28dd31a9ae,

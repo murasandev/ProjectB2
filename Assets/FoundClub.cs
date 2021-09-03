@@ -9,6 +9,7 @@ public class FoundClub : MonoBehaviour
     private CanvasManager _canvas;
     private bool _isHelpActive;
 
+
     private int _timesLooked;
     private bool _clubFound;
 
@@ -42,11 +43,12 @@ public class FoundClub : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        int looksNeeded = Random.Range(2, 4);
        
         if (other.CompareTag("Player"))
             _timesLooked++;
 
-        if(_timesLooked >= 3 && _clubFound)
+        if(_timesLooked >= looksNeeded && _clubFound)
         {
             _isHelpActive = true;
             _canvas.FindClubHelp(_isHelpActive);

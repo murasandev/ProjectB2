@@ -92,13 +92,15 @@ public class NewPlayer : PhysicsObject
         _dt.TriggerDialog();
         _helpLevel = 0;
         _eventManager.UpdateHelpText(_helpLevel);
+
+        _eventManager.StartGammieScene += FreeGammyCutScene;
     }
 
     // Update is called once per frame
     void Update()
     {
         ActivateRage();
-        FreeGammyCutScene();
+        //FreeGammyCutScene();
         triggerWaterScene();
         UpdateUI();
         row();
@@ -286,15 +288,19 @@ public class NewPlayer : PhysicsObject
 
     private void FreeGammyCutScene()
     {
-        float dist = Vector3.Distance(transform.position, gammieTransform.position);
-        if (dist < 2.0f && freeGammyBool == true)
+        //float dist = Vector3.Distance(transform.position, gammieTransform.position);
+        //if (dist < 2.0f && freeGammyBool == true)
+        //{
+
+        if (freeGammyBool)
         {
             StartCoroutine(FreeGammyRoutine());
             _helpLevel = 3;
             _eventManager.UpdateHelpText(_helpLevel);
             freeGammyBool = false;
             stopActions = true;
-        }
+        }   
+        //}
     }
     IEnumerator FreeGammyRoutine()
     {
@@ -399,5 +405,10 @@ public class NewPlayer : PhysicsObject
             _eventManager.UpdateHelpText(_helpLevel);
             updateLastLvl = true;
         }
+    }
+
+    private void OnDestroy()
+    {
+        _eventManager.StartGammieScene -= FreeGammyCutScene;
     }
 }

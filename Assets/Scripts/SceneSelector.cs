@@ -27,13 +27,13 @@ public class SceneSelector : MonoBehaviour
     }
     public void FoundClub()
     {
-        SceneManager.LoadScene(3, LoadSceneMode.Additive);
+        SceneManager.LoadScene(8, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
     }
     public void UnloadClubScene()
     {
-        SceneManager.UnloadSceneAsync(3);
+        SceneManager.UnloadSceneAsync(8);
         _canvas.enabled = true;
         _player.enabled = true;
     }

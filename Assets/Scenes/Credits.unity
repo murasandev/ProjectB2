@@ -1128,6 +1128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6633842337191065918, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 6633842337191065918, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 300
       objectReference: {fileID: 0}
@@ -1151,6 +1156,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_HorizontalOverflow
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6633842337682144308, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 6633842337682144308, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_FontData.m_MaxSize

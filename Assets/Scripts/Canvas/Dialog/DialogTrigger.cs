@@ -39,3 +39,4 @@ public class DialogTrigger : MonoBehaviour
             DialogController.Instance.StartDialog(dialog);
     }
 }
+

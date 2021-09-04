@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7d13ca8d060de41369be7f7c4b34ba4b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Barbaric
+  fontNames:
+  - Barbaric
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a154ef69adbc34a83927ca9e38a1c202, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

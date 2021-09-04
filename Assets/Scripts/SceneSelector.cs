@@ -88,6 +88,6 @@ public class SceneSelector : MonoBehaviour
 
     public void CreditsScene()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(9);
     }
 }

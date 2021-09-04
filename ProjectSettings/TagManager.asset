@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bookshelf
+  - Weapon
+  - Object
+  - FindClub
+  - Bird Cage
+  - Dialogue
+  - Water
+  - EndSceneTrigger
+  - Music
+  - RageCollectible
+  - Chest
   layers:
   - Default
   - TransparentFX
@@ -13,11 +24,11 @@ TagManager:
   - UI
   - 
   - 
+  - Post Processing
+  - Player
+  - 
+  - 
   - Foreground
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

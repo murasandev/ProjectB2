@@ -18,12 +18,16 @@ public class Skeleton : MonoBehaviour
             Debug.Log("Event Manager is null");
 
         _eventManager.ClubFound += ClubFound;
+        _eventManager.FreeGammieSceneActive += TurnOffDialog;
     }
 
     public void ClubFound() => _dt.dialog = _clubFoundDialog;
 
+    public void TurnOffDialog() => _dt.TurnOffDialogTrigger();
+
     private void OnDestroy()
     {
         _eventManager.ClubFound -= ClubFound;
+        _eventManager.FreeGammieSceneActive -= TurnOffDialog;
     }
 }

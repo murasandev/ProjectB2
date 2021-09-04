@@ -7,31 +7,35 @@ public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
 
-    [SerializeField]private bool _initialDialog;
-    public bool initialDialog { get { return _initialDialog; } }
+    [SerializeField]private bool _activeOnEnter;
+    public bool activeOnEnter { get { return _activeOnEnter; } }
+
+    [SerializeField] private bool _dialogTriggerOn;
+    public bool dialogTriggerOn { get { return _dialogTriggerOn; } }
 
     private void Start()
     {
-        _initialDialog = true;
+        _activeOnEnter = true;
+        _dialogTriggerOn = true;
     }
 
+    public void SetActiveOnEnterFalse() => _activeOnEnter = false;
+
+    public void TurnOffDialogTrigger() => _dialogTriggerOn = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && _initialDialog)
+        if (other.CompareTag("Player") && _activeOnEnter)
         {
-     
-           TriggerDialog();
-            _initialDialog = false;
+
+            TriggerDialog();
+            _activeOnEnter = false;
         }
     }
 
-    public void SetIntitalDialogFalse() => _initialDialog = false;
-
-
     public void TriggerDialog()
     {
-        DialogController.Instance.StartDialog(dialog);
-        
+        if(_dialogTriggerOn)
+            DialogController.Instance.StartDialog(dialog);
     }
 }

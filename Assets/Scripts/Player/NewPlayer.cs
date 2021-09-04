@@ -59,6 +59,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private float acceleration;
     [SerializeField] private float rageJump;
     private bool enragedJumpBool = true;
+    [SerializeField] private int jumpCount;
 
     // Start is called before the first frame update
     void Start()
@@ -104,7 +105,7 @@ public class NewPlayer : PhysicsObject
         triggerWaterScene();
         UpdateUI();
         row();
-        EnragedJump();
+        //EnragedJump();
         FinalHelpTxt();
 
         if (stopActions == false || _dbOn == false)
@@ -142,13 +143,36 @@ public class NewPlayer : PhysicsObject
                 //_spriteR.flipX = false;
                 transform.localScale = new Vector3(1, 1, 1);
             }
-
-            if (Input.GetButtonDown("Jump") && grounded)
+            if (Input.GetButtonDown("Jump") && isRaging == false && grounded)
             {
                 velocity.y = jumpPower;
                 _anim.Jump(true);
                 StartCoroutine(ResetJumpCoroutine());
                 enragedJumpBool = true;
+            }
+
+            if (Input.GetButtonDown("Jump") && isRaging == true)
+            {
+                jumpCount++;
+                if (jumpCount == 0)
+                {
+                    velocity.y = jumpPower;
+                    _anim.Jump(true);
+                    StartCoroutine(ResetJumpCoroutine());
+                    enragedJumpBool = true;
+                }
+                else if (jumpCount <= 1)
+                {
+                    velocity.y = jumpPower;
+                    _anim.Jump(true);
+                    StartCoroutine(ResetJumpCoroutine());
+                    enragedJumpBool = true;
+                    jumpCount++;
+                }
+            }
+            if (grounded)
+            {
+                jumpCount = 0;
             }
 
             if (hasClub == true && clubCinematic == true)
@@ -174,6 +198,8 @@ public class NewPlayer : PhysicsObject
         _anim.Jump(false);
     }
 
+    /*
+     * dont delete, may use in future implication
     void EnragedJump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !grounded && isRaging == true && enragedJumpBool == true)
@@ -190,6 +216,7 @@ public class NewPlayer : PhysicsObject
             enragedJumpBool = false;
         }
     }
+    */
 
     void ActivateRage()
     {
@@ -238,7 +265,7 @@ public class NewPlayer : PhysicsObject
     {
         if (other.CompareTag("FindClub"))
         {
-            Debug.Log("Press 'Enter' to obtain club!");
+            Debug.Log("Press 'E' to obtain club!");
 
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyUp(KeyCode.E) || Input.GetKey(KeyCode.E))
             {

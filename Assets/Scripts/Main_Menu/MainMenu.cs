@@ -40,7 +40,7 @@ public class MainMenu : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(7);
     }
 
     public void LoadCredits()

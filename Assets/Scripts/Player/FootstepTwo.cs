@@ -28,9 +28,10 @@ public class FootstepTwo : MonoBehaviour
 
         PlayerAudioStorage audioStorage = GetComponent<PlayerAudioStorage>();
 
-        if (audioStorage != null)
+        if (audioStorage == null)
         {
-            print(audioStorage);
+            //print(audioStorage);
+            print("audioStorage missing.");
         }
         AudioManager.Instance.PlayEffect(audioStorage._footstep_2, 0.5f);
     }

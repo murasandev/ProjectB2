@@ -12,6 +12,9 @@ public class CanvasManager : MonoBehaviour
     public GameObject _dialogbox;
 
     [SerializeField]
+    public GameObject _findClubHelp;
+
+    [SerializeField]
     private Text _helpText;
 
     private DialogController _dialogController;
@@ -90,4 +93,6 @@ public class CanvasManager : MonoBehaviour
             _helpBoxActive = false;
         }     
     }
+
+    public void FindClubHelp(bool isActive) => _findClubHelp.gameObject.SetActive(isActive);
 }

@@ -11,6 +11,7 @@ public class SceneSelector : MonoBehaviour
     private WaterTrigger _water;
     private EndTrigger _endTrigger;
     private TutorialRage _tutorialRage;
+    private EventManager _eventManager;
 
     private void Start()
     {
@@ -20,7 +21,18 @@ public class SceneSelector : MonoBehaviour
         _water = FindObjectOfType<WaterTrigger>();
         _endTrigger = FindObjectOfType<EndTrigger>();
         _tutorialRage = FindObjectOfType<TutorialRage>();
+
+        _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
+        if (_eventManager == null)
+            Debug.Log("Event Manager is NULL");
+
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void IntroComplete()
     {
         SceneManager.LoadScene(2);
@@ -47,6 +59,7 @@ public class SceneSelector : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(4);
         _canvas.enabled = true;
+        _eventManager.FreeGammieSceneActivated();
         _player.TeachBromRage();
         _gammie.TransformtoDrake();
         _tutorialRage.startTutorialRage();
@@ -71,5 +84,10 @@ public class SceneSelector : MonoBehaviour
         SceneManager.LoadScene(6, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
+    }
+
+    public void CreditsScene()
+    {
+        SceneManager.LoadScene(9);
     }
 }

@@ -6,7 +6,6 @@ using System;
 
 public class EventManager : MonoBehaviour
 {
-
     private static EventManager _instance;
     public static EventManager Instance { get { return _instance; } }
 
@@ -20,7 +19,6 @@ public class EventManager : MonoBehaviour
 
         _instance = this;
     }
-
     
     public event Action<int> NewHelpText;
     public void UpdateHelpText(int helpTxtNum)
@@ -37,5 +35,21 @@ public class EventManager : MonoBehaviour
             ClubFound();
     }
 
-   }
+    public Action StartGammieScene;
+    public void BirdCageKnockedDown()
+    {
+        if(StartGammieScene != null)
+        {
+            StartGammieScene();
+        }
+    }
+
+    public event Action FreeGammieSceneActive;
+    public void FreeGammieSceneActivated()
+    {
+        if (FreeGammieSceneActive != null)
+            FreeGammieSceneActive();
+    }
+
+}
 

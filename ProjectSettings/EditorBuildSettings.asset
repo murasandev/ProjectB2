@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Club Cinematic Interact.unity
     guid: 811196a2956b9ae4999ba336c7ad8ac4
+  - enabled: 1
+    path: Assets/Scenes/Free Gammy Cinematic Interact.unity
+    guid: bf5a27c31a920214f9f5ac8f33306f63
   m_configObjects: {}

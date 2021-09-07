@@ -13,10 +13,8 @@ public class EventManager : MonoBehaviour
     void Awake()
     {
         if (_instance != null && _instance != this)
-        {
-            Destroy(this);
-        }
-
+           Destroy(this);
+        
         _instance = this;
     }
     
@@ -39,9 +37,8 @@ public class EventManager : MonoBehaviour
     public void BirdCageKnockedDown()
     {
         if(StartGammieScene != null)
-        {
             StartGammieScene();
-        }
+        
     }
 
     public event Action FreeGammieSceneActive;
@@ -49,6 +46,13 @@ public class EventManager : MonoBehaviour
     {
         if (FreeGammieSceneActive != null)
             FreeGammieSceneActive();
+    }
+
+    public event Action WaterSceneActive;
+    public void WaterSceneActivated()
+    {
+        if (WaterSceneActive != null)
+            WaterSceneActive();
     }
 
 }

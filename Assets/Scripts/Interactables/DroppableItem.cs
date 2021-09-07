@@ -11,6 +11,7 @@ public class DroppableItem : MonoBehaviour
     private Collider2D _c2D;
   
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,24 +20,34 @@ public class DroppableItem : MonoBehaviour
         _c2D = GetComponent<Collider2D>();
 
         _water = GameObject.Find("Water").GetComponent<Collider2D>();
+
         _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
         if (_eventManager == null)
             Debug.Log("Event Manager is null");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Weapon"))
         {
             _rb.gravityScale = 1.0f;
             _anim.enabled = false;
-            UpdateHelpTxt();
-          
+
+            switch (gameObject.name)
+            {
+                case "Bird_Cage":
+                    _eventManager.BirdCageKnockedDown();
+                    break;
+
+                case "Crate":
+                    UpdateHelpTxtCrate();
+                    break;
+
+                default:
+                    Debug.Log("Error: Value NUll");
+                    break;
+
+            }
         }
         if (other.CompareTag("Water"))
         {
@@ -44,7 +55,7 @@ public class DroppableItem : MonoBehaviour
         }
     }
 
-    public void UpdateHelpTxt()
+    public void UpdateHelpTxtCrate()
     {
         int helpLvl = 2;
         _eventManager.UpdateHelpText(helpLvl);

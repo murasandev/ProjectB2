@@ -30,7 +30,7 @@ public class SceneAudio : MonoBehaviour
     {
         AudioClip _musicTrack;
         
-        if(_trackId > 3)
+        if(_trackId > 4)
         {
             _musicTrack = null;
         }
@@ -46,6 +46,9 @@ public class SceneAudio : MonoBehaviour
                     break;
                 case 3:
                     _musicTrack = sceneMusic._track_3;
+                    break;
+                case 4:
+                    _musicTrack = sceneMusic._track_4;
                     break;
                 default:
                     _musicTrack = null;

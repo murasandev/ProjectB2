@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1627571237476914769}
   - component: {fileID: 1627571237476914770}
   - component: {fileID: 1627571237476914775}
-  - component: {fileID: 8485717491298567312}
+  - component: {fileID: 1627571237476914768}
   m_Layer: 0
   m_Name: FindClub
   m_TagString: FindClub
@@ -72,9 +72,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: {fileID: 11400000, guid: 050eeb28fdaa24535b2cce3b776f8c74, type: 2}
-  _activeOnEnter: 0
-  _dialogTriggerOn: 0
---- !u!114 &8485717491298567312
+  _initialDialog: 0
+--- !u!114 &1627571237476914768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,6 +82,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1627571237476914771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e8c7f4b793542059bb0d7d27c6dc47, type: 3}
+  m_Script: {fileID: 11500000, guid: d5eab0c7fa54c4ad6b3a1fee400d22cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -7,16 +7,14 @@ public class FoundClub : MonoBehaviour
     private DialogTrigger _dt;
     private EventManager _eventManager;
     private CanvasManager _canvas;
-    private bool _isHelpActive;
+    private bool _eToInteractActive;
 
-
-    private int _timesLooked;
-    private bool _clubFound;
+    private bool _clubNotFound;
 
     // Start is called before the first frame update
     void Start()
     {
-        _clubFound = true;
+        _clubNotFound = true;
         _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
         if (_eventManager == null)
             Debug.Log("Event Manager is null");
@@ -24,6 +22,9 @@ public class FoundClub : MonoBehaviour
         _canvas = FindObjectOfType<CanvasManager>();
 
         _dt = GetComponent<DialogTrigger>();
+        if (_dt == null)
+            Debug.Log("Dialog Trigger is NULL");
+
         _dt.SetActiveOnEnterFalse();
 
         _eventManager.ClubFound += StartHintDialog;
@@ -31,30 +32,35 @@ public class FoundClub : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && _isHelpActive)
+        if (Input.GetKeyDown(KeyCode.E) && _eToInteractActive)
         {
-            _isHelpActive = false;
-            _canvas.FindClubHelp(_isHelpActive);
+            _eToInteractActive = false;
+            _canvas.EtoInteractIsActive(_eToInteractActive);
+            _clubNotFound = false;
         }
             
         if (_dt.activeOnEnter)
             _dt.SetActiveOnEnterFalse();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        int looksNeeded = Random.Range(2, 4);
-       
-        if (other.CompareTag("Player"))
-            _timesLooked++;
-
-        if(_timesLooked >= looksNeeded && _clubFound)
+        if (_clubNotFound)
         {
-            _isHelpActive = true;
-            _canvas.FindClubHelp(_isHelpActive);
-            _clubFound = false;
+            _eToInteractActive = true;
+            _canvas.EtoInteractIsActive(_eToInteractActive);
+        }        
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+
+        if (_clubNotFound)
+        {
+            _eToInteractActive = false;
+            _canvas.EtoInteractIsActive(_eToInteractActive);
+
         }
-           
     }
 
     public void StartHintDialog() => _dt.TriggerDialog();

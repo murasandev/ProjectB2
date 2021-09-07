@@ -12,7 +12,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject _dialogbox;
 
     [SerializeField]
-    public GameObject _findClubHelp;
+    public GameObject _EtoInteract;
 
     [SerializeField]
     private Text _helpText;
@@ -94,5 +94,5 @@ public class CanvasManager : MonoBehaviour
         }     
     }
 
-    public void FindClubHelp(bool isActive) => _findClubHelp.gameObject.SetActive(isActive);
+    public void EtoInteractIsActive(bool isActive) => _EtoInteract.gameObject.SetActive(isActive);
 }

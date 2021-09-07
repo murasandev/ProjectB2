@@ -78,6 +78,7 @@ public class SceneSelector : MonoBehaviour
         _water.WaterTriggerStart();
         _endTrigger.EndTriggerEnable();
         _player.enabled = true;
+        _eventManager.WaterSceneActivated();
     }
     public void EndScene()
     {

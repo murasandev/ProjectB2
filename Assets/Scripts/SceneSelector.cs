@@ -51,13 +51,13 @@ public class SceneSelector : MonoBehaviour
     }
     public void FreeGammyScene()
     {
-        SceneManager.LoadScene(4, LoadSceneMode.Additive);
+        SceneManager.LoadScene(10, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
     }
     public void UnloadFreeGammy()
     {
-        SceneManager.UnloadSceneAsync(4);
+        SceneManager.UnloadSceneAsync(10);
         _canvas.enabled = true;
         _eventManager.FreeGammieSceneActivated();
         _player.TeachBromRage();

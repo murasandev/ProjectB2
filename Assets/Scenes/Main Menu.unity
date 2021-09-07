@@ -168,6 +168,7 @@ MonoBehaviour:
   _track_1: {fileID: 8300000, guid: a41b90607aaa7b8428d686438edb7d59, type: 3}
   _track_2: {fileID: 8300000, guid: 7029145042f200d4ab11c4d03d291857, type: 3}
   _track_3: {fileID: 8300000, guid: 44d2cd1da0870b346a71d272545f6bfd, type: 3}
+  _track_4: {fileID: 0}
 --- !u!4 &332322237
 Transform:
   m_ObjectHideFlags: 0
@@ -803,6 +804,26 @@ PrefabInstance:
       propertyPath: _sfxSource
       value: 
       objectReference: {fileID: 359434831}
+    - target: {fileID: 6402485271841787339, guid: 2db7446eed648402882836678fb2eb39,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402485271841787339, guid: 2db7446eed648402882836678fb2eb39,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402485271841787339, guid: 2db7446eed648402882836678fb2eb39,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402485271841787339, guid: 2db7446eed648402882836678fb2eb39,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6402485271916001008, guid: 2db7446eed648402882836678fb2eb39,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -832,25 +853,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-    - target: {fileID: 6402485271841787339, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271841787339, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271841787339, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271841787339, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6402485271916001011, guid: 2db7446eed648402882836678fb2eb39,
         type: 3}

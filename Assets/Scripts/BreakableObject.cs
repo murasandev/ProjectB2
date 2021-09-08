@@ -26,11 +26,13 @@ public class BreakableObject : MonoBehaviour
                 {
                     _player.rageTutorialChest();
                 }
+                CameraShake.Instance.ShakeCamera(2.0f, 0.1f);
             }
         }
         if (other.CompareTag("Bird Cage"))
         {
             _anim.SetTrigger("Hit");
+            CameraShake.Instance.ShakeCamera(5.0f, 0.1f);
         }
     }
 }

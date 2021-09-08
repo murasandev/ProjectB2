@@ -43,7 +43,7 @@ public class CameraShake : MonoBehaviour
                     cineCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
                 cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 
-                    Mathf.Lerp(startingIntensity, 0f, (1 - shakeTimer / shakeTimerTotal));
+                    Mathf.Lerp(startingIntensity, 0f, (1 - (shakeTimer / shakeTimerTotal)));
             }
         }
     }

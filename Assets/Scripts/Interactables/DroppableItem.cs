@@ -37,10 +37,12 @@ public class DroppableItem : MonoBehaviour
             {
                 case "Bird_Cage":
                     _eventManager.BirdCageKnockedDown();
+                    CameraShake.Instance.ShakeCamera(5.0f, .1f);
                     break;
 
                 case "Crate":
                     UpdateHelpTxtCrate();
+                    CameraShake.Instance.ShakeCamera(5.0f, .1f);
                     break;
 
                 default:

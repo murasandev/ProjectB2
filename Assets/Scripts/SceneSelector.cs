@@ -12,6 +12,7 @@ public class SceneSelector : MonoBehaviour
     private EndTrigger _endTrigger;
     private TutorialRage _tutorialRage;
     private EventManager _eventManager;
+    private BjornArmActivate _bjornActivate;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class SceneSelector : MonoBehaviour
         _water = FindObjectOfType<WaterTrigger>();
         _endTrigger = FindObjectOfType<EndTrigger>();
         _tutorialRage = FindObjectOfType<TutorialRage>();
+        _bjornActivate = FindObjectOfType<BjornArmActivate>();
 
         _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
         if (_eventManager == null)
@@ -76,7 +78,7 @@ public class SceneSelector : MonoBehaviour
         SceneManager.UnloadSceneAsync(5);
         _canvas.enabled = true;
         _water.WaterTriggerStart();
-        _endTrigger.EndTriggerEnable();
+        _bjornActivate.ActivateBjorn();
         _player.enabled = true;
         _eventManager.WaterSceneActivated();
     }

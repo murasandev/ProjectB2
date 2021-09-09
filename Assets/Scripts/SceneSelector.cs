@@ -80,6 +80,7 @@ public class SceneSelector : MonoBehaviour
         _water.WaterTriggerStart();
         _bjornActivate.ActivateBjorn();
         _player.enabled = true;
+        _eventManager.WaterSceneActivated();
     }
     public void EndScene()
     {

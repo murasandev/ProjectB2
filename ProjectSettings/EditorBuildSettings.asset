@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Free Gammy Cinematic Interact.unity
     guid: bf5a27c31a920214f9f5ac8f33306f63
+  - enabled: 1
+    path: Assets/Scenes/Water Cinematic Interact.unity
+    guid: 7aed116284b4a8747a05ec68253a1a6f
+  - enabled: 1
+    path: Assets/Scenes/End Cinematic Interact.unity
+    guid: 796e9c1c35e242c449e2c5ae4ac3ef8f
   m_configObjects: {}

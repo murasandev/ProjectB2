@@ -24,6 +24,6 @@ public class FootstepOne : MonoBehaviour
     {
         PlayerAudioStorage audioStorage = GetComponent<PlayerAudioStorage>();
 
-        AudioManager.Instance.PlayEffect(audioStorage._footstep_1, 0.5f);
+        AudioManager.Instance.PlayEffect(audioStorage._footstep_1, 0.15f);
     }
 }

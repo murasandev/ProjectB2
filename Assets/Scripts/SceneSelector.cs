@@ -69,13 +69,13 @@ public class SceneSelector : MonoBehaviour
     }
     public void WaterScene()
     {
-        SceneManager.LoadScene(5, LoadSceneMode.Additive);
+        SceneManager.LoadScene(11, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
     }
     public void UnloadWaterScene()
     {
-        SceneManager.UnloadSceneAsync(5);
+        SceneManager.UnloadSceneAsync(11);
         _canvas.enabled = true;
         _water.WaterTriggerStart();
         _bjornActivate.ActivateBjorn();
@@ -84,7 +84,7 @@ public class SceneSelector : MonoBehaviour
     }
     public void EndScene()
     {
-        SceneManager.LoadScene(6, LoadSceneMode.Additive);
+        SceneManager.LoadScene(12, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
     }

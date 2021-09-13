@@ -33,6 +33,6 @@ public class FootstepTwo : MonoBehaviour
             //print(audioStorage);
             print("audioStorage missing.");
         }
-        AudioManager.Instance.PlayEffect(audioStorage._footstep_2, 0.5f);
+        AudioManager.Instance.PlayEffect(audioStorage._footstep_2, 0.15f);
     }
 }

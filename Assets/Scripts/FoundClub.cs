@@ -6,7 +6,7 @@ public class FoundClub : MonoBehaviour
 {
     private DialogTrigger _dt;
     private EventManager _eventManager;
-    private CanvasManager _canvas;
+    private PlayerCanvas _canvas;
     private bool _eToInteractActive;
 
     private bool _clubNotFound;
@@ -19,7 +19,9 @@ public class FoundClub : MonoBehaviour
         if (_eventManager == null)
             Debug.Log("Event Manager is null");
 
-        _canvas = FindObjectOfType<CanvasManager>();
+        _canvas = FindObjectOfType<Player>().GetComponentInChildren<PlayerCanvas>();
+        if (_canvas == null)
+            Debug.Log("Player Canvas is NULL");
 
         _dt = GetComponent<DialogTrigger>();
         if (_dt == null)
@@ -59,7 +61,6 @@ public class FoundClub : MonoBehaviour
         {
             _eToInteractActive = false;
             _canvas.EtoInteractIsActive(_eToInteractActive);
-
         }
     }
 

@@ -6,7 +6,7 @@ public class FoundClub : MonoBehaviour
 {
     private DialogTrigger _dt;
     private EventManager _eventManager;
-    private PlayerCanvas _canvas;
+    private EtoInteract _eToInteract;
     private bool _eToInteractActive;
 
     private bool _clubNotFound;
@@ -19,8 +19,8 @@ public class FoundClub : MonoBehaviour
         if (_eventManager == null)
             Debug.Log("Event Manager is null");
 
-        _canvas = FindObjectOfType<Player>().GetComponentInChildren<PlayerCanvas>();
-        if (_canvas == null)
+        _eToInteract = GetComponentInChildren<EtoInteract>();
+        if (_eToInteract == null)
             Debug.Log("Player Canvas is NULL");
 
         _dt = GetComponent<DialogTrigger>();
@@ -37,7 +37,7 @@ public class FoundClub : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && _eToInteractActive)
         {
             _eToInteractActive = false;
-            _canvas.EtoInteractIsActive(_eToInteractActive);
+            _eToInteract.EtoInteractIsActive(_eToInteractActive);
             _clubNotFound = false;
         }
             
@@ -50,7 +50,7 @@ public class FoundClub : MonoBehaviour
         if (_clubNotFound)
         {
             _eToInteractActive = true;
-            _canvas.EtoInteractIsActive(_eToInteractActive);
+            _eToInteract.EtoInteractIsActive(_eToInteractActive);
         }        
     }
 
@@ -60,7 +60,7 @@ public class FoundClub : MonoBehaviour
         if (_clubNotFound)
         {
             _eToInteractActive = false;
-            _canvas.EtoInteractIsActive(_eToInteractActive);
+            _eToInteract.EtoInteractIsActive(_eToInteractActive);
         }
     }
 

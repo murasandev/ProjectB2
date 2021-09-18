@@ -1200,6 +1200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1099144033749244179, guid: bb4d70dea3cb143fdb6450d9ebac1013,
+        type: 3}
+      propertyPath: m_TagString
+      value: Canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 1099144033749244201, guid: bb4d70dea3cb143fdb6450d9ebac1013,
         type: 3}
       propertyPath: _EtoInteract
@@ -1315,6 +1320,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7482363112513301960, guid: bb4d70dea3cb143fdb6450d9ebac1013,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482363112513301961, guid: bb4d70dea3cb143fdb6450d9ebac1013,
+        type: 3}
+      propertyPath: _helpTxtString.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482363112513301961, guid: bb4d70dea3cb143fdb6450d9ebac1013,
+        type: 3}
+      propertyPath: _helpTxtString.Array.data[6]
+      value: 'Hint: Search around the bookshelf.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482363112513301963, guid: bb4d70dea3cb143fdb6450d9ebac1013,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7482363112970772868, guid: bb4d70dea3cb143fdb6450d9ebac1013,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1334,6 +1359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482363113954652891, guid: bb4d70dea3cb143fdb6450d9ebac1013,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb4d70dea3cb143fdb6450d9ebac1013, type: 3}

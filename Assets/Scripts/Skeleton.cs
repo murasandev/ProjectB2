@@ -7,14 +7,13 @@ public class Skeleton : MonoBehaviour
 
     private DialogTrigger _dt;
     private EventManager _eventManager;
-    private Help _helpBx;
     [SerializeField] private Dialog _clubFoundDialog;
 
     // Start is called before the first frame update
     void Start()
     {
         _dt = GetComponent<DialogTrigger>();
-        _helpBx = FindObjectOfType<Canvas>().GetComponentInChildren<Help>();
+
 
         _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
         if (_eventManager == null)
@@ -28,9 +27,13 @@ public class Skeleton : MonoBehaviour
 
     public void TurnOffDialog() => _dt.TurnOffDialogTrigger();
 
-    OnTriggerEnter2d()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.CompareTag("Player"))
+        {
+            int helpLvl = 6;
+            _eventManager.UpdateHelpText(helpLvl);       
+        }
     }
 
     private void OnDestroy()

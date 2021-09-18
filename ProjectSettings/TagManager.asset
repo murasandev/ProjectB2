@@ -15,6 +15,7 @@ TagManager:
   - Music
   - RageCollectible
   - Chest
+  - Canvas
   layers:
   - Default
   - TransparentFX

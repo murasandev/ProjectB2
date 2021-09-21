@@ -32,6 +32,8 @@ public class MainMenu : MonoBehaviour
         Animator fadeAnim = fader.GetComponent<Animator>();
 
         fadeAnim.SetTrigger("LoadScene");
+
+        LoadScene();
     }
     public void Quit()
     {

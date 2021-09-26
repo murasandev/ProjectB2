@@ -65,9 +65,12 @@ public class CinPromptCtrl : MonoBehaviour
 
     }
 
-    public void RevealPromptsFade(int prompt_ready)
+    public void RevealPromptsFade()
     {
-        StartCoroutine(FadeIn(0.922f, 1.0f));
+        if(prompt_Ready == 0)
+        {
+            StartCoroutine(FadeIn(0.922f, 0.2f));
+        }
         prompt_Ready = 1;
     }
 

@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 433272598}
   - component: {fileID: 433272600}
   - component: {fileID: 433272599}
+  - component: {fileID: 433272601}
   m_Layer: 5
   m_Name: right_click_prompt
   m_TagString: Untagged
@@ -276,6 +277,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433272597}
   m_CullTransparentMesh: 0
+--- !u!95 &433272601
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433272597}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ddb9f5d497179cf428581e89cb4e2aea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &438420489
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +861,7 @@ GameObject:
   - component: {fileID: 862832255}
   - component: {fileID: 862832257}
   - component: {fileID: 862832256}
+  - component: {fileID: 862832258}
   m_Layer: 5
   m_Name: left_click_prompt
   m_TagString: Untagged
@@ -904,6 +925,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862832254}
   m_CullTransparentMesh: 0
+--- !u!95 &862832258
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862832254}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03c1aff4c7de36e4a9b9e9b635ea29ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &971419622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1200,7 @@ GameObject:
   - component: {fileID: 1426108608}
   - component: {fileID: 1426108611}
   - component: {fileID: 1426108612}
+  - component: {fileID: 1426108613}
   m_Layer: 0
   m_Name: Intro Cinematic Short
   m_TagString: Untagged
@@ -1247,6 +1288,20 @@ MonoBehaviour:
   _fadeType: 2
   _fadeTime: 0.5
   _targetVol: 0.3
+--- !u!114 &1426108613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426108607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b628d17a75a3d3144a5e2d02d7e80eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cont_Prompt: {fileID: 862832256}
+  prev_Prompt: {fileID: 433272599}
 --- !u!1 &1472295954
 GameObject:
   m_ObjectHideFlags: 0

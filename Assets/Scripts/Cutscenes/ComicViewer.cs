@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ComicViewer : MonoBehaviour
 {
@@ -38,7 +39,6 @@ public class ComicViewer : MonoBehaviour
         {
             _anim.SetTrigger("OnRightClick");
             _anim.ResetTrigger("OnLeftClick");
-
             StartCoroutine(ResetInput());
         }
 

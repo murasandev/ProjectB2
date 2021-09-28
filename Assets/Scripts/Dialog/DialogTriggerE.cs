@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogTriggerE : MonoBehaviour
 {
     private DialogTrigger _dt;
-    private CanvasManager _canvas;
+    private EtoInteract _eKey;
     private bool _inOnTrigger;
     private bool _initialDialog;
 
@@ -14,7 +14,7 @@ public class DialogTriggerE : MonoBehaviour
     void Start()
     {
         _dt = GetComponent<DialogTrigger>();
-        _canvas = FindObjectOfType<CanvasManager>();
+        _eKey = GetComponentInChildren<EtoInteract>();
 
         _initialDialog = true;
     }
@@ -30,7 +30,7 @@ public class DialogTriggerE : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && _initialDialog)
             {
                 _dt.TriggerDialog();
-                _canvas.EtoInteractIsActive(false);
+                _eKey.EtoInteractIsActive(false);
                 _initialDialog = false;
             }
         }
@@ -41,7 +41,7 @@ public class DialogTriggerE : MonoBehaviour
         if (other.CompareTag("Player") && _initialDialog)
         {
             _inOnTrigger = true;
-            _canvas.EtoInteractIsActive(true);
+            _eKey.EtoInteractIsActive(true);
         }
             
     }
@@ -51,7 +51,7 @@ public class DialogTriggerE : MonoBehaviour
         if (other.CompareTag("Player") && _initialDialog)
         {
             _inOnTrigger = false;
-            _canvas.EtoInteractIsActive(false);
+            _eKey.EtoInteractIsActive(false);
         }     
     }
 }

@@ -13,6 +13,8 @@ public class Skeleton : MonoBehaviour
     void Start()
     {
         _dt = GetComponent<DialogTrigger>();
+
+
         _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
         if (_eventManager == null)
             Debug.Log("Event Manager is null");
@@ -24,6 +26,15 @@ public class Skeleton : MonoBehaviour
     public void ClubFound() => _dt.dialog = _clubFoundDialog;
 
     public void TurnOffDialog() => _dt.TurnOffDialogTrigger();
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            int helpLvl = 6;
+            _eventManager.UpdateHelpText(helpLvl);       
+        }
+    }
 
     private void OnDestroy()
     {

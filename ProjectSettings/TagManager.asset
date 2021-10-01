@@ -16,6 +16,7 @@ TagManager:
   - RageCollectible
   - Chest
   - Canvas
+  - Floor
   layers:
   - Default
   - TransparentFX

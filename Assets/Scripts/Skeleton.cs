@@ -8,6 +8,8 @@ public class Skeleton : MonoBehaviour
     private DialogTrigger _dt;
     private EventManager _eventManager;
     [SerializeField] private Dialog _clubFoundDialog;
+    [SerializeField] private AudioClip _hitSound;
+    [SerializeField] private float _sfxVol;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,8 @@ public class Skeleton : MonoBehaviour
 
         _eventManager.ClubFound += ClubFound;
         _eventManager.FreeGammieSceneActive += TurnOffDialog;
+
+        _sfxVol = 1.0f;
     }
 
     public void ClubFound() => _dt.dialog = _clubFoundDialog;
@@ -33,6 +37,19 @@ public class Skeleton : MonoBehaviour
         {
             int helpLvl = 6;
             _eventManager.UpdateHelpText(helpLvl);       
+        }
+
+        if(other.CompareTag("Bird Cage"))
+        {
+            PlayAudio(_hitSound, _sfxVol);
+        }
+    }
+
+    private void PlayAudio(AudioClip _soundFX, float _sfxVolume)
+    {
+        if (_soundFX != null)
+        {
+            AudioManager.Instance.PlayEffect(_soundFX, _sfxVolume);
         }
     }
 

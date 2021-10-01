@@ -194,6 +194,19 @@ public class NewPlayer : PhysicsObject
     }
     IEnumerator ResetJumpCoroutine()
     {
+        int randSound = Random.Range(1, 3);
+        switch (randSound)
+        {
+            case 1:
+                PlayAudio(audioStorage._jump_1, 1.0f);
+                break;
+            case 2:
+                PlayAudio(audioStorage._jump_2, 1.0f);
+                break;
+            default:
+                print("Randomizer selected a non-existant sound option.");
+                break;
+        }
         yield return new WaitForSeconds(0.1f);
         _anim.Jump(false);
     }
@@ -289,6 +302,11 @@ public class NewPlayer : PhysicsObject
         if (other.CompareTag("RageCollectible"))
         {
             rageTutorialCollect += 1;
+        }
+        if (other.CompareTag("Floor"))
+        {
+            PlayAudio(audioStorage._landingSound, .3f);
+            Debug.Log("Floor contact");
         }
     }
     IEnumerator StartSwimRoutine()

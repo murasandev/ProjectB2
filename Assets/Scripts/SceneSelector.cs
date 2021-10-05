@@ -85,6 +85,7 @@ public class SceneSelector : MonoBehaviour
     public void EndScene()
     {
         SceneManager.LoadScene(12, LoadSceneMode.Additive);
+        AudioManager.Instance.LoopEffectStop();
         _canvas.enabled = false;
         _player.enabled = false;
     }

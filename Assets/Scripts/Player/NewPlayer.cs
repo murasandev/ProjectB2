@@ -10,6 +10,7 @@ public class NewPlayer : PhysicsObject
 
     [SerializeField] private float maxDistance = 5.0f;
 
+
     [SerializeField] private float rage = 0f;
     [SerializeField] private bool enrage = false;
     [SerializeField] private float subtractRage = 1f;
@@ -101,7 +102,6 @@ public class NewPlayer : PhysicsObject
     void Update()
     {
         ActivateRage();
-        //FreeGammyCutScene();
         triggerWaterScene();
         UpdateUI();
         row();
@@ -135,12 +135,10 @@ public class NewPlayer : PhysicsObject
 
             if (Input.GetAxis("Horizontal") < 0)
             {
-                //_spriteR.flipX = true;
                 transform.localScale = new Vector3(-1, 1, 1);
             }
             else if (Input.GetAxis("Horizontal") > 0)
             {
-                //_spriteR.flipX = false;
                 transform.localScale = new Vector3(1, 1, 1);
             }
             if (Input.GetButtonDown("Jump") && isRaging == false && grounded)
@@ -192,6 +190,9 @@ public class NewPlayer : PhysicsObject
             stopActions = true;
         }
     }
+
+    public void StopActions(bool isOn) => stopActions = isOn;
+
     IEnumerator ResetJumpCoroutine()
     {
         int randSound = Random.Range(1, 3);
@@ -210,6 +211,9 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(0.1f);
         _anim.Jump(false);
     }
+
+
+
 
     /*
      * dont delete, may use in future implication

@@ -108,7 +108,7 @@ public class NewPlayer : PhysicsObject
         //EnragedJump();
         FinalHelpTxt();
 
-        if (stopActions == false || _dbOn == false)
+        if (stopActions == false || _dbOn == false) 
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
             {
@@ -183,12 +183,12 @@ public class NewPlayer : PhysicsObject
             }
         }
 
-        if(_dbOn)
+        if(_dbOn || stopActions)
         {
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * 0, 0);
             _anim.Idle(0);
-            stopActions = true;
         }
+
     }
 
     public void StopActions(bool isOn) => stopActions = isOn;

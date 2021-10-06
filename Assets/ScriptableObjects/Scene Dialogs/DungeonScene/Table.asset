@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b88de665b37364515b5eca52df43d0dd, type: 3}
-  m_Name: Tester
+  m_Name: Table
   m_EditorClassIdentifier: 
   gammieConversation: 0
   _dialogInfo:
   - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
-    dialogText: Tester
-  - character: {fileID: 11400000, guid: 29fed5bfec4805643b5c22ac8c8c0766, type: 2}
-    dialogText: 'is working......
-
-'
+    dialogText: everything is covered in dust

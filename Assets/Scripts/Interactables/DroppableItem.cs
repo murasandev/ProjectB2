@@ -9,10 +9,6 @@ public class DroppableItem : MonoBehaviour
     private EventManager _eventManager;
     private Collider2D _water;
     private Collider2D _c2D;
-    private Collider2D _playerCollider;
-    
-  
-
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +18,6 @@ public class DroppableItem : MonoBehaviour
         _c2D = GetComponent<Collider2D>();
 
         _water = GameObject.Find("Water").GetComponent<Collider2D>();
-        _playerCollider = GameObject.Find("Player").GetComponent<Collider2D>();
         _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
         if (_eventManager == null)
             Debug.Log("Event Manager is null");
@@ -57,11 +52,10 @@ public class DroppableItem : MonoBehaviour
         {
             Physics2D.IgnoreCollision(_c2D, _water);
         }
-
-        //if (other.CompareTag("Player"))
-        //{
-        //    Physics2D.IgnoreCollision(_c2D, _playerCollider);
-        //}
+        if (other.CompareTag("Floor"))
+        {
+            CameraShake.Instance.ShakeCamera(5.0f, .1f);
+        }
     }
 
     public void UpdateHelpTxtCrate()

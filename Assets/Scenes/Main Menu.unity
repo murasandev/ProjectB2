@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _volume: 0.1
   _trackId: 1
+  _playOnStart: 1
 --- !u!114 &332322236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +170,7 @@ MonoBehaviour:
   _track_2: {fileID: 8300000, guid: 7029145042f200d4ab11c4d03d291857, type: 3}
   _track_3: {fileID: 8300000, guid: 44d2cd1da0870b346a71d272545f6bfd, type: 3}
   _track_4: {fileID: 0}
+  _track_5: {fileID: 0}
 --- !u!4 &332322237
 Transform:
   m_ObjectHideFlags: 0
@@ -789,6 +791,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6402485271361509351, guid: 2db7446eed648402882836678fb2eb39,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6402485271361509352, guid: 2db7446eed648402882836678fb2eb39,
         type: 3}
       propertyPath: _sceneId
@@ -878,6 +885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402485272531041573, guid: 2db7446eed648402882836678fb2eb39,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6402485272531041573, guid: 2db7446eed648402882836678fb2eb39,
         type: 3}

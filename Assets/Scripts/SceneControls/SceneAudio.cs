@@ -10,6 +10,9 @@ public class SceneAudio : MonoBehaviour
     [SerializeField]
     private int _trackId;
 
+    [SerializeField]
+    private bool _playOnStart;
+
     SceneMusicStorage sceneMusic;
 
 
@@ -17,7 +20,12 @@ public class SceneAudio : MonoBehaviour
     void Start()
     {
         sceneMusic = GetComponent<SceneMusicStorage>();
-        AudioManager.Instance.PlayMusic(MusicSelection(_trackId), _volume);
+
+        if(_playOnStart == true)
+        {
+            AudioManager.Instance.PlayMusic(MusicSelection(_trackId), _volume);
+        }
+        
     }
 
     // Update is called once per frame
@@ -30,7 +38,7 @@ public class SceneAudio : MonoBehaviour
     {
         AudioClip _musicTrack;
         
-        if(_trackId > 4)
+        if(_trackId > 5)
         {
             _musicTrack = null;
         }
@@ -50,6 +58,9 @@ public class SceneAudio : MonoBehaviour
                 case 4:
                     _musicTrack = sceneMusic._track_4;
                     break;
+                case 5:
+                    _musicTrack = sceneMusic._track_5;
+                    break;
                 default:
                     _musicTrack = null;
                     break;
@@ -57,6 +68,45 @@ public class SceneAudio : MonoBehaviour
         }
         return _musicTrack;
             
+    }
+
+   
+    public void SelectTrack(int _trackInput)
+    {
+        AudioClip _musicTrack;
+        print("input: " + _trackInput);
+        print("volume: " + _volume);
+        if (_trackId > 5)
+        {
+            _musicTrack = null;
+        }
+        else
+        {
+            switch (_trackInput)
+            {
+                case 1:
+                    _musicTrack = sceneMusic._track_1;
+                    break;
+                case 2:
+                    _musicTrack = sceneMusic._track_2;
+                    break;
+                case 3:
+                    _musicTrack = sceneMusic._track_3;
+                    break;
+                case 4:
+                    _musicTrack = sceneMusic._track_4;
+                    break;
+                case 5:
+                    _musicTrack = sceneMusic._track_5;
+                    break;
+                default:
+                    _musicTrack = null;
+                    break;
+            }
+        }
+        print("Music Track: " + _musicTrack);
+        AudioManager.Instance.PlayMusic(_musicTrack, _volume);
+
     }
 
 }

@@ -5611,7 +5611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778947191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9049268, y: 1.0480447, z: -10}
+  m_LocalPosition: {x: -3.8902707, y: 1.0480447, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11871,8 +11871,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
         type: 3}
+      propertyPath: _trackId_1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
+      propertyPath: _audioSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
       propertyPath: _playOnStart
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
+      propertyPath: _source_volume_1
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
+      propertyPath: _source_volume_2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7473860968599333572, guid: 3971bf620dfb344fca9042075ef9b7d8,
         type: 3}

@@ -5,13 +5,22 @@ using UnityEngine;
 public class SceneAudio : MonoBehaviour
 {
    [SerializeField]
-    private float _volume = 1.0f;
+    public float _source_volume_1 = 1.0f;
 
     [SerializeField]
-    private int _trackId;
+    public float _source_volume_2 = 1.0f;
+
+    [SerializeField]
+    public int _trackId_1;
+
+    [SerializeField]
+    public int _trackId_2;
 
     [SerializeField]
     private bool _playOnStart;
+
+    [SerializeField]
+    public int _audioSource;
 
     SceneMusicStorage sceneMusic;
 
@@ -23,7 +32,16 @@ public class SceneAudio : MonoBehaviour
 
         if(_playOnStart == true)
         {
-            AudioManager.Instance.PlayMusic(MusicSelection(_trackId), _volume);
+            if (_audioSource == 1)
+            {
+                AudioManager.Instance.PlayMusic(MusicSelection(_trackId_1), _source_volume_1, _audioSource);
+            }
+
+            else if(_audioSource == 2)
+            {
+                AudioManager.Instance.PlayMusic(MusicSelection(_trackId_2), _source_volume_2, _audioSource);
+            }
+            
         }
         
     }
@@ -71,12 +89,12 @@ public class SceneAudio : MonoBehaviour
     }
 
    
-    public void SelectTrack(int _trackInput)
+    public void SelectTrack(int _trackInput, int _source, float _volume)
     {
         AudioClip _musicTrack;
         print("input: " + _trackInput);
         print("volume: " + _volume);
-        if (_trackId > 5)
+        if (_trackInput > 5)
         {
             _musicTrack = null;
         }
@@ -105,7 +123,7 @@ public class SceneAudio : MonoBehaviour
             }
         }
         print("Music Track: " + _musicTrack);
-        AudioManager.Instance.PlayMusic(_musicTrack, _volume);
+        AudioManager.Instance.PlayMusic(_musicTrack, _volume, _source);
 
     }
 

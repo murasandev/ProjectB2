@@ -523,6 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxSource: {fileID: 0}
   _bgmSource: {fileID: 0}
+  _bgmSource_2: {fileID: 0}
 --- !u!4 &472965121
 Transform:
   m_ObjectHideFlags: 0
@@ -1285,9 +1286,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxSource: {fileID: 0}
   _bgmSource: {fileID: 0}
+  _bgmSource_2: {fileID: 0}
   _fadeType: 2
   _fadeTime: 0.5
   _targetVol: 0.3
+  _targetVol_2: 0
 --- !u!114 &1426108613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,9 +1730,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300b1c7c2a3f000428bb9d8829057f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _volume: 0
-  _trackId: 2
+  _source_volume_1: 0
+  _source_volume_2: 0
+  _trackId_1: 2
+  _trackId_2: 0
   _playOnStart: 1
+  _audioSource: 1
 --- !u!114 &1973510350
 MonoBehaviour:
   m_ObjectHideFlags: 0

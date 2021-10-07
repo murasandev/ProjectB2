@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 5466391850058807646, guid: e8503c0e0bf9c4f4c88a358ac4d4aa5d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6856434890404706657, guid: e8503c0e0bf9c4f4c88a358ac4d4aa5d,
         type: 3}
@@ -586,16 +586,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307341909}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 955320f23a2d02a469768be5032a955a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sfxSource: {fileID: 1429389280}
   _bgmSource: {fileID: 1429389281}
-  _fadeType: 0
+  _bgmSource_2: {fileID: 0}
+  _fadeType: 3
   _fadeTime: 0
   _targetVol: 0
+  _targetVol_2: 0.3
 --- !u!1 &1404368112
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +769,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524855207743857692, guid: c8ecb5fd030c60c40a81deb7de141a18,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670213647886687368, guid: c8ecb5fd030c60c40a81deb7de141a18,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ecb5fd030c60c40a81deb7de141a18, type: 3}
@@ -1195,7 +1207,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
         type: 3}
+      propertyPath: _trackId_1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
+      propertyPath: _trackId_2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
+      propertyPath: _audioSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
       propertyPath: _playOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
+      propertyPath: _source_volume_1
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473860968599333570, guid: 3971bf620dfb344fca9042075ef9b7d8,
+        type: 3}
+      propertyPath: _source_volume_2
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7473860968599333571, guid: 3971bf620dfb344fca9042075ef9b7d8,

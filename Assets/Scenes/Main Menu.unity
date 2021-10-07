@@ -566,18 +566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca511260a3e08e43b1072833f4c4533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1661005295 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6402485272531041575, guid: 2db7446eed648402882836678fb2eb39,
-    type: 3}
-  m_PrefabInstance: {fileID: 6402485271110613586}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92aa733473787fd4cb731fcd74ad4dec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1682702275
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,31 +734,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6402485270599151350, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485270599151350, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485270599151350, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485270599151350, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485270879784972, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: FadeOutAuto
-      objectReference: {fileID: 0}
     - target: {fileID: 6402485270879784975, guid: 2db7446eed648402882836678fb2eb39,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -790,16 +753,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271361509351, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271361509352, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: _sceneId
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6402485271361509353, guid: 2db7446eed648402882836678fb2eb39,
         type: 3}
@@ -830,36 +783,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271916001008, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271916001008, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271916001008, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1661005295}
-    - target: {fileID: 6402485271916001008, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271916001008, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadCredits
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402485271916001008, guid: 2db7446eed648402882836678fb2eb39,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6402485271916001011, guid: 2db7446eed648402882836678fb2eb39,
         type: 3}

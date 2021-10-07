@@ -41,24 +41,28 @@ public class SceneSelector : MonoBehaviour
     }
     public void FoundClub()
     {
+        _player.StopActions(true);
         SceneManager.LoadScene(8, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
     }
     public void UnloadClubScene()
     {
+        _player.StopActions(false);
         SceneManager.UnloadSceneAsync(8);
         _canvas.enabled = true;
         _player.enabled = true;
     }
     public void FreeGammyScene()
     {
+        _player.StopActions(true);
         SceneManager.LoadScene(10, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
     }
     public void UnloadFreeGammy()
     {
+        _player.StopActions(false);
         SceneManager.UnloadSceneAsync(10);
         _canvas.enabled = true;
         _eventManager.FreeGammieSceneActivated();
@@ -69,12 +73,14 @@ public class SceneSelector : MonoBehaviour
     }
     public void WaterScene()
     {
+        _player.StopActions(true);
         SceneManager.LoadScene(11, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
     }
     public void UnloadWaterScene()
     {
+        _player.StopActions(false);
         SceneManager.UnloadSceneAsync(11);
         _canvas.enabled = true;
         _water.WaterTriggerStart();
@@ -84,7 +90,9 @@ public class SceneSelector : MonoBehaviour
     }
     public void EndScene()
     {
+        _player.StopActions(true);
         SceneManager.LoadScene(12, LoadSceneMode.Additive);
+        AudioManager.Instance.LoopEffectStop();
         _canvas.enabled = false;
         _player.enabled = false;
     }

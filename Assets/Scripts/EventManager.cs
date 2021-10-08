@@ -62,5 +62,12 @@ public class EventManager : MonoBehaviour
             CageFallActive();
     }
 
+
+    public event Action StartRage;
+    public void GammyTaughtRage()
+    {
+        if (StartRage != null)
+            StartRage();
+    }
 }
 

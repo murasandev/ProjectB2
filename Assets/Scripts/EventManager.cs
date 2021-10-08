@@ -55,5 +55,19 @@ public class EventManager : MonoBehaviour
             WaterSceneActive();
     }
 
+    public event Action CageFallActive;
+    public void CageFall()
+    {
+        if (CageFallActive != null)
+            CageFallActive();
+    }
+
+
+    public event Action StartRage;
+    public void GammyTaughtRage()
+    {
+        if (StartRage != null)
+            StartRage();
+    }
 }
 

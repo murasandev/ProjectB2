@@ -17,6 +17,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private bool boolRage;
     [SerializeField] private bool stopActions = false;
     [SerializeField] public bool isRaging = false;
+    [SerializeField] private bool _gameStart;
 
     [SerializeField] private bool hasClub = false;
     [SerializeField] private bool clubCinematic = true;
@@ -96,19 +97,20 @@ public class NewPlayer : PhysicsObject
         _eventManager.UpdateHelpText(_helpLevel);
 
         _eventManager.StartGammieScene += FreeGammyCutScene;
+        _eventManager.StartRage += ActivateRage;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ActivateRage();
+       // ActivateRage();
         triggerWaterScene();
         UpdateUI();
         row();
         //EnragedJump();
         FinalHelpTxt();
 
-        if (stopActions == false || _dbOn == false)
+        if (stopActions == false || _dbOn == false) 
         {
             if (Input.GetButtonDown("Fire1") && hasClub == true && _isSwimming == false)
             {
@@ -118,10 +120,10 @@ public class NewPlayer : PhysicsObject
                 switch (randSound)
                 {
                     case 1:
-                        PlayAudio(audioStorage._woosh_1, 1.0f);
+                        PlayAudio(audioStorage._woosh_1, 0.15f);
                         break;
                     case 2:
-                        PlayAudio(audioStorage._woosh_2, 1.0f);
+                        PlayAudio(audioStorage._woosh_2, 0.15f);
                         break;
                     default:
                         print("Randomizer selected a non-existant sound option.");
@@ -129,6 +131,8 @@ public class NewPlayer : PhysicsObject
                       
                 }
             }
+
+
             maxSpeed = 5;
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
             _anim.Move(Mathf.Abs(Input.GetAxis("Horizontal")));
@@ -183,12 +187,12 @@ public class NewPlayer : PhysicsObject
             }
         }
 
-        if(_dbOn)
+        if(_dbOn || stopActions)
         {
             targetVelocity = new Vector2(Input.GetAxis("Horizontal") * 0, 0);
             _anim.Idle(0);
-            stopActions = true;
         }
+
     }
 
     public void StopActions(bool isOn) => stopActions = isOn;
@@ -268,7 +272,7 @@ public class NewPlayer : PhysicsObject
     }
     IEnumerator StartRageRoutine()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(.5f);
         stopActions = false;
         _spriteR.color = new Color(.9686f, .5725f, .4823f, 1f);
     }
@@ -307,10 +311,13 @@ public class NewPlayer : PhysicsObject
         {
             rageTutorialCollect += 1;
         }
-        if (other.CompareTag("Floor"))
+        if (other.CompareTag("Floor") && !_gameStart)
         {
             PlayAudio(audioStorage._landingSound, .3f);
-            Debug.Log("Floor contact");
+        }
+        if (other.CompareTag("Floor") && _gameStart)
+        {
+            _gameStart = false;
         }
     }
     IEnumerator StartSwimRoutine()
@@ -366,7 +373,7 @@ public class NewPlayer : PhysicsObject
     }
     IEnumerator TeachBromRageRoutine()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(.5f);
         rage = 100;
         rageTutorial = true;
         _helpLevel = 4;
@@ -459,5 +466,6 @@ public class NewPlayer : PhysicsObject
     private void OnDestroy()
     {
         _eventManager.StartGammieScene -= FreeGammyCutScene;
+        _eventManager.StartRage -= ActivateRage;
     }
 }

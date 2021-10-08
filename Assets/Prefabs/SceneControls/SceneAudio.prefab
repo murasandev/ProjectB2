@@ -48,6 +48,7 @@ MonoBehaviour:
   _track_2: {fileID: 8300000, guid: a41b90607aaa7b8428d686438edb7d59, type: 3}
   _track_3: {fileID: 8300000, guid: 7029145042f200d4ab11c4d03d291857, type: 3}
   _track_4: {fileID: 8300000, guid: dc763a6c62c3543f3a04faddbf74e483, type: 3}
+  _track_5: {fileID: 8300000, guid: 51c283f7117a94e4f9182ee11d520f6a, type: 3}
 --- !u!114 &7473860968599333570
 MonoBehaviour:
   m_ObjectHideFlags: 0

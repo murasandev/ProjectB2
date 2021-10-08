@@ -523,6 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxSource: {fileID: 0}
   _bgmSource: {fileID: 0}
+  _bgmSource_2: {fileID: 0}
 --- !u!4 &472965121
 Transform:
   m_ObjectHideFlags: 0
@@ -688,7 +689,7 @@ PrefabInstance:
     - target: {fileID: 3653430077111766626, guid: c8ecb5fd030c60c40a81deb7de141a18,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3653430077111766626, guid: c8ecb5fd030c60c40a81deb7de141a18,
         type: 3}
@@ -1285,9 +1286,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxSource: {fileID: 0}
   _bgmSource: {fileID: 0}
+  _bgmSource_2: {fileID: 0}
   _fadeType: 2
   _fadeTime: 0.5
   _targetVol: 0.3
+  _targetVol_2: 0
 --- !u!114 &1426108613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,8 +1730,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300b1c7c2a3f000428bb9d8829057f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _volume: 0
-  _trackId: 2
+  _source_volume_1: 0
+  _source_volume_2: 0
+  _trackId_1: 2
+  _trackId_2: 0
+  _playOnStart: 1
+  _audioSource: 1
 --- !u!114 &1973510350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,6 +1752,7 @@ MonoBehaviour:
   _track_2: {fileID: 8300000, guid: 7029145042f200d4ab11c4d03d291857, type: 3}
   _track_3: {fileID: 8300000, guid: 44d2cd1da0870b346a71d272545f6bfd, type: 3}
   _track_4: {fileID: 0}
+  _track_5: {fileID: 0}
 --- !u!4 &1973510351
 Transform:
   m_ObjectHideFlags: 0

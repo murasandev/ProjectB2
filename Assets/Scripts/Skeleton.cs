@@ -22,7 +22,7 @@ public class Skeleton : MonoBehaviour
             Debug.Log("Event Manager is null");
 
         _eventManager.ClubFound += ClubFound;
-        _eventManager.FreeGammieSceneActive += TurnOffDialog;
+        _eventManager.StartGammieScene += TurnOffDialog;
 
         _sfxVol = 1.0f;
     }
@@ -56,6 +56,6 @@ public class Skeleton : MonoBehaviour
     private void OnDestroy()
     {
         _eventManager.ClubFound -= ClubFound;
-        _eventManager.FreeGammieSceneActive -= TurnOffDialog;
+        _eventManager.StartGammieScene -= TurnOffDialog;
     }
 }

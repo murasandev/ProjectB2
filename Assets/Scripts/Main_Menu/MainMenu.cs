@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
 
         fadeAnim.SetTrigger("LoadScene");
 
-        LoadScene();
+        //LoadScene();
     }
     public void Quit()
     {

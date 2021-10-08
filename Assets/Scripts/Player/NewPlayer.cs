@@ -118,10 +118,10 @@ public class NewPlayer : PhysicsObject
                 switch (randSound)
                 {
                     case 1:
-                        PlayAudio(audioStorage._woosh_1, 1.0f);
+                        PlayAudio(audioStorage._woosh_1, 0.15f);
                         break;
                     case 2:
-                        PlayAudio(audioStorage._woosh_2, 1.0f);
+                        PlayAudio(audioStorage._woosh_2, 0.15f);
                         break;
                     default:
                         print("Randomizer selected a non-existant sound option.");

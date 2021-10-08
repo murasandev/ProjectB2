@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -56,18 +57,30 @@ public class SceneSelector : MonoBehaviour
     public void FreeGammyScene()
     {
         _player.StopActions(true);
+        _gammie.TransformtoGammie();
+        StartCoroutine(LoadGammyCoroutine());
+        //SceneManager.LoadScene(10, LoadSceneMode.Additive);
+        //_canvas.enabled = false;
+        //_player.enabled = false;
+    }
+
+    IEnumerator LoadGammyCoroutine()
+    {
+        yield return new WaitForSeconds(3.0f);
         SceneManager.LoadScene(10, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
+
     }
+
     public void UnloadFreeGammy()
     {
         _player.StopActions(false);
         SceneManager.UnloadSceneAsync(10);
         _canvas.enabled = true;
         _eventManager.FreeGammieSceneActivated();
+        //_gammie.TransformtoGammie();
         _player.TeachBromRage();
-        _gammie.TransformtoDrake();
         _tutorialRage.startTutorialRage();
         _player.enabled = true;
     }

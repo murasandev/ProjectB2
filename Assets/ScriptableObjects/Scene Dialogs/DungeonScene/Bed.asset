@@ -15,4 +15,4 @@ MonoBehaviour:
   gammieConversation: 0
   _dialogInfo:
   - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
-    dialogText: "no one has slept in this in years\u2026"
+    dialogText: "No one has slept in this in years\u2026\n"

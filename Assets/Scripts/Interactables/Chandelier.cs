@@ -10,7 +10,8 @@ public class Chandelier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _leverTrigger = GameObject.Find("Lever").GetComponent<LeverTrigger>();
+        //_leverTrigger = GameObject.Find("Lever").GetComponent<LeverTrigger>();
+        _leverTrigger = GameObject.Find("Ground_Switch").GetComponent<LeverTrigger>();
         _anim = GetComponent<Animator>();
     }
 

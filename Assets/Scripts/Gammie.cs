@@ -39,7 +39,6 @@ public class Gammie : MonoBehaviour
     void Update()
     {
         Movement();
-        TransformtoGammie();
 
         if (_dt.activeOnEnter)
             _dt.SetActiveOnEnterFalse();
@@ -73,16 +72,13 @@ public class Gammie : MonoBehaviour
             }
         }
     }
-    private void TransformtoGammie()
+
+
+    public void TransformtoGammie()
     {
-        float dist = Vector3.Distance(transform.position, target.position);
-        if (dist < 1.0f && transformGammie == true)
-        {
-            _anim.SetTrigger("toGammie");
-            transformGammie = false;
-            transformDrake = true;
-            //StartCoroutine(toDrake());
-        }
+    
+        StartCoroutine(toDrake());
+
     }
     
     public void TransformtoDrake()
@@ -92,10 +88,16 @@ public class Gammie : MonoBehaviour
     IEnumerator toDrake()
     {
         //coroutine to test transform back to drake
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(1f);
         if (transformDrake == true)
         {
             _anim.SetTrigger("toDrake");
+            transformDrake = false;
+        }
+        else
+        {
+            _anim.SetTrigger("toGammie");
+            transformDrake = true;
         }
     }
 

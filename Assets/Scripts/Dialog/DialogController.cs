@@ -33,6 +33,7 @@ public class DialogController : MonoBehaviour {
     private Coroutine _currentTWText = null;
 
     private Dialog _dialog;
+    private EventManager _eventManager;
 
     private static DialogController _instance;
     public static DialogController Instance { get { return _instance;  } }
@@ -45,6 +46,7 @@ public class DialogController : MonoBehaviour {
  
     private void Start()
     {
+
         _sentences = new Queue<string>();
         _canvasManager = FindObjectOfType<CanvasManager>();
         _player = FindObjectOfType<NewPlayer>();
@@ -59,6 +61,12 @@ public class DialogController : MonoBehaviour {
         {
             Debug.Log("UI Manager is NULL");
         }
+
+        _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
+        if (_eventManager == null)
+            Debug.Log("Event Manager is null");
+
+ 
         _initialDialogHelp = true;
         _currentChar = "";
         _typeWriterComplete = true;
@@ -154,7 +162,12 @@ public class DialogController : MonoBehaviour {
         dialogOn = false;
 
         if (_dialog.gammieConversation)
+        {
             _gammie.TransformtoDrake();
+            _eventManager.GammyTaughtRage();
+
+        }
+           
      }
 
 

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -594,7 +594,7 @@ PrefabInstance:
     - target: {fileID: 3653430077111766626, guid: c8ecb5fd030c60c40a81deb7de141a18,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3653430077111766626, guid: c8ecb5fd030c60c40a81deb7de141a18,
         type: 3}
@@ -1247,6 +1247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _volume: 0.25
   _trackId: 2
+  _playOnStart: 0
 --- !u!114 &1973510350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,6 +1263,8 @@ MonoBehaviour:
   _track_1: {fileID: 8300000, guid: a41b90607aaa7b8428d686438edb7d59, type: 3}
   _track_2: {fileID: 8300000, guid: 7029145042f200d4ab11c4d03d291857, type: 3}
   _track_3: {fileID: 8300000, guid: 44d2cd1da0870b346a71d272545f6bfd, type: 3}
+  _track_4: {fileID: 0}
+  _track_5: {fileID: 0}
 --- !u!4 &1973510351
 Transform:
   m_ObjectHideFlags: 0

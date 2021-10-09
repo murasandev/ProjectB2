@@ -468,4 +468,8 @@ public class NewPlayer : PhysicsObject
         _eventManager.StartGammieScene -= FreeGammyCutScene;
         _eventManager.StartRage -= ActivateRage;
     }
+    public void setPlayerColorDefault()
+    {
+        _spriteR.color = new Color(1f, 1f, 1f, 1f);
+    }
 }

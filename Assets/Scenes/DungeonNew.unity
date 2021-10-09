@@ -200,6 +200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3107996406431087721, guid: 63d29724a737ff141907bff8e9a28cef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d29724a737ff141907bff8e9a28cef, type: 3}
 --- !u!1001 &79735346
@@ -217,6 +222,10 @@ PrefabInstance:
       propertyPath: gammieTransform
       value: 
       objectReference: {fileID: 7702073216527326678}
+    - target: {fileID: 1324167278, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1777320539, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -55.17224
@@ -917,6 +926,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3107996406431087721, guid: 63d29724a737ff141907bff8e9a28cef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d29724a737ff141907bff8e9a28cef, type: 3}
 --- !u!114 &385238088 stripped
@@ -1296,6 +1310,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfa61a8257b5648fcb6dfea22ad9dcf1, type: 3}
+--- !u!61 &594553211 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922,
+    type: 3}
+  m_PrefabInstance: {fileID: 4572608961409013877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &606358470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5628,7 +5648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778947191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8902707, y: 1.0480447, z: -10}
+  m_LocalPosition: {x: -3.9000783, y: 1.0480447, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5895,6 +5915,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3107996406431087721, guid: 63d29724a737ff141907bff8e9a28cef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d29724a737ff141907bff8e9a28cef, type: 3}
 --- !u!1001 &848105209
@@ -5963,6 +5988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torch_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107996406431087721, guid: 63d29724a737ff141907bff8e9a28cef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d29724a737ff141907bff8e9a28cef, type: 3}
@@ -9083,6 +9113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3107996406431087721, guid: 63d29724a737ff141907bff8e9a28cef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d29724a737ff141907bff8e9a28cef, type: 3}
 --- !u!1001 &1718613099
@@ -11006,6 +11041,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1100517923881331215, guid: fa00dbf1922c8b44cb19c00c74d657cc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa00dbf1922c8b44cb19c00c74d657cc, type: 3}
 --- !u!1001 &1321030046814038139
@@ -11074,6 +11114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torch_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107996406431087721, guid: 63d29724a737ff141907bff8e9a28cef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d29724a737ff141907bff8e9a28cef, type: 3}
@@ -11543,9 +11588,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 546189550, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 651248569, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
       propertyPath: _sfxVol
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 651248569, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: _waterBoxCollider
+      value: 
+      objectReference: {fileID: 594553211}
+    - target: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: m_Size.y
+      value: 9.865266
+      objectReference: {fileID: 0}
+    - target: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.062366962
+      objectReference: {fileID: 0}
+    - target: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4572608962272998304, guid: 86fb157e67c03004fb7841e74c8ad922,
         type: 3}
@@ -11607,7 +11676,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 546189550, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
 --- !u!1001 &4604338583610906667
 PrefabInstance:
@@ -12372,7 +12442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b89981627b6bf8468047f97f5a2c14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventManager: {fileID: 0}
 --- !u!1001 &8727408665280541579
 PrefabInstance:
   m_ObjectHideFlags: 0

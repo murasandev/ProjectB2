@@ -94,6 +94,7 @@ public class SceneSelector : MonoBehaviour
     public void UnloadWaterScene()
     {
         _player.StopActions(false);
+        _player.setPlayerColorDefault();
         SceneManager.UnloadSceneAsync(11);
         _canvas.enabled = true;
         _water.WaterTriggerStart();

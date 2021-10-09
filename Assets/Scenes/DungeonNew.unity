@@ -224,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 7702073216527326678}
     - target: {fileID: 1324167278, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1777320539, guid: 89e004afbcb6cf148a4a7bb4deef13cc, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1310,6 +1310,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfa61a8257b5648fcb6dfea22ad9dcf1, type: 3}
+--- !u!61 &594553211 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922,
+    type: 3}
+  m_PrefabInstance: {fileID: 4572608961409013877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &606358470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5642,7 +5648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778947191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8902707, y: 1.0480447, z: -10}
+  m_LocalPosition: {x: -3.9000783, y: 1.0480447, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5773,38 +5779,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!1 &783788304 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2643925493054059860, guid: 89e004afbcb6cf148a4a7bb4deef13cc,
-    type: 3}
-  m_PrefabInstance: {fileID: 79735346}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &783788312
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783788304}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.001026094, y: -0.011710286}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.28}
-    newSize: {x: 0.36, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.32666016, y: 0.63769794}
-  m_EdgeRadius: 0
 --- !u!114 &796753360 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1099144033377584819, guid: bb4d70dea3cb143fdb6450d9ebac1013,
@@ -11067,6 +11041,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1100517923881331215, guid: fa00dbf1922c8b44cb19c00c74d657cc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa00dbf1922c8b44cb19c00c74d657cc, type: 3}
 --- !u!1001 &1321030046814038139
@@ -11609,13 +11588,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 546189550, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 651248569, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
       propertyPath: _sfxVol
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 651248569, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: _waterBoxCollider
+      value: 
+      objectReference: {fileID: 594553211}
     - target: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
       propertyPath: m_Size.y
-      value: 9.194664
+      value: 9.865266
       objectReference: {fileID: 0}
     - target: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
       propertyPath: m_Enabled
@@ -11623,7 +11610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
       propertyPath: m_Offset.y
-      value: -0.39766812
+      value: -0.062366962
+      objectReference: {fileID: 0}
+    - target: {fileID: 876471211, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4572608962272998304, guid: 86fb157e67c03004fb7841e74c8ad922,
         type: 3}
@@ -11685,7 +11676,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 546189550, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 86fb157e67c03004fb7841e74c8ad922, type: 3}
 --- !u!1001 &4604338583610906667
 PrefabInstance:
@@ -12450,7 +12442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b89981627b6bf8468047f97f5a2c14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventManager: {fileID: 0}
 --- !u!1001 &8727408665280541579
 PrefabInstance:
   m_ObjectHideFlags: 0

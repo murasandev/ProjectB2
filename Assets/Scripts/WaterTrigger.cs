@@ -11,6 +11,7 @@ public class WaterTrigger : MonoBehaviour
     [SerializeField] private float _sfxVol;
     [SerializeField] private bool _loopOn;
 
+    [SerializeField] private BoxCollider2D _waterBoxCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +24,11 @@ public class WaterTrigger : MonoBehaviour
     {
         _water.SetTrigger("WaterRise");
         _audioManager.LoopEffectStart(_waterSfx, _sfxVol, _loopOn);
+        StartCoroutine(SetWaterTriggerCoroutine());
+    }
+    IEnumerator SetWaterTriggerCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+        _waterBoxCollider.isTrigger = false;
     }
 }

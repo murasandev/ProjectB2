@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -194,6 +194,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &449046931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449046932}
+  - component: {fileID: 449046934}
+  - component: {fileID: 449046933}
+  m_Layer: 5
+  m_Name: Audio_SFX_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &449046932
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449046931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7940123065889219335}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.7, y: -30}
+  m_SizeDelta: {x: 58.391167, y: 11.771339}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &449046933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449046931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8773585, g: 0.120016046, b: 0.2188845, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 472a1a5b98a48439c8a7bf1df86a0448, type: 3}
+    m_FontSize: 120
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 120
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 'SFX
+
+'
+--- !u!222 &449046934
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449046931}
+  m_CullTransparentMesh: 0
 --- !u!1 &679713968
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +612,87 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &1791903370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791903371}
+  - component: {fileID: 1791903373}
+  - component: {fileID: 1791903372}
+  m_Layer: 5
+  m_Name: Audio_Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1791903371
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791903370}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7940123065889219335}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2, y: -15}
+  m_SizeDelta: {x: 97.9352, y: 59.55934}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1791903372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791903370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.044010334, g: 0.15351872, b: 0.4056604, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: aa34dc50a96a24edf9ed3bd6ec2b9548, type: 3}
+    m_FontSize: 110
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 120
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "BABY BARBARIAN THEME SONG\nBy: William and Lewis Gosline\n\n\"Dungeon
+    Ambience\" \nyd licensed CC-BY3.0, GPL 2.0, or GPL 3.0: \nhttps://opengameart.org/content/dungeon-ambience\n\n\"A
+    Tricky Puzzle\"\n3xBlast licensed CC-BY3.0, GPL 2.0, or GPL 3.0:\nhttps://opengameart.org/content/a-tricky-puzzle-loop\n\n\"Sea
+    and River Wave Sounds\" by RandomMind licensed\nCC-BY3.0, GPL 2.0, or GPL 3.0:\nhttps://opengameart.org/content/sea-and-river-wave-sounds\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+--- !u!222 &1791903373
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791903370}
+  m_CullTransparentMesh: 0
 --- !u!1001 &3571209277098801868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -667,21 +828,52 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1735
       objectReference: {fileID: 0}
+    - target: {fileID: 675743401, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 107
+      objectReference: {fileID: 0}
+    - target: {fileID: 675743401, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 697166980, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 697166981, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.578125
+      objectReference: {fileID: 0}
     - target: {fileID: 702279534, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -75.9
+      value: -112.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 702279534, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 947987765, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -75.4
+      value: -135
       objectReference: {fileID: 0}
     - target: {fileID: 947987765, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -11.6
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 947987766, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_Text
+      value: 'Lucas Gattoni
+
+        Azhar Fauzi Jr
+
+        Igor Wolski
+
+        Mariam
+        Yasser'
+      objectReference: {fileID: 0}
+    - target: {fileID: 947987766, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1216687801, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
       propertyPath: m_IsActive
@@ -689,11 +881,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1366907393, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 70.1
+      value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 1366907393, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -11.1
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366907394, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_Text
+      value: 'Fausto Chiodoni
+
+        Travis Hanson
+
+        Ian Webster
+
+
+
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366907394, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1366907394, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
       propertyPath: m_FontData.m_LineSpacing
@@ -703,40 +913,168 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1388388539, guid: ec20e7b94b86342c2b783789a7aaa2a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.578125
+      objectReference: {fileID: 0}
     - target: {fileID: 405234591048332485, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_Color.a
       value: 0.52499104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947413339080846715, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5009517299113848101, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6633842336444605514, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842336444605517, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842336844243404, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Action SFX: https://quicksounds.com
+
+        Club Swing & Fall Landing
+        SFX: https://www.zapsplat.com
+
+        Button Press SFX: https://soundcloud.com/cleytonkauffman
+
+        "Step
+        Sound (Walking)" by IgnasD licensed CC-BY3.0, GPL 2.0, or GPL 3.0:
+
+        https://opengameart.org/content/step-sound-walking
+
+
+
+
+
+
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842336844243404, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842336844243404, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842336844243404, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842336844243404, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842336844243406, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio_SFX
+      objectReference: {fileID: 0}
     - target: {fileID: 6633842336844243407, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.3
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6633842336844243407, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 40.3
+      value: -69
       objectReference: {fileID: 0}
     - target: {fileID: 6633842336998826557, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 69
+      value: -66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842337022838776, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6633842337022838779, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 80.2
+      value: 137
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842337095810104, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842337095810105, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842337191065905, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842337191065905, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633842337682144311, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -370
       objectReference: {fileID: 0}
     - target: {fileID: 7713543688077014612, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -775
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940123065416359074, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 108.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940123065964552888, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940123065964552888, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940123065964552889, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio_Music_Header
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940123065964552891, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_Text
+      value: MUSIC
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940123066356615102, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 7940123066638558321, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
@@ -858,6 +1196,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7940123066867294535, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -113.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8048338989404173200, guid: ec20e7b94b86342c2b783789a7aaa2a4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -868,6 +1211,12 @@ PrefabInstance:
 --- !u!1 &7940123065889219334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1388388538, guid: ec20e7b94b86342c2b783789a7aaa2a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7940123065889219333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7940123065889219335 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6633842336998826557, guid: ec20e7b94b86342c2b783789a7aaa2a4,
     type: 3}
   m_PrefabInstance: {fileID: 7940123065889219333}
   m_PrefabAsset: {fileID: 0}

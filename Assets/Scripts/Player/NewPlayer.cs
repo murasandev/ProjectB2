@@ -63,6 +63,10 @@ public class NewPlayer : PhysicsObject
     private bool enragedJumpBool = true;
     [SerializeField] private int jumpCount;
 
+    [SerializeField] private int _itemsToBreak;
+    [SerializeField] private int _itemsHit;
+    private bool _waterSceneActive;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,15 +100,18 @@ public class NewPlayer : PhysicsObject
         _helpLevel = 0;
         _eventManager.UpdateHelpText(_helpLevel);
 
+        _waterSceneActive = false;
+
         _eventManager.StartGammieScene += FreeGammyCutScene;
         _eventManager.StartRage += ActivateRage;
+        //_eventManager.WaterSceneTriggered += triggerWaterScene;
     }
 
     // Update is called once per frame
     void Update()
     {
        // ActivateRage();
-        triggerWaterScene();
+      //  triggerWaterScene();
         UpdateUI();
         row();
         //EnragedJump();
@@ -311,7 +318,7 @@ public class NewPlayer : PhysicsObject
         {
             rageTutorialCollect += 1;
         }
-        if (other.CompareTag("Floor") && !_gameStart)
+        if (other.CompareTag("Floor") && !_gameStart && !_waterSceneActive)
         {
             PlayAudio(audioStorage._landingSound, .3f);
         }
@@ -439,16 +446,30 @@ public class NewPlayer : PhysicsObject
             chestOpened = true;
         }   
     }
+
+    public void HitItem()
+    {
+        _itemsHit++;
+        rage += 20;
+
+        if (_itemsHit == _itemsToBreak)
+        {
+            triggerWaterScene();
+        }
+    }
+
     public void triggerWaterScene()
     {
-        if (rageTutorialCollect == 5 && chestOpened == true && rageTutorial == true)
+        // if (rageTutorialCollect == 5 && chestOpened == true && rageTutorial == true)
+        if (rageTutorial == true)
         {
             _scene.WaterScene();
+            _waterSceneActive = true;
             rageTutorial = false;
             isRaging = false;
             rage = 0;
             transform.position = new Vector3(-4.56f, -2f, 0f);
-        }
+         }
     }
 
     public void FinalHelpTxt()
@@ -467,6 +488,7 @@ public class NewPlayer : PhysicsObject
     {
         _eventManager.StartGammieScene -= FreeGammyCutScene;
         _eventManager.StartRage -= ActivateRage;
+        //_eventManager.WaterSceneTriggered -= triggerWaterScene;
     }
     public void setPlayerColorDefault()
     {

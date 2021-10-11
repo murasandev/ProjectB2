@@ -10,6 +10,7 @@ public class Skeleton : MonoBehaviour
     [SerializeField] private Dialog _clubFoundDialog;
     [SerializeField] private AudioClip _hitSound;
     [SerializeField] private float _sfxVol;
+    [SerializeField] private GameObject _skeletonCrushDT;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class Skeleton : MonoBehaviour
 
         _eventManager.ClubFound += ClubFound;
         _eventManager.StartGammieScene += TurnOffDialog;
+        _skeletonCrushDT.SetActive(false);
 
         _sfxVol = 1.0f;
     }
@@ -42,6 +44,7 @@ public class Skeleton : MonoBehaviour
         if(other.CompareTag("Bird Cage"))
         {
             PlayAudio(_hitSound, _sfxVol);
+            _skeletonCrushDT.SetActive(true);
         }
     }
 

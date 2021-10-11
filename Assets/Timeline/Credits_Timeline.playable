@@ -22,10 +22,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 0.3166666666666639
     m_ClipIn: 0
     m_Asset: {fileID: 8271376515582989314}
-    m_Duration: 101.75
+    m_Duration: 107.45
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8708503505271299025}
     m_EaseInDuration: 0
@@ -115,10 +115,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 18.583333333333332
+    m_Start: 28.533333333333328
     m_ClipIn: 0
     m_Asset: {fileID: 8130482274912094761}
-    m_Duration: 83.16666666666667
+    m_Duration: 79.23333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6869639450251509705}
     m_EaseInDuration: 0
@@ -220,10 +220,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 18.583333333333332
+    m_Start: 28.53333333333333
     m_ClipIn: 0
     m_Asset: {fileID: -1448540809623645218}
-    m_Duration: 83.16666666666667
+    m_Duration: 79.23333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6346888666610563796}
     m_EaseInDuration: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 18.583333333333332
+    m_PreExtrapolationTime: 28.53333333333333
     m_DisplayName: Escape_Txt_Credits
   m_Markers:
     m_Objects: []
@@ -333,7 +333,7 @@ MonoBehaviour:
     m_Start: 1.2166666666666666
     m_ClipIn: 0
     m_Asset: {fileID: -234198408126973936}
-    m_Duration: 100.4
+    m_Duration: 105.85
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5291702647230218879}
     m_EaseInDuration: 0
@@ -545,10 +545,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 95.65
+    m_Start: 99.51666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -6828852296663280204}
-    m_Duration: 6.099999999999994
+    m_Duration: 8.25
     m_TimeScale: 1
     m_ParentTrack: {fileID: -2906262709026354508}
     m_EaseInDuration: 0
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 97.75
+    m_Start: 103.76666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 5564437924035633975}
     m_Duration: 4
@@ -836,7 +836,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 97.75
+    m_PreExtrapolationTime: 103.76666666666667
     m_DisplayName: FadeOut
   m_Markers:
     m_Objects: []
@@ -1071,10 +1071,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 100.6
+    m_Start: 107.06666666666666
     m_ClipIn: 0
     m_Asset: {fileID: -3327218487470243948}
-    m_Duration: 1.1500000000000057
+    m_Duration: 0.7000000000000028
     m_TimeScale: 1
     m_ParentTrack: {fileID: 944049350763748844}
     m_EaseInDuration: 0
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 26.716666666666665
+    m_Start: 28.933333333333334
     m_ClipIn: 0
     m_Asset: {fileID: -1941510637044560226}
     m_Duration: 30
@@ -1274,7 +1274,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 26.716666666666665
+    m_PreExtrapolationTime: 28.933333333333334
     m_DisplayName: ComicHolderRighrt
   m_Markers:
     m_Objects: []
@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 26.716666666666665
+    m_Start: 28.933333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 3625670958920085149}
     m_Duration: 30
@@ -1407,7 +1407,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 26.716666666666665
+    m_PreExtrapolationTime: 28.933333333333334
     m_DisplayName: ComicHolderAnim
   m_Markers:
     m_Objects: []

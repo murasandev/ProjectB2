@@ -83,7 +83,7 @@ public class DialogController : MonoBehaviour {
 
         dialogOn = true;
         _canvasManager.ShowDialogBox(true);
-        _player._dbOn = true;
+        _player.StopActions(true);
         var dList = dialog._dialogInfo;
         _dialog = dialog;
 
@@ -158,7 +158,7 @@ public class DialogController : MonoBehaviour {
     private void EndDialog()
     {
         _canvasManager.ShowDialogBox(false);
-        _player._dbOn = false;
+        _player.StopActions(false);
         dialogOn = false;
 
         if (_dialog.gammieConversation)

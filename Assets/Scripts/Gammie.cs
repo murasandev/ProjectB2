@@ -59,15 +59,15 @@ public class Gammie : MonoBehaviour
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector2.Lerp(transform.position, target.position, step);
-
-            if (transform.position.x > target.position.x || transform.position.x > player.position.x)
+      
+            if (transform.position.x > player.position.x)
             {
-                //transform.localScale = new Vector3(-1, 1, 1);
+                //flips gammy left
                 _spriteR.flipX = false;
-            }
-            else if (transform.position.x < target.position.x || transform.position.x < player.position.x)
+              
+            } else if (transform.position.x < player.position.x)
             {
-                //transform.localScale = new Vector3(1, 1, 1);
+                //flips gammy right
                 _spriteR.flipX = true;
             }
         }

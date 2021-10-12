@@ -75,6 +75,7 @@ public class SceneSelector : MonoBehaviour
 
     public void UnloadFreeGammy()
     {
+        _player.BromMovePos();
         _player.StopActions(false);
         SceneManager.UnloadSceneAsync(10);
         _canvas.enabled = true;

@@ -11,6 +11,6 @@ public class TutorialRage : MonoBehaviour
     }
     public void startTutorialRage()
     {
-     //   _tutorialRage.SetActive(true);
+        _tutorialRage.SetActive(true);
     }
 }

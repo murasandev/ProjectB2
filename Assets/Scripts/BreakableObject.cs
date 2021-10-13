@@ -14,14 +14,14 @@ public class BreakableObject : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit " + other.name);
 
         //items only breakable when raging
         if (other.tag == "Weapon" || other.tag == "Object")
         {
             if (_player.isRaging == true)
             {
-                _anim.SetTrigger("Hit");
+                ActivateAnim();
+
                 if (this.tag == "Chest")
                 {
                     _player.rageTutorialChest();
@@ -35,4 +35,6 @@ public class BreakableObject : MonoBehaviour
             CameraShake.Instance.ShakeCamera(5.0f, 0.1f);
         }
     }
+
+    public void ActivateAnim() => _anim.SetTrigger("Hit");
 }

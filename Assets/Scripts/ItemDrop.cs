@@ -24,16 +24,17 @@ public class ItemDrop : MonoBehaviour
     private void FixedUpdate()
     {
         Speed();
-//        Debug.Log(_speed + " Speed");
+//      Debug.Log(_speed + " Speed");
         if (_speed == 0.0f)
         {
             DisableMass();
             EnableTrigger();
         }
     }
+
     private void EnableTrigger()
     {
-        _bc.isTrigger = enabled;
+        _bc.isTrigger = false;
     }
     private void DisableMass()
     {

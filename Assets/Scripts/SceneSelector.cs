@@ -14,6 +14,7 @@ public class SceneSelector : MonoBehaviour
     private TutorialRage _tutorialRage;
     private EventManager _eventManager;
     private BjornArmActivate _bjornActivate;
+    private Skeleton _skeleton;
 
     private void Start()
     {
@@ -59,9 +60,6 @@ public class SceneSelector : MonoBehaviour
         _player.StopActions(true);
         _gammie.TransformtoGammie();
         StartCoroutine(LoadGammyCoroutine());
-        //SceneManager.LoadScene(10, LoadSceneMode.Additive);
-        //_canvas.enabled = false;
-        //_player.enabled = false;
     }
 
     IEnumerator LoadGammyCoroutine()

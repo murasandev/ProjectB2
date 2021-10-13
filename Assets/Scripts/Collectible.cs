@@ -27,7 +27,6 @@ public class Collectible : MonoBehaviour
     private void FixedUpdate()
     {
         Speed();
-        Debug.Log(_speed + " Speed");
 
         if (_speed == 0.0f)
         {

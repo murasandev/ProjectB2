@@ -542,6 +542,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6402485271361509351, guid: 2db7446eed648402882836678fb2eb39,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6402485271361509353, guid: 2db7446eed648402882836678fb2eb39,
         type: 3}
       propertyPath: _fadeTime

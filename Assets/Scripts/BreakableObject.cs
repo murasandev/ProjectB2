@@ -22,6 +22,7 @@ public class BreakableObject : MonoBehaviour
             if (_player.isRaging == true)
             {
                 _anim.SetTrigger("Hit");
+                _player.rageTutorialPlusOne();
                 if (this.tag == "Chest")
                 {
                     _player.rageTutorialChest();

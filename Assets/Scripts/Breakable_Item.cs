@@ -38,7 +38,7 @@ public class Breakable_Item : MonoBehaviour
                 CameraShake.Instance.ShakeCamera(2.0f, 0.1f);
                 _player.HitItem();
                 Destroy(this.gameObject);
-                //_anim.SetTrigger("");
+             //   _anim.SetTrigger("Hit");
             }
         }
     }

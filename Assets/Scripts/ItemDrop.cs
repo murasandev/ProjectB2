@@ -6,6 +6,7 @@ public class ItemDrop : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D _bc;
     [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private Animator _animator;
 
     Vector3 lastPosition = Vector3.zero;
     private float _speed;
@@ -16,6 +17,7 @@ public class ItemDrop : MonoBehaviour
         //reference player rage
         _bc = GetComponent<BoxCollider2D>();
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -29,6 +31,7 @@ public class ItemDrop : MonoBehaviour
         {
             DisableMass();
             EnableTrigger();
+            ActivateAnimator();
         }
     }
     private void EnableTrigger()
@@ -44,5 +47,9 @@ public class ItemDrop : MonoBehaviour
     {
         _speed = (transform.position - lastPosition).magnitude;
         lastPosition = transform.position;
+    }
+    private void ActivateAnimator()
+    {
+        _animator.enabled = true;
     }
 }

@@ -497,4 +497,8 @@ public class NewPlayer : PhysicsObject
     {
         _spriteR.color = new Color(1f, 1f, 1f, 1f);
     }
+    public void rageTutorialPlusOne()
+    {
+        rageTutorialCollect++;
+    }
 }

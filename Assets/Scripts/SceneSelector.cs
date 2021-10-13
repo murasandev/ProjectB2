@@ -89,6 +89,13 @@ public class SceneSelector : MonoBehaviour
         SceneManager.LoadScene(11, LoadSceneMode.Additive);
         _canvas.enabled = false;
         _player.enabled = false;
+
+        //deactivates all interactables in scene
+        GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
+        foreach(GameObject interactable in interactables)
+        {
+            interactable.SetActive(false);
+        }
     }
     public void UnloadWaterScene()
     {
@@ -104,10 +111,14 @@ public class SceneSelector : MonoBehaviour
     public void EndScene()
     {
         _player.StopActions(true);
-        SceneManager.LoadScene(12, LoadSceneMode.Additive);
+        SceneManager.LoadScene(13, LoadSceneMode.Additive);
         AudioManager.Instance.LoopEffectStop();
         _canvas.enabled = false;
         _player.enabled = false;
+    }
+    public void ToBeContinuedScene()
+    {
+        SceneManager.LoadScene(12);
     }
 
     public void CreditsScene()

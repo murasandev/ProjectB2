@@ -452,6 +452,7 @@ public class NewPlayer : PhysicsObject
 
         if (_itemsHit == _itemsToBreak)
         {
+            CameraShake.Instance.ShakeCamera(15.0f, 3f);
             triggerWaterScene();
         }
     }
@@ -490,5 +491,9 @@ public class NewPlayer : PhysicsObject
     public void setPlayerColorDefault()
     {
         _spriteR.color = new Color(1f, 1f, 1f, 1f);
+    }
+    public void rageTutorialPlusOne()
+    {
+        rageTutorialCollect++;
     }
 }

@@ -43,6 +43,10 @@ public class DialogTriggerE : MonoBehaviour
             _inOnTrigger = true;
             _eKey.EtoInteractIsActive(true);
         }
+        else
+        {
+            _initialDialog = false;
+        }
             
     }
 

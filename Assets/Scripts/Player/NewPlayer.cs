@@ -101,6 +101,7 @@ public class NewPlayer : PhysicsObject
         _helpLevel = 0;
         _eventManager.UpdateHelpText(_helpLevel);
 
+        _gameStart = true;
         _waterSceneActive = false;
 
         _eventManager.StartGammieScene += FreeGammyCutScene;
@@ -280,7 +281,7 @@ public class NewPlayer : PhysicsObject
     }
     IEnumerator StartRageRoutine()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(3.5f);
         _stopActions = false;
         _spriteR.color = new Color(.9686f, .5725f, .4823f, 1f);
     }
@@ -294,12 +295,10 @@ public class NewPlayer : PhysicsObject
     {
         if (other.CompareTag("FindClub"))
         {
-            Debug.Log("Press 'E' to obtain club!");
 
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyUp(KeyCode.E) || Input.GetKey(KeyCode.E))
             {
                 hasClub = true;
-                Debug.Log("Club obtained!");
             }
         }
     }
@@ -355,10 +354,6 @@ public class NewPlayer : PhysicsObject
     }
     private void FreeGammyCutScene()
     {
-        //float dist = Vector3.Distance(transform.position, gammieTransform.position);
-        //if (dist < 2.0f && freeGammyBool == true)
-        //{
-
         if (freeGammyBool)
         {
             StartCoroutine(FreeGammyRoutine());
@@ -367,7 +362,6 @@ public class NewPlayer : PhysicsObject
             freeGammyBool = false;
             _stopActions = true;
         }   
-        //}
     }
     IEnumerator FreeGammyRoutine()
     {
@@ -458,6 +452,7 @@ public class NewPlayer : PhysicsObject
 
         if (_itemsHit == _itemsToBreak)
         {
+            CameraShake.Instance.ShakeCamera(15.0f, 3f);
             triggerWaterScene();
         }
     }

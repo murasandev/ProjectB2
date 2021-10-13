@@ -63,7 +63,6 @@ public class AudioManager : MonoBehaviour
         _sfxSource.volume = volume;
         _sfxSource.loop = isLoopingOn;
         _sfxSource.Play();
-        Debug.Log("Should be looping....");
     }
 
     public void LoopEffectStop() => _sfxSource.Stop();

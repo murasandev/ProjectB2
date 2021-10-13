@@ -142,6 +142,7 @@ public class DialogController : MonoBehaviour {
         string sentence = _sentences.Dequeue();
         Sprite sprite = _dialog._dialogInfo[_dialogNum].character.charSprite;
         string name = _dialog._dialogInfo[_dialogNum].character.name;
+
         if (_dialogNum < _dialog._dialogInfo.Count - 1)
         {
             _dialogNum++;
@@ -154,7 +155,6 @@ public class DialogController : MonoBehaviour {
         _currentTWText = StartCoroutine(ShowTextTypeWrite());
     }
 
-
     private void EndDialog()
     {
         _canvasManager.ShowDialogBox(false);
@@ -165,9 +165,7 @@ public class DialogController : MonoBehaviour {
         {
             _gammie.TransformtoDrake();
             _eventManager.GammyTaughtRage();
-
-        }
-           
+        }     
      }
 
 

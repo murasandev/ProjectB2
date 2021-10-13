@@ -15,14 +15,12 @@ MonoBehaviour:
   gammieConversation: 1
   _dialogInfo:
   - character: {fileID: 11400000, guid: cd607f9ebd48c4d07ae54e52dc04c23f, type: 2}
-    dialogText: My boy, I've found some food while flying around, but I seemed to
-      have dropped it...
-  - character: {fileID: 11400000, guid: 601c21a3b98994f32b654b1bc8c196e9, type: 2}
-    dialogText: Food..?!
+    dialogText: "When you go into a RAGE you become stronger and are able to jump
+      higher! \n"
   - character: {fileID: 11400000, guid: 299fc4d04ef482b4d86bb5f75a7ed4af, type: 2}
-    dialogText: There's some up there!
+    dialogText: Destroying items fuels your rage. Try hitting that big  boulder and
+      other things you see.
   - character: {fileID: 11400000, guid: 9076ecc4ea64dcb4d9c8a6a7757bda43, type: 2}
     dialogText: HANGRY!
   - character: {fileID: 11400000, guid: cd607f9ebd48c4d07ae54e52dc04c23f, type: 2}
-    dialogText: When you go into a RAGE you become stronger and are able to jump
-      higher! Go get 'em grandson!
+    dialogText: Go get 'em grandson!

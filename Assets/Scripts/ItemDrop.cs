@@ -36,7 +36,7 @@ public class ItemDrop : MonoBehaviour
 
     private void EnableTrigger()
     {
-        _bc.isTrigger = false;
+        _bc.isTrigger = true;
     }
     private void DisableMass()
     {

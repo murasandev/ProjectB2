@@ -8,14 +8,14 @@ public class DroppableItem : MonoBehaviour
     private Animator _anim;
     private EventManager _eventManager;
     private Collider2D _water;
-    private Collider2D _c2D;
+    private CapsuleCollider2D _c2D;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
-        _c2D = GetComponent<Collider2D>();
+        _c2D = GetComponent<CapsuleCollider2D>();
 
         _water = GameObject.Find("Water").GetComponent<Collider2D>();
         _eventManager = EventManager.Instance != null ? EventManager.Instance : FindObjectOfType<EventManager>();
@@ -29,6 +29,7 @@ public class DroppableItem : MonoBehaviour
         {
             _rb.gravityScale = 1.0f;
             _anim.enabled = false;
+            _c2D.isTrigger = false;
 
             switch (gameObject.name)
             {
@@ -45,7 +46,6 @@ public class DroppableItem : MonoBehaviour
                 default:
                     Debug.Log("Error: Value NUll");
                     break;
-
             }
         }
         if (other.CompareTag("Water"))

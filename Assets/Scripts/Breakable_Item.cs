@@ -38,6 +38,7 @@ public class Breakable_Item : MonoBehaviour
                 CameraShake.Instance.ShakeCamera(2.0f, 0.1f);
                 _player.HitItem();
                 _anim.SetTrigger("Hit");
+                _bc.enabled = false;
             }
         }
     }
